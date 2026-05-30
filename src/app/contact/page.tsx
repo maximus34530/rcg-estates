@@ -75,7 +75,6 @@ export default function ContactPage() {
             </p>
           </motion.div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#F9FAFB] to-[#F9FAFB]/0 pointer-events-none" />
       </section>
 
       {/* Main Content */}

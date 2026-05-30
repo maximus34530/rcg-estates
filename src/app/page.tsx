@@ -182,11 +182,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Hero → Who We Are: white bleed bridge ────────────────────────── */}
-      <div aria-hidden="true" className="relative z-10 h-24 bg-gradient-to-b from-white/0 to-white pointer-events-none" />
-
       {/* ── 2. WHO WE ARE ─────────────────────────────────────────────────── */}
-      <section className="py-28 bg-white overflow-hidden -mt-24">
+      <section className="py-28 bg-white overflow-hidden border-t border-neutral-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-start">
 
@@ -269,13 +266,8 @@ export default function HomePage() {
       </section>
 
       {/* ── 3. PROCESS — charcoal with boxed bordered rows ────────────────── */}
-      <section className="relative bg-[#111827] overflow-hidden">
-        {/* Top bridge */}
-        <div aria-hidden="true" className="absolute top-0 inset-x-0 h-20 bg-gradient-to-b from-white to-white/0 pointer-events-none" />
-        {/* Bottom bridge */}
-        <div aria-hidden="true" className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-white to-white/0 pointer-events-none" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+      <section className="bg-[#111827] border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
             <FadeUp className="lg:col-span-5">
               <SectionLabel text="The Process" light />
@@ -568,10 +560,8 @@ export default function HomePage() {
       </section>
 
       {/* ── 8. CTA ────────────────────────────────────────────────────────── */}
-      <section className="relative py-28 bg-[#111827] overflow-hidden">
-        {/* Top bridge */}
-        <div aria-hidden="true" className="absolute top-0 inset-x-0 h-20 bg-gradient-to-b from-white to-white/0 pointer-events-none" />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-28 bg-[#111827] border-t border-white/5">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeUp>
             <div className="w-12 h-[2px] bg-[#0A3594] mx-auto mb-8" />
             <p className="text-[#6B93D6] text-xs font-mono tracking-[.25em] uppercase mb-4">Let's Build Together</p>

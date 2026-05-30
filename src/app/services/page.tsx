@@ -88,11 +88,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* White bridge */}
-      <div aria-hidden className="h-12 bg-gradient-to-b from-white/0 to-white" />
 
       {/* Services Box Matrix */}
-      <section className="pb-20 bg-white">
+      <section className="pt-16 pb-20 bg-white border-t border-neutral-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp className="mb-10">
             <div className="flex items-center gap-3 mb-3">

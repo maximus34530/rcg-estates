@@ -62,7 +62,6 @@ export default function AboutPage() {
             <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">{companyInfo.about}</p>
           </motion.div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-white/0 pointer-events-none" />
       </section>
 
       {/* Stats */}
