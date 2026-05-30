@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 function FacebookIcon({ className }: { className?: string }) {
@@ -61,12 +62,23 @@ export default function Footer() {
 
         {/* Brand */}
         <div className="lg:col-span-1">
-          <Link href="/" className="block mb-5">
-            <span className="text-white font-bold text-xl tracking-tight">
-              RCG<span className="text-[#0A3594]"> Estates</span>
-            </span>
-            <div className="text-gray-600 text-[9px] font-medium tracking-[.25em] uppercase mt-0.5">
-              Construction & Development
+          <Link href="/" className="flex items-center gap-2.5 mb-5">
+            <div className="flex items-center justify-center bg-white rounded-sm px-2 py-1.5 shrink-0">
+              <Image
+                src="/logo.png"
+                alt="RCG Estates logo"
+                width={100}
+                height={40}
+                className="h-6 w-auto object-contain"
+              />
+            </div>
+            <div className="flex flex-col leading-none">
+              <span className="text-white font-bold text-lg tracking-tight">
+                RCG<span className="text-[#6B93D6]"> Estates</span>
+              </span>
+              <div className="text-gray-600 text-[9px] font-medium tracking-[.25em] uppercase mt-0.5">
+                Construction & Development
+              </div>
             </div>
           </Link>
           <p className="text-sm leading-relaxed text-gray-500 mb-6">
