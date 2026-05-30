@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
+/* ─── Design Tokens ────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --accent:      #0A3594;
+  --accent-deep: #072D82;
+  --dark:        #111827;
+  --darker:      #0D1117;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-background: #ffffff;
+  --color-foreground:  #111827;
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ─── Base ─────────────────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #111827;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #111827; }
+::-webkit-scrollbar-thumb { background: #0A3594; border-radius: 2px; }
+
+/* ─── Selection ─────────────────────────────────────────────────────── */
+::selection { background: #0A3594; color: #fff; }
+
+/* ─── Testimonial Marquee ───────────────────────────────────────────── */
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 38s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Button glow ───────────────────────────────────────────────────── */
+.btn-glow:hover {
+  box-shadow: 0 8px 32px rgba(10, 53, 148, 0.28), 0 2px 8px rgba(10, 53, 148, 0.14);
+}
+
+/* ─── Architectural section rule ─────────────────────────────────────── */
+.arch-rule {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #0A3594;
+  margin-bottom: 1rem;
 }
