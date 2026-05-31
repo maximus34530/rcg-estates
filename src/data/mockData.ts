@@ -121,7 +121,7 @@ export const owner = {
     "Custom Home Builder & Developer, 10+ Builds in McAllen & Mission",
     "RE/MAX Platinum RGV · Imperio Real Estate",
   ],
-  bio: `Raul Ceron is the founder of RCG Estates Construction & Development. A licensed TX Realtor and custom home builder, he handles everything: land acquisition, permits, construction, and closing. His Bette Street Collection in Mission is five luxury homes built on one block. That's not a contractor. That's a developer.`,
+  bio: `Raul Ceron is the founder of RCG Estates Construction & Development. A licensed TX Realtor and custom home builder, he handles everything: land acquisition, permits, construction, and closing. His Bette Street Collection in Mission is five luxury homes built on one block.`,
   bioParagraph2: `His builds include the Bette Street collection in Mission and 816 N Trinity in McAllen (4,100 sqft), with finish selections sourced through his partnership with Royal Decor Gallery at 4003 W US Hwy 83, McAllen.`,
   partner: {
     name: "Royal Decor Gallery",
@@ -153,7 +153,7 @@ export const companyInfo = {
     },
     {
       title: "Built Here, Not Outsourced",
-      desc: "McAllen, Mission, and the wider RGV. Local codes, local subs, local knowledge of what works in South Texas heat and clay soil.",
+      desc: "McAllen, Mission, and the wider RGV. Local codes, local subs, local knowledge of what works in South Texas heat.",
     },
   ],
   stats: [
@@ -296,8 +296,8 @@ export const projects: Project[] = [
       images.housef375,
     ],
     description:
-      "A luxury custom build featuring premium interior selections, designer-level fixtures, and Italian-sourced finishes from RCG's partnership with Royal Decor Gallery.",
-    features: ["Italian Finishes", "Designer Fixtures", "Chef's Kitchen", "Luxury Master Suite", "Custom Millwork"],
+      "A luxury custom build featuring premium interior selections, designer-level fixtures, and custom finishes throughout.",
+    features: ["Premium Finishes", "Designer Fixtures", "Chef's Kitchen", "Luxury Master Suite", "Custom Millwork"],
   },
 ];
 
@@ -393,12 +393,12 @@ export const services: Service[] = [
     id: "design-consultation",
     title: "Design and Architectural Services",
     description:
-      "Pre-construction design with access to premium Italian finishes through our Royal Decor Gallery partnership.",
+      "Pre-construction design with access to premium finish selections and artisan hardware.",
     details: [
       "Custom floor plan development",
       "Interior and exterior design guidance",
-      "Italian luxury wallpaper and hardware sourcing",
-      "Royal Decor Gallery finish selections",
+      "Premium wallpaper and hardware sourcing",
+      "Finish selections and material board",
       "Material board and budget alignment",
       "3D rendering coordination",
     ],
@@ -438,7 +438,7 @@ export const processSteps = [
   {
     step: "03",
     title: "Design Your Home",
-    desc: "Design your floor plan with our architects, then select Italian-grade finishes through Royal Decor Gallery.",
+    desc: "Design your floor plan with our architects, then lock in your finish selections before ground breaks.",
   },
   {
     step: "04",

@@ -259,7 +259,7 @@ export default function ProjectsPage() {
                   className="px-8 py-8 flex flex-col items-start"
                 >
                   <span className="text-3xl font-bold text-white tracking-tight leading-none mb-1.5">{s.value}</span>
-                  <span className="text-[10px] text-white/40 font-mono uppercase tracking-[.2em]">{s.label}</span>
+                  <span className="text-[10px] text-white/65 font-mono uppercase tracking-[.2em]">{s.label}</span>
                 </motion.div>
               ))}
             </div>
@@ -284,7 +284,7 @@ export default function ProjectsPage() {
             </button>
           ))}
           <span className="ml-auto flex items-center px-5 text-xs text-white/30 font-mono">
-            {filtered.length} project{filtered.length !== 1 ? "s" : ""}
+            {filtered.length}+ project{filtered.length !== 1 ? "s" : ""}
           </span>
         </div>
       </div>

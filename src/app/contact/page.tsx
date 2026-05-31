@@ -49,9 +49,7 @@ export default function ContactPage() {
               <span className="text-[#6B93D6]">Start Here.</span>
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed">
-              Whether you have a lot picked out or you&apos;re still figuring out
-              if building makes sense — fill out the form and we&apos;ll follow
-              up within one business day with an honest answer on next steps.
+              Whether you own land or are just starting to look, let&apos;s talk. Fill out the form, and we&apos;ll get back to you within one business day with an honest breakdown of your options.
             </p>
           </motion.div>
         </div>
@@ -87,10 +85,10 @@ export default function ContactPage() {
                 Direct Contact
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight tracking-tight mb-4">
-                One Call.<br />One Builder.<br />Zero Runaround.
+                Your builder from call one to keys in hand.
               </h2>
               <p className="text-gray-400 leading-relaxed text-sm mb-10">
-                Raul reviews every inquiry personally. Whether you have a lot picked out or just a budget in mind, tell us where you are and you will get an honest answer within one business day.
+                No gatekeepers. Raul reviews every inquiry personally. Drop your budget or your lot details below, and we&apos;ll get back to you within 24 hours with real next steps.
               </p>
             </FadeUp>
 
@@ -244,7 +242,7 @@ export default function ContactPage() {
             {[
               { value: "24hr", label: "Response Goal", sub: "We aim to reply to every inquiry within one business day" },
               { value: "$2.1M+", label: "In Custom Homes Built", sub: "McAllen and Mission — real addresses you can drive to" },
-              { value: "5★", label: "Google Rating", sub: "Verified reviews from real homeowners who've built with RCG Estates" },
+              { value: "Your Turn", label: "Start Building", sub: "One call is all it takes. Tell us your vision and let's make it happen." },
             ].map((item) => (
               <div key={item.label} className="px-8 py-6 text-center md:text-left">
                 <div className="text-3xl font-bold text-white tracking-tight mb-1">{item.value}</div>

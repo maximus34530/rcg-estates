@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import {
-  ArrowRight, CheckCircle, Phone, MapPin, Star, Quote, BadgeCheck, Building2,
+  ArrowRight, CheckCircle, Phone, MapPin, Quote, BadgeCheck, Building2,
 } from "lucide-react";
-import { companyInfo, owner, testimonials, projects, images } from "@/data/mockData";
+import { companyInfo, owner, projects, images } from "@/data/mockData";
 
 function FadeUp({
   children, delay = 0, className = "",
@@ -138,8 +138,7 @@ export default function AboutPage() {
               </FadeUp>
 
               <FadeUp delay={0.12}>
-                <p className="text-gray-500 text-lg leading-relaxed mb-4">{owner.bio}</p>
-                <p className="text-gray-400 leading-relaxed mb-8">{owner.bioParagraph2}</p>
+                <p className="text-gray-500 text-lg leading-relaxed mb-8">{owner.bio}</p>
               </FadeUp>
 
               <FadeUp delay={0.16}>
@@ -162,7 +161,7 @@ export default function AboutPage() {
                   {[
                     { icon: BadgeCheck, label: "Licensed TX Agent", sub: "Full real estate representation on land purchase and sale" },
                     { icon: BadgeCheck, label: "Custom Builder", sub: "End-to-end construction — foundation to finish" },
-                    { icon: BadgeCheck, label: "Royal Decor Partner", sub: "Exclusive Italian luxury finishes in every premium build" },
+                    { icon: BadgeCheck, label: "RGV Land Expert", sub: "Lot evaluation, zoning, and soil review before you commit" },
                   ].map((item) => (
                     <div key={item.label} className="p-4 rounded-xl border border-gray-100 shadow-sm bg-white">
                       <item.icon className="w-5 h-5 text-[#0A3594] mb-2" />
@@ -206,51 +205,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-24 bg-[#F9FAFB]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeUp className="mb-14 text-center">
-            <div className="inline-flex items-center gap-4 mb-4">
-              <div className="w-8 h-[2px] bg-[#0A3594]" />
-              <span className="text-[#0A3594] text-[11px] font-semibold tracking-[.24em] uppercase">Client Reviews</span>
-              <div className="w-8 h-[2px] bg-[#0A3594]" />
-            </div>
-            <h2 className="text-4xl font-bold text-[#111827] tracking-tight">What Our Clients Say</h2>
-          </FadeUp>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <FadeUp key={t.id} delay={i * 0.09}>
-                <div className="h-full rounded-2xl border border-gray-100 shadow-sm bg-white p-7 flex flex-col hover:shadow-lg hover:border-gray-200 transition-all">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(t.rating)].map((_, j) => (
-                      <Star key={j} className="w-4 h-4 text-amber-400 fill-amber-400" />
-                    ))}
-                  </div>
-                  <p className="font-semibold text-[#111827] text-base mb-3">"{t.quote}"</p>
-                  <p className="text-sm text-gray-400 leading-relaxed flex-1 mb-5">{t.body}</p>
-                  <div className="h-px w-full bg-gray-100 mb-4" />
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#0A3594]/10 flex items-center justify-center shrink-0">
-                      <span className="text-[#0A3594] text-sm font-bold">{t.name.trim()[0]}</span>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-[#111827] text-sm">{t.name}</div>
-                      <div className="text-xs text-gray-400 font-mono mt-0.5">{t.location}</div>
-                    </div>
-                  </div>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Service Area + Contact */}
       <section className="py-20 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <FadeUp className="lg:col-span-7">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <FadeUp className="lg:col-span-5">
               <div className="flex items-center gap-3 mb-4">
                 <span className="block w-8 h-[2px] bg-[#0A3594]" />
                 <span className="text-[#0A3594] text-[11px] font-semibold tracking-[.24em] uppercase">Service Area</span>
@@ -282,25 +241,18 @@ export default function AboutPage() {
               </div>
             </FadeUp>
 
-            <FadeUp delay={0.12} className="lg:col-span-5">
-              <div className="rounded-2xl bg-[#111827] border border-white/8 p-7">
-                <p className="text-[#0A3594] text-[10px] font-mono tracking-widest uppercase mb-5">Contact Information</p>
-                <ul className="space-y-4">
-                  <li className="flex items-center gap-3">
-                    <Phone className="w-4 h-4 text-[#0A3594] shrink-0" />
-                    <a href="tel:+19564087136" className="text-gray-300 text-sm hover:text-white transition-colors">+1 (956) 408-7136</a>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <MapPin className="w-4 h-4 text-[#0A3594] shrink-0" />
-                    <span className="text-gray-300 text-sm">Rio Grande Valley, Texas</span>
-                  </li>
-                </ul>
-                <div className="mt-5 pt-5 border-t border-white/8">
-                  <p className="text-gray-500 text-xs font-mono mb-3">Office Hours</p>
-                  <p className="text-gray-400 text-sm">{companyInfo.hours.weekdays}</p>
-                  <p className="text-gray-400 text-sm">{companyInfo.hours.saturday}</p>
-                  <p className="text-gray-400 text-sm">{companyInfo.hours.sunday}</p>
-                </div>
+            <FadeUp delay={0.12} className="lg:col-span-7">
+              <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm" style={{ height: "420px" }}>
+                <iframe
+                  title="RCG Estates Service Area — Rio Grande Valley"
+                  src="https://maps.google.com/maps?q=Rio+Grande+Valley+Texas&t=&z=9&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </FadeUp>
           </div>

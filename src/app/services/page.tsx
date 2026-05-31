@@ -55,7 +55,7 @@ export default function ServicesPage() {
               Full-Scope Services for Every Stage of Your Build
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed">
-              From lot selection to final walkthrough — every phase handled with local RGV expertise and Italian-quality finishes.
+              From lot selection to final walkthrough, every phase handled with local RGV expertise.
             </p>
           </motion.div>
         </div>
@@ -149,7 +149,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/8 border-b border-white/8">
             {[
               { label: "Custom Home Builder — McAllen & Mission", sub: "Every build managed from permit to final walkthrough at a real address you can visit" },
-              { label: "Royal Decor Gallery Partner", sub: "Exclusive access to Italian luxury finishes and artisan hardware featured in every build" },
+              { label: "Premium Finish Selections", sub: "Access to artisan hardware and high-end materials for every build" },
               { label: "RGV Land & Lot Expert", sub: "Soil, zoning, flood zone, and setback evaluation before you commit a dollar" },
             ].map((item) => (
               <div key={item.label} className="px-8 py-7">
@@ -170,10 +170,7 @@ export default function ServicesPage() {
                 Built in the RGV.<br />For the RGV.<br />At Every Price Point.
               </h2>
               <p className="text-gray-400 leading-relaxed mb-8 text-lg">
-                RCG Estates builds custom homes at real addresses in McAllen and Mission — homes you can
-                drive to and inspect before you commit. Every build features <strong className="text-white font-semibold">Italian luxury finishes</strong> through
-                our partnership with Royal Decor Gallery, and is backed by deep local knowledge of RGV
-                land, permits, and construction standards.
+                Drive by our completed projects before you sign a single paper. You don&apos;t have to second guess.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact"
@@ -187,25 +184,6 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            {/* Credentials box */}
-            <div className="lg:col-span-5">
-              <div className="border border-white/10 divide-y divide-white/10">
-                {[
-                  { credential: "Licensed Texas Real Estate Agent", note: "RE/MAX Platinum RGV and Imperio Real Estate" },
-                  { credential: "Custom Home Builder — McAllen & Mission", note: "$2.1M+ in completed homes at real, verifiable addresses" },
-                  { credential: "Royal Decor Gallery Partner", note: "Exclusive access to Italian luxury finishes and artisan hardware" },
-                  { credential: "RGV Land and Lot Expert", note: "Geotechnical, zoning, and flood zone evaluation before you commit" },
-                ].map((item) => (
-                  <div key={item.credential} className="px-6 py-5 flex items-start gap-4">
-                    <CheckCircle className="w-5 h-5 text-[#6B93D6] mt-0.5 shrink-0" />
-                    <div>
-                      <div className="text-white font-semibold text-sm mb-0.5">{item.credential}</div>
-                      <div className="text-gray-500 text-xs leading-relaxed">{item.note}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
