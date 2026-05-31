@@ -137,7 +137,7 @@ function ImageFrame({
   );
 }
 
-const categories: (ProjectCategory | "All")[] = ["All", "Custom Build", "Renovation", "Commercial"];
+const categories: (ProjectCategory | "All")[] = ["All", "Custom Build"];
 
 const statusStyles: Record<string, string> = {
   "Completed":    "bg-emerald-950/60 text-emerald-400 border border-emerald-700/50",
@@ -344,8 +344,7 @@ export default function ProjectsPage() {
                 Want to Be Our Next Project?
               </h2>
               <p className="text-gray-400 mb-8 leading-relaxed max-w-lg">
-                Let&apos;s talk about your lot, your vision, and your timeline. As your builder and licensed agent,
-                Raul handles every step — from land search to sold sign.
+                Tell us about your lot, your vision, and your timeline. As your builder and licensed agent, Raul handles every step from land search to move-in day.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact"

@@ -56,8 +56,8 @@ export default function AboutPage() {
               <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">About RCG Estates</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
-              Building With Purpose,<br />
-              <span className="text-[#0A3594]">One Person, Lot to Keys</span>
+              One Builder.<br />
+              <span className="text-[#0A3594]">From the Lot to the Keys.</span>
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">{companyInfo.about}</p>
           </motion.div>
@@ -256,7 +256,7 @@ export default function AboutPage() {
                 <span className="text-[#0A3594] text-[11px] font-semibold tracking-[.24em] uppercase">Service Area</span>
               </div>
               <h2 className="text-3xl font-bold text-[#111827] tracking-tight mb-4 leading-tight">
-                Your Dream, Designed for the Valley.<br />Built for You.
+                Building Custom Homes Across the Rio Grande Valley
               </h2>
               <p className="text-gray-400 leading-relaxed mb-6 text-sm">
                 We proudly serve clients in McAllen, Pharr, Mission, Harlingen, Brownsville, and surrounding South Texas areas.

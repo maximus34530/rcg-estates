@@ -98,9 +98,9 @@ export default function HomePage() {
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}>
               <div className="mb-5">
-                <a href="#contact"
+                  <a href="#contact"
                   className="btn-glow inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-base">
-                  Contact Us <ArrowRight className="w-4 h-4" />
+                  Start With a Free Call <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </motion.div>
@@ -376,10 +376,10 @@ export default function HomePage() {
             <FadeUp delay={0.1} className="lg:col-span-5">
               <div className="border border-white/10 divide-y divide-white/10">
                 {[
-                  { icon: BadgeCheck, label: "Licensed TX Real Estate Agent", sub: "Represents you on the lot purchase — not just the build" },
+                  { icon: BadgeCheck, label: "Licensed Texas Real Estate Agent", sub: "Represents you on the lot purchase, not just the build" },
                   { icon: BadgeCheck, label: "Custom Home Builder", sub: "Foundation through finish, with weekly progress updates" },
                   { icon: BadgeCheck, label: "Royal Decor Gallery Partner", sub: "Finish selections at 4003 W US Hwy 83, McAllen" },
-                  { icon: BadgeCheck, label: "RGV Local", sub: "Knows RGV soil, permits, and which lots are worth buying" },
+                  { icon: BadgeCheck, label: "Built and Based in the RGV", sub: "Knows local soil, permits, and which lots are worth buying" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4 px-6 py-5">
                     <item.icon className="w-5 h-5 text-[#6B93D6] shrink-0 mt-0.5" />
@@ -401,7 +401,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
             <FadeUp>
               <SectionLabel text="Build Journal" />
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] tracking-tight">Building Smarter Starts Here</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] tracking-tight">Before You Break Ground</h2>
             </FadeUp>
             <FadeUp>
               <Link href="/blog"

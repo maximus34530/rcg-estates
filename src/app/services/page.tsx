@@ -5,8 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import {
-  Home, PencilRuler, Wrench, MapPin, ClipboardList,
-  BarChart3, ArrowRight, CheckCircle, Phone,
+  Home, PencilRuler, ClipboardList,
+  ArrowRight, CheckCircle, Phone,
 } from "lucide-react";
 import { services, companyInfo } from "@/data/mockData";
 
@@ -27,7 +27,7 @@ function FadeUp({
 }
 
 const iconMap: Record<string, React.ElementType> = {
-  Home, PencilRuler, Wrench, MapPin, ClipboardList, BarChart3,
+  Home, PencilRuler, ClipboardList,
 };
 
 const serviceStats = companyInfo.stats;
@@ -55,9 +55,7 @@ export default function ServicesPage() {
               Full-Scope Services for Every Stage of Your Build
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed">
-              From raw land acquisition to the final walkthrough, RCG Estates
-              provides end-to-end services purpose-built for the Rio Grande
-              Valley&apos;s unique construction landscape.
+              From finding your lot to handing over the keys, every phase is managed by one person who knows the RGV.
             </p>
           </motion.div>
         </div>
@@ -97,7 +95,7 @@ export default function ServicesPage() {
             </h2>
           </FadeUp>
 
-          <div className="border border-neutral-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.07)] transition-all duration-500 ease-out grid grid-cols-1 lg:grid-cols-2 divide-y divide-x-0 lg:divide-x lg:divide-y-0 divide-neutral-100">
+          <div className="border border-neutral-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.07)] transition-all duration-500 ease-out grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-neutral-100">
             {services.map((service, i) => {
               const Icon = iconMap[service.icon] || Home;
               return (
@@ -150,8 +148,8 @@ export default function ServicesPage() {
           {/* Proof bar */}
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/8 border-b border-white/8">
             {[
-              { label: "Licensed Texas Real Estate Agent", sub: "Representing you on the land purchase — no extra fees" },
-              { label: "Custom Home Builder — RGV", sub: "Managing every phase from permit to final walkthrough" },
+              { label: "Licensed Texas Real Estate Agent", sub: "Representing you on the land purchase, no separate agent fee" },
+              { label: "Custom Home Builder in the RGV", sub: "Managing every phase from permit to final walkthrough" },
               { label: "Single Point of Contact", sub: "From raw lot to closed sale, one professional, no handoffs" },
             ].map((item) => (
               <div key={item.label} className="px-8 py-7">
@@ -193,10 +191,10 @@ export default function ServicesPage() {
             <div className="lg:col-span-5">
               <div className="border border-white/10 divide-y divide-white/10">
                 {[
-                  { credential: "Licensed Texas Real Estate Agent", note: "RE/MAX Platinum RGV · Imperio Real Estate" },
-                  { credential: "Custom Home Builder — RGV", note: "6 completed builds in McAllen and Mission — see the portfolio" },
-                  { credential: "Royal Decor Gallery Partner", note: "Exclusive access to Italian luxury finishes & hardware" },
-                  { credential: "RGV Land & Lot Expert", note: "Geotechnical, zoning, and flood zone evaluation" },
+                  { credential: "Licensed Texas Real Estate Agent", note: "RE/MAX Platinum RGV and Imperio Real Estate" },
+                  { credential: "Custom Home Builder in the RGV", note: "6 completed builds in McAllen and Mission. See the portfolio." },
+                  { credential: "Royal Decor Gallery Partner", note: "Exclusive access to Italian luxury finishes and hardware" },
+                  { credential: "RGV Land and Lot Expert", note: "Geotechnical, zoning, and flood zone evaluation" },
                 ].map((item) => (
                   <div key={item.credential} className="px-6 py-5 flex items-start gap-4">
                     <CheckCircle className="w-5 h-5 text-[#6B93D6] mt-0.5 shrink-0" />

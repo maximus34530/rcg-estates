@@ -32,7 +32,6 @@ const quickLinks = [
 const serviceLinks = [
   "Custom Home Builds",
   "Design & Planning",
-  "Luxury Renovations",
   "Real Estate Advisory",
   "Pre-Construction",
 ];

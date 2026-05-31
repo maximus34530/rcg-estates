@@ -84,15 +84,13 @@ export default function ContactPage() {
           <div className="lg:col-span-5">
             <FadeUp>
               <p className="text-[#6B93D6] text-xs font-mono tracking-[.22em] uppercase mb-4">
-                — Direct Contact
+                Direct Contact
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight tracking-tight mb-4">
                 One Call.<br />One Builder.<br />Zero Runaround.
               </h2>
               <p className="text-gray-400 leading-relaxed text-sm mb-10">
-                Grand-scale living rooms, custom hidden walk-in pantries, and signature
-                ambient-lit modern architectural details — tailored to your lifestyle
-                from the very first conversation.
+                Raul reviews every inquiry personally. Whether you have a lot picked out or just a budget in mind, tell us where you are and you will get an honest answer within one business day.
               </p>
             </FadeUp>
 
@@ -189,11 +187,10 @@ export default function ContactPage() {
                 <span className="text-[#0A3594] text-[11px] font-semibold tracking-[.24em] uppercase">Service Area</span>
               </div>
               <h2 className="text-3xl font-bold text-[#111827] tracking-tight leading-tight mb-4">
-                We Build Across the Rio Grande Valley
+                McAllen is Home. The Whole Valley is Our Territory.
               </h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-8">
-                If you&apos;re in South Texas, you&apos;re in our neighborhood. RCG Estates serves clients
-                across the entire Rio Grande Valley — from McAllen to Brownsville and everywhere in between.
+                We are based in McAllen and take on projects throughout the Rio Grande Valley. If you have a lot anywhere in South Texas, call us and we will tell you straight whether it makes sense to build.
               </p>
 
               <div className="space-y-0 divide-y divide-neutral-100 border border-neutral-100">
@@ -225,7 +222,7 @@ export default function ContactPage() {
             <FadeUp delay={0.1} className="lg:col-span-8">
               <div className="relative w-full overflow-hidden border border-neutral-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)]" style={{ height: 480 }}>
                 <iframe
-                  src="https://maps.google.com/maps?q=RCG+Estates+McAllen+TX&t=&z=15&ie=UTF8&iwloc=B&output=embed"
+                  src="https://maps.google.com/maps?q=McAllen,+TX&t=&z=11&ie=UTF8&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -233,11 +230,6 @@ export default function ContactPage() {
                   referrerPolicy="no-referrer-when-downgrade"
                   title="RCG Estates Service Area — Rio Grande Valley, Texas"
                 />
-                {/* Overlay label */}
-                <div className="absolute top-4 left-4 bg-[#111827]/90 backdrop-blur-sm border border-white/10 px-4 py-2.5">
-                  <p className="text-white text-xs font-semibold uppercase tracking-widest">RGV Service Area</p>
-                  <p className="text-white/40 text-[10px] font-mono mt-0.5">Rio Grande Valley · Texas</p>
-                </div>
               </div>
             </FadeUp>
 
