@@ -53,6 +53,7 @@ export default function Navbar() {
                 alt="RCG Estates logo"
                 width={120}
                 height={76}
+                unoptimized
                 className="h-9 w-auto object-contain shrink-0"
                 priority
               />

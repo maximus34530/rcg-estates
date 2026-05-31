@@ -68,6 +68,7 @@ export default function Footer() {
                 alt="RCG Estates logo"
                 width={100}
                 height={63}
+                unoptimized
                 className="h-8 w-auto object-contain shrink-0"
               />
             <div className="flex flex-col leading-none">
