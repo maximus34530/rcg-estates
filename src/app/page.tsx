@@ -13,9 +13,9 @@ import {
 } from "@/data/mockData";
 
 const REELS: { url: string; caption: string }[] = [
-  { url: "https://www.instagram.com/reel/DVuTP5NjTbE/", caption: "Custom home build — Rio Grande Valley" },
+  { url: "https://www.instagram.com/p/DW5InDDDHVT/", caption: "Custom home build — Rio Grande Valley" },
   { url: "https://www.instagram.com/reel/DTV7Rn1gdaS/", caption: "Interior finish walkthrough" },
-  { url: "https://www.instagram.com/reel/DWxZF05jIn3/", caption: "From foundation to final keys" },
+  { url: "https://www.instagram.com/p/DUWNx6IkcTV/", caption: "From foundation to final keys" },
 ];
 
 /* ─── Scroll-reveal ────────────────────────────────────────────────────── */
@@ -246,16 +246,56 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right 5 cols — staggered images */}
+            {/* Right 5 cols — Raul story photos */}
             <div className="lg:col-span-5 pt-4">
-              <FadeUp delay={0.18} className="mb-5">
-                <Frame src={images.trinity816[2]} alt="816 N Trinity interior" className="w-full h-72 rounded-none" />
+
+              {/* Top: Signing at title company — portrait, full width */}
+              <FadeUp delay={0.18} className="mb-4">
+                <div className="relative w-full h-80 overflow-hidden group">
+                  <Image src="/raul-signing.jpg" alt="Raul Ceron signing at closing table"
+                    fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" sizes="(max-width:1024px) 100vw,40vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/60 to-transparent" />
+                  <div className="absolute bottom-3 left-4">
+                    <span className="text-white text-[10px] font-mono tracking-widest uppercase opacity-80">At the Closing Table</span>
+                  </div>
+                </div>
               </FadeUp>
-              <FadeUp delay={0.28} className="ml-10 mb-5">
-                <Frame src={images.bette1007[1]} alt="1007 Bette exterior" className="w-4/5 h-48 rounded-none" />
+
+              {/* Middle row: site photo + phone photo side by side */}
+              <FadeUp delay={0.26} className="mb-4 grid grid-cols-2 gap-4">
+                <div className="relative h-52 overflow-hidden group">
+                  <Image src="/raul-site.jpg" alt="Raul Ceron at construction site"
+                    fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="20vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/50 to-transparent" />
+                  <div className="absolute bottom-2 left-3">
+                    <span className="text-white text-[10px] font-mono tracking-widest uppercase opacity-80">On Site</span>
+                  </div>
+                </div>
+                <div className="relative h-52 overflow-hidden group">
+                  <Image src="/raul-phone.jpg" alt="Raul Ceron at desk"
+                    fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" sizes="20vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/50 to-transparent" />
+                  <div className="absolute bottom-2 left-3">
+                    <span className="text-white text-[10px] font-mono tracking-widest uppercase opacity-80">Client Calls</span>
+                  </div>
+                </div>
               </FadeUp>
-              <FadeUp delay={0.38}>
-                <div className="grid grid-cols-3 border-t border-neutral-100 pt-6 gap-0">
+
+              {/* Bottom: crutches — dedication shot */}
+              <FadeUp delay={0.34} className="mb-6">
+                <div className="relative w-full h-56 overflow-hidden group">
+                  <Image src="/raul-crutches.jpg" alt="Raul Ceron on job site"
+                    fill className="object-cover object-center transition-transform duration-700 group-hover:scale-105" sizes="(max-width:1024px) 100vw,40vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/65 to-transparent" />
+                  <div className="absolute bottom-3 left-4 right-4">
+                    <span className="text-white text-[10px] font-mono tracking-widest uppercase opacity-80">Nothing Stops the Build</span>
+                  </div>
+                </div>
+              </FadeUp>
+
+              {/* Stats */}
+              <FadeUp delay={0.4}>
+                <div className="grid grid-cols-3 border-t border-neutral-100 pt-5 gap-0">
                   {[
                     { value: "50+", label: "Homes Built" },
                     { value: "5", label: "RGV Cities" },
