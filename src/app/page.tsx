@@ -97,28 +97,33 @@ export default function HomePage() {
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.22 }}
-              className="text-white/70 text-lg leading-relaxed mb-4 max-w-xl">
+              className="text-white/70 text-lg leading-relaxed mb-10 max-w-xl">
               {companyInfo.subTagline}
-            </motion.p>
-            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-white/55 text-base leading-relaxed mb-10 max-w-xl">
-              Designed and built by{" "}
-              <span className="text-white font-semibold">Raul Ceron</span> — licensed Texas
-              real estate agent and custom builder — from pre-approval to move-in.
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.38 }}
-              className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact"
-                className="btn-glow inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-base">
-                Schedule a Free Consultation <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link href="/projects"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/15 hover:border-white/30 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl transition-all text-base">
-                View Our Work
-              </Link>
+              transition={{ duration: 0.5, delay: 0.3 }}>
+              {/* Scarcity nudge */}
+              <div className="flex items-center gap-2 mb-5 text-white/55 text-xs font-mono tracking-wide">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse shrink-0" />
+                Currently accepting new 2025 builds
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 mb-5">
+                <Link href="/contact"
+                  className="btn-glow inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-base">
+                  Get a Free Quote <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link href="/projects"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/15 hover:border-white/30 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl transition-all text-base">
+                  View Our Work
+                </Link>
+              </div>
+              {/* Phone inline */}
+              <div className="flex items-center gap-2 text-white/45 text-sm">
+                <Phone className="w-3.5 h-3.5" />
+                <span>Or call Raul directly:</span>
+                <a href="tel:+19564087136" className="text-white/80 font-medium hover:text-white transition-colors">(956) 408-7136</a>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -168,8 +173,7 @@ export default function HomePage() {
                   <Quote className="w-5 h-5 text-[#0A3594] shrink-0 mt-0.5" />
                   <div>
                     <p className="text-[#111827] font-medium leading-relaxed text-sm">
-                      "I built RCG Estates to give Rio Grande Valley families something that didn't exist — a builder
-                      who is also your licensed agent, giving you one trusted professional from the lot to the closing table."
+                      "One builder, one agent, one person — from the lot to the closing table."
                     </p>
                     <p className="text-xs text-[#0A3594] font-mono font-semibold tracking-widest mt-3 uppercase">
                       — Raul Ceron, Founder
@@ -406,26 +410,12 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── REVIEWS MARQUEE (live Google data) ────────────────────────────── */}
+      <ReviewsMarquee />
+
       {/* ── UVP — Charcoal with credential grid ──────────────────────────── */}
       <section className="bg-[#111827]">
         <div className="max-w-7xl mx-auto">
-          {/* Proof bar */}
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 divide-x-0 md:divide-x divide-white/8 border-b border-white/8">
-            {[
-              { value: "50+", label: "Custom Homes Built", sub: "Across the Rio Grande Valley since founding" },
-              { value: "1 Pro", label: "Agent + Builder", sub: "Raul handles land, construction, and sale" },
-              { value: "100%", label: "Client Referral Rate", sub: "Every client came from a prior client" },
-            ].map((item, i) => (
-              <FadeUp key={item.label} delay={i * 0.08}>
-                <div className="px-10 py-10">
-                  <div className="text-4xl font-bold text-white tracking-tight mb-1">{item.value}</div>
-                  <div className="text-gray-200 font-semibold text-sm mb-1">{item.label}</div>
-                  <div className="text-gray-500 text-xs leading-relaxed">{item.sub}</div>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
-
           {/* UVP body */}
           <div className="px-4 sm:px-6 lg:px-8 py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <FadeUp className="lg:col-span-7">
@@ -563,9 +553,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 6. REVIEWS MARQUEE (live Google data) ────────────────────────── */}
-      <ReviewsMarquee />
-
       {/* ── 7. BLOG PREVIEW ───────────────────────────────────────────────── */}
       <section className="py-24 bg-white border-t border-neutral-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -617,13 +604,12 @@ export default function HomePage() {
               Let's Build Your Dream<br />Home, Together
             </h2>
             <p className="text-gray-400 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
-              Whether you're ready to break ground or just exploring what's possible — Raul is ready to listen.
-              No pressure, no commitment.
+              Ready to build? Raul is available for a free, no-pressure consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact"
                 className="btn-glow inline-flex items-center justify-center gap-2 px-9 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-bold rounded-xl transition-all text-base">
-                Schedule a Free Consultation <ArrowRight className="w-4 h-4" />
+                Get a Free Quote <ArrowRight className="w-4 h-4" />
               </Link>
               <a href="tel:+19564087136"
                 className="inline-flex items-center justify-center gap-2 px-9 py-4 border border-white/15 hover:border-white/30 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl transition-all text-base">

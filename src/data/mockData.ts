@@ -121,9 +121,9 @@ export const owner = {
 export const companyInfo = {
   name: "RCG Estates Construction & Development",
   tagline: "Custom Homes Built for Life in the Rio Grande Valley",
-  subTagline: "Expert Craftsmanship | Local Knowledge | Personalized Design",
-  about: `At RCG Estates Construction & Development, we specialize in building premium custom homes and commercial spaces across the Rio Grande Valley. With a strong reputation in McAllen, Pharr, Mission, Harlingen, and Brownsville, we bring together expert design, skilled craftsmanship, and personalized service — ensuring every project meets your goals and exceeds your expectations.`,
-  mission: `We believe every family deserves a home that's truly theirs — built around their lifestyle, built to last, and guided by the kind of local knowledge that only comes from years of working in South Texas soil.`,
+  subTagline: "Your builder and your agent — one person, from lot to keys.",
+  about: `RCG Estates builds premium custom homes across the Rio Grande Valley — designed around your lifestyle, crafted with Italian-grade finishes, and guided by Raul Ceron from first conversation to closing table.`,
+  mission: `Built to last. Built for you. Built in the RGV.`,
   founded: "2024",
   principles: [
     {
@@ -147,7 +147,7 @@ export const companyInfo = {
     { value: "50+", label: "Custom Homes Built" },
     { value: "5", label: "RGV Cities Served" },
     { value: "100%", label: "Client Referral Rate" },
-    { value: "Est. '24", label: "Founded in RGV" },
+    { value: "5.0★", label: "Google Rating" },
   ],
   cities: ["McAllen", "Mission", "Pharr", "Harlingen", "Brownsville", "Edinburg"],
   hours: {
@@ -432,26 +432,26 @@ export const processSteps = [
   {
     step: "01",
     title: "Get Pre-Approved",
-    desc: "We connect you with trusted local lenders and walk you through construction financing so you build with confidence, not guesswork.",
-    detail: "As your licensed agent, Raul can also represent you on the land purchase — no extra fees.",
+    desc: "Connect with trusted local lenders and lock in construction financing before a single design decision is made.",
+    detail: "As your licensed agent, Raul represents you on the land purchase — no extra fees.",
   },
   {
     step: "02",
     title: "Choose Your Location",
-    desc: "We help you secure the ideal lot — evaluating soil, utilities, flood zones, setbacks, and neighborhood trajectory before you commit.",
-    detail: "We've walked hundreds of RGV parcels. Bad lots cost far more than their purchase price.",
+    desc: "We evaluate soil, utilities, flood zones, and setbacks on every parcel before you commit a dollar.",
+    detail: "Bad lots cost far more than their purchase price.",
   },
   {
     step: "03",
     title: "Design Your Home",
-    desc: "Collaborate with our architectural partners to develop a floor plan built around your lifestyle, then source premium finishes through Royal Decor Gallery.",
-    detail: "Every design decision is budget-aligned from day one. No surprises at bid time.",
+    desc: "Design your floor plan with our architects, then select Italian-grade finishes through Royal Decor Gallery.",
+    detail: "Every decision is budget-aligned from day one. No surprises at bid time.",
   },
   {
     step: "04",
     title: "Build With Confidence",
-    desc: "We manage every subcontractor, inspection, and milestone — keeping you informed weekly. When complete, Raul can list and sell the property as your licensed agent.",
-    detail: "One professional. From raw lot to sold sign. That's the RCG difference.",
+    desc: "We manage every subcontractor and inspection with weekly updates. Raul can also list and sell when you're ready.",
+    detail: "One professional. From raw lot to sold sign.",
   },
 ];
 
