@@ -68,8 +68,8 @@ export default function ContactPage() {
             sizes="100vw"
           />
           {/* Multi-layer overlay for depth */}
-          <div className="absolute inset-0 bg-[#0D1117]/72" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0D1117]/90 via-[#0D1117]/55 to-[#0D1117]/30" />
+          <div className="absolute inset-0 bg-[#0D1117]/58" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0D1117]/80 via-[#0D1117]/45 to-[#0D1117]/22" />
           <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#111827] to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#111827] to-transparent" />
           {/* Ambient blue glow */}
@@ -220,7 +220,7 @@ export default function ContactPage() {
             <FadeUp delay={0.1} className="lg:col-span-8">
               <div className="relative w-full overflow-hidden border border-neutral-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)]" style={{ height: 480 }}>
                 <iframe
-                  src="https://maps.google.com/maps?q=McAllen,+TX&t=&z=11&ie=UTF8&output=embed"
+                  src="https://maps.google.com/maps?q=RCG+Estates+Construction+%26+Development,+McAllen,+TX&t=&z=9&ie=UTF8&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

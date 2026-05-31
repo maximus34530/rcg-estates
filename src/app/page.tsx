@@ -1,12 +1,12 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
 import { motion, useInView } from "framer-motion";
 import {
-  ArrowRight, MapPin, Star, CheckCircle, Quote, BadgeCheck,
+  ArrowRight, MapPin, Star, CheckCircle, Quote, BadgeCheck, Volume2, VolumeX,
 } from "lucide-react";
 import {
   companyInfo, owner, processSteps, projects, blogPosts, images, videos,
@@ -59,6 +59,17 @@ function Frame({
 
 /* ═══════════════════════════════════════════════════════════════════════════ */
 export default function HomePage() {
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const [unmutedIndex, setUnmutedIndex] = useState<number | null>(null);
+
+  function handleToggleMute(i: number) {
+    const next = unmutedIndex === i ? null : i;
+    videoRefs.current.forEach((el, idx) => {
+      if (el) el.muted = next !== idx;
+    });
+    setUnmutedIndex(next);
+  }
+
   return (
     <>
       {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
@@ -310,6 +321,7 @@ export default function HomePage() {
               {videos.map((v, i) => (
                 <div key={i} className="bg-black relative overflow-hidden group">
                   <video
+                    ref={(el) => { videoRefs.current[i] = el; }}
                     src={v.src}
                     autoPlay
                     muted
@@ -321,6 +333,16 @@ export default function HomePage() {
                   <span className="absolute bottom-3 left-3 text-[10px] font-mono tracking-widest uppercase text-white/50">
                     {v.label}
                   </span>
+                  <button
+                    onClick={() => handleToggleMute(i)}
+                    aria-label={unmutedIndex === i ? "Mute video" : "Unmute video"}
+                    className="absolute bottom-3 right-3 z-10 flex items-center justify-center w-8 h-8 rounded-full bg-black/60 border border-white/20 text-white backdrop-blur-sm hover:bg-black/80 hover:border-white/40 transition-all duration-200"
+                  >
+                    {unmutedIndex === i
+                      ? <Volume2 size={14} />
+                      : <VolumeX size={14} />
+                    }
+                  </button>
                 </div>
               ))}
             </div>
