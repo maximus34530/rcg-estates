@@ -251,47 +251,12 @@ export default function HomePage() {
             {/* Right 5 cols — Raul story photos */}
             <div className="lg:col-span-5 pt-4">
 
-              {/* Top: Signing at title company — portrait, full width */}
-              <FadeUp delay={0.18} className="mb-4">
-                <div className="relative w-full h-80 overflow-hidden group">
-                  <Image src="/raul-signing.jpg" alt="Raul Ceron signing at closing table"
+              {/* Raul portrait */}
+              <FadeUp delay={0.18} className="mb-6">
+                <div className="relative w-full overflow-hidden group" style={{ aspectRatio: "3/4" }}>
+                  <Image src="/raul-dante.jpg" alt="Raul Ceron — RCG Estates"
                     fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" sizes="(max-width:1024px) 100vw,40vw" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/60 to-transparent" />
-                  <div className="absolute bottom-3 left-4">
-                    <span className="text-white text-[10px] font-mono tracking-widest uppercase opacity-80">At the Closing Table</span>
-                  </div>
-                </div>
-              </FadeUp>
-
-              {/* Middle row: site photo + phone photo side by side */}
-              <FadeUp delay={0.26} className="mb-4 grid grid-cols-2 gap-4">
-                <div className="relative h-52 overflow-hidden group">
-                  <Image src="/raul-site.jpg" alt="Raul Ceron at construction site"
-                    fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="20vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/50 to-transparent" />
-                  <div className="absolute bottom-2 left-3">
-                    <span className="text-white text-[10px] font-mono tracking-widest uppercase opacity-80">On Site</span>
-                  </div>
-                </div>
-                <div className="relative h-52 overflow-hidden group">
-                  <Image src="/raul-phone.jpg" alt="Raul Ceron at desk"
-                    fill className="object-cover object-top transition-transform duration-700 group-hover:scale-105" sizes="20vw" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/50 to-transparent" />
-                  <div className="absolute bottom-2 left-3">
-                    <span className="text-white text-[10px] font-mono tracking-widest uppercase opacity-80">Client Calls</span>
-                  </div>
-                </div>
-              </FadeUp>
-
-              {/* Bottom: crutches — dedication shot */}
-              <FadeUp delay={0.34} className="mb-6">
-                <div className="relative w-full h-56 overflow-hidden group">
-                  <Image src="/raul-crutches.jpg" alt="Raul Ceron on job site"
-                    fill className="object-cover object-center transition-transform duration-700 group-hover:scale-105" sizes="(max-width:1024px) 100vw,40vw" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/65 to-transparent" />
-                  <div className="absolute bottom-3 left-4 right-4">
-                    <span className="text-white text-[10px] font-mono tracking-widest uppercase opacity-80">Nothing Stops the Build</span>
-                  </div>
                 </div>
               </FadeUp>
 
