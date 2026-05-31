@@ -20,14 +20,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "RCG Estates | Custom Home Builder — Rio Grande Valley",
   description:
-    "Licensed agent and custom home builder in McAllen and Mission, TX. One person from lot purchase through construction to move-in.",
+    "Custom home builder in McAllen and Mission, TX. Real homes at real addresses — Italian luxury finishes, local RGV expertise, from lot to move-in.",
   keywords:
     "custom home builder RGV, Rio Grande Valley real estate, McAllen homes, luxury homes RGV, RCG Estates",
   metadataBase: new URL("https://rcgestatesconstruction.com"),
   openGraph: {
     title: "RCG Estates | Custom Home Builder — Rio Grande Valley",
     description:
-      "Custom home builder in the Rio Grande Valley. Licensed agent and builder — one person from lot to keys.",
+      "Custom home builder in the Rio Grande Valley. Real addresses, Italian finishes, and deep local expertise — lot to move-in.",
     type: "website",
     url: "https://rcgestatesconstruction.com",
     siteName: "RCG Estates",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RCG Estates | Custom Home Builder — Rio Grande Valley",
     description:
-      "Custom home builder in the Rio Grande Valley. Licensed agent and builder — one person from lot to keys.",
+      "Custom home builder in the Rio Grande Valley. Real addresses, Italian finishes, and deep local expertise — lot to move-in.",
     images: ["/og-image.png"],
   },
   icons: {

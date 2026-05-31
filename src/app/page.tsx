@@ -135,8 +135,8 @@ export default function HomePage() {
               <FadeUp><SectionLabel text="Who We Are" /></FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="text-4xl sm:text-5xl font-bold text-[#111827] leading-tight tracking-tight mb-7">
-                  One Person Runs Your Build.<br />
-                  <span className="text-[#0A3594]">From the Lot to Move-In.</span>
+                  Custom Homes Built Right<br />
+                  <span className="text-[#0A3594]">For the Rio Grande Valley.</span>
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
@@ -150,7 +150,7 @@ export default function HomePage() {
                   <Quote className="w-5 h-5 text-[#0A3594] shrink-0 mt-0.5" />
                   <div>
                     <p className="text-[#111827] font-medium leading-relaxed text-sm">
-                      "One builder, one agent, one person — from the lot to the closing table."
+                      "Every home we build is at a real address you can drive to. That&apos;s the standard we hold ourselves to."
                     </p>
                     <p className="text-xs text-[#0A3594] font-mono font-semibold tracking-widest mt-3 uppercase">
                       — Raul Ceron, Founder
@@ -364,21 +364,22 @@ export default function HomePage() {
                 <span className="text-white/40 text-[11px] font-semibold tracking-[.24em] uppercase">The RCG Difference</span>
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-                Why Hire a Builder<br />Who&apos;s Also Your Agent?
+                Why Families in the RGV<br />Choose RCG Estates
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                With most contractors, you buy the lot through one person and build through another —
-                and when there&apos;s a problem, each one points at the other. Raul is licensed to represent
-                you on the land purchase and to manage the construction. One person accountable for the whole thing.
+                Every home we&apos;ve built is at a real address in McAllen or Mission — a home you can
+                drive to, walk through, and inspect before you ever sign anything. That transparency,
+                combined with Italian luxury finishes and deep local knowledge of RGV land and permits,
+                is what makes RCG Estates different.
               </p>
             </FadeUp>
 
             <FadeUp delay={0.1} className="lg:col-span-5">
               <div className="border border-white/10 divide-y divide-white/10">
                 {[
-                  { icon: BadgeCheck, label: "Licensed Texas Real Estate Agent", sub: "Represents you on the lot purchase, not just the build" },
-                  { icon: BadgeCheck, label: "Custom Home Builder", sub: "Foundation through finish, with weekly progress updates" },
-                  { icon: BadgeCheck, label: "Royal Decor Gallery Partner", sub: "Finish selections at 4003 W US Hwy 83, McAllen" },
+                  { icon: BadgeCheck, label: "Real Homes at Real Addresses", sub: "Every build in our portfolio has a verifiable address you can visit" },
+                  { icon: BadgeCheck, label: "Custom Home Builder — RGV", sub: "Foundation through finish, with progress updates throughout" },
+                  { icon: BadgeCheck, label: "Royal Decor Gallery Partner", sub: "Italian luxury finishes and artisan hardware in every build" },
                   { icon: BadgeCheck, label: "Built and Based in the RGV", sub: "Knows local soil, permits, and which lots are worth buying" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4 px-6 py-5">

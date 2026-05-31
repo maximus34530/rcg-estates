@@ -243,8 +243,8 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/8 py-12">
             {[
               { value: "24hr", label: "Response Goal", sub: "We aim to reply to every inquiry within one business day" },
-              { value: "6", label: "Completed Builds", sub: "McAllen and Mission — addresses in our portfolio" },
-              { value: "1", label: "Point of Contact", sub: "Licensed agent and builder — no handoffs between companies" },
+              { value: "$2.1M+", label: "In Custom Homes Built", sub: "McAllen and Mission — real addresses you can drive to" },
+              { value: "5★", label: "Google Rating", sub: "Verified reviews from real homeowners who've built with RCG Estates" },
             ].map((item) => (
               <div key={item.label} className="px-8 py-6 text-center md:text-left">
                 <div className="text-3xl font-bold text-white tracking-tight mb-1">{item.value}</div>

@@ -55,7 +55,7 @@ export default function ServicesPage() {
               Full-Scope Services for Every Stage of Your Build
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed">
-              From finding your lot to handing over the keys, every phase is managed by one person who knows the RGV.
+              From lot selection to final walkthrough — every phase handled with local RGV expertise and Italian-quality finishes.
             </p>
           </motion.div>
         </div>
@@ -148,9 +148,9 @@ export default function ServicesPage() {
           {/* Proof bar */}
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/8 border-b border-white/8">
             {[
-              { label: "Licensed Texas Real Estate Agent", sub: "Representing you on the land purchase, no separate agent fee" },
-              { label: "Custom Home Builder in the RGV", sub: "Managing every phase from permit to final walkthrough" },
-              { label: "Single Point of Contact", sub: "From raw lot to closed sale, one professional, no handoffs" },
+              { label: "Custom Home Builder — McAllen & Mission", sub: "Every build managed from permit to final walkthrough at a real address you can visit" },
+              { label: "Royal Decor Gallery Partner", sub: "Exclusive access to Italian luxury finishes and artisan hardware featured in every build" },
+              { label: "RGV Land & Lot Expert", sub: "Soil, zoning, flood zone, and setback evaluation before you commit a dollar" },
             ].map((item) => (
               <div key={item.label} className="px-8 py-7">
                 <div className="text-[10px] text-white/40 font-mono uppercase tracking-[.18em] mb-1.5">{item.label}</div>
@@ -167,13 +167,13 @@ export default function ServicesPage() {
                 <span className="text-white/40 text-[11px] font-semibold tracking-[.24em] uppercase">The RCG Difference</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-5 leading-tight">
-                One Professional.<br />Two Licenses.<br />Zero Handoffs.
+                Built in the RGV.<br />For the RGV.<br />At Every Price Point.
               </h2>
               <p className="text-gray-400 leading-relaxed mb-8 text-lg">
-                Raul Ceron is both a <strong className="text-white font-semibold">Licensed Texas Real Estate Agent</strong> and
-                a <strong className="text-white font-semibold">Custom Home Builder</strong>. That means he can represent you
-                on the land purchase, manage the entire build, and list the finished home — all under one roof,
-                with no extra fees or coordination overhead.
+                RCG Estates builds custom homes at real addresses in McAllen and Mission — homes you can
+                drive to and inspect before you commit. Every build features <strong className="text-white font-semibold">Italian luxury finishes</strong> through
+                our partnership with Royal Decor Gallery, and is backed by deep local knowledge of RGV
+                land, permits, and construction standards.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact"
@@ -192,9 +192,9 @@ export default function ServicesPage() {
               <div className="border border-white/10 divide-y divide-white/10">
                 {[
                   { credential: "Licensed Texas Real Estate Agent", note: "RE/MAX Platinum RGV and Imperio Real Estate" },
-                  { credential: "Custom Home Builder in the RGV", note: "6 completed builds in McAllen and Mission. See the portfolio." },
-                  { credential: "Royal Decor Gallery Partner", note: "Exclusive access to Italian luxury finishes and hardware" },
-                  { credential: "RGV Land and Lot Expert", note: "Geotechnical, zoning, and flood zone evaluation" },
+                  { credential: "Custom Home Builder — McAllen & Mission", note: "$2.1M+ in completed homes at real, verifiable addresses" },
+                  { credential: "Royal Decor Gallery Partner", note: "Exclusive access to Italian luxury finishes and artisan hardware" },
+                  { credential: "RGV Land and Lot Expert", note: "Geotechnical, zoning, and flood zone evaluation before you commit" },
                 ].map((item) => (
                   <div key={item.credential} className="px-6 py-5 flex items-start gap-4">
                     <CheckCircle className="w-5 h-5 text-[#6B93D6] mt-0.5 shrink-0" />

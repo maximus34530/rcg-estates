@@ -134,14 +134,14 @@ export const owner = {
 export const companyInfo = {
   name: "RCG Estates Construction & Development",
   tagline: "Custom Home Builder in the Rio Grande Valley",
-  subTagline: "Licensed agent and builder. One person from lot selection through construction to move-in.",
-  about: `If you've never built before, the hardest part isn't the construction — it's knowing who to trust, whether the lot is any good, and who's actually responsible when something goes wrong. Raul Ceron is a licensed Texas real estate agent and custom home builder. You work with one person for the land, the build, and the close.`,
+  subTagline: "Custom home builder in the Rio Grande Valley. From lot selection through construction to move-in.",
+  about: `If you've never built before, the hardest part isn't the construction — it's knowing who to trust, whether the lot is any good, and who's actually responsible when something goes wrong. Raul Ceron is a licensed Texas real estate agent and custom home builder with a portfolio of completed homes at real addresses in McAllen and Mission you can visit before you commit.`,
   mission: `Every home in our portfolio is at a real address you can drive to. That's the standard we hold ourselves to.`,
   founded: "2024",
   principles: [
     {
-      title: "One Person, Start to Finish",
-      desc: "No handoff between an agent who sold you the lot and a builder you've never met. Raul handles both.",
+      title: "Real Homes at Real Addresses",
+      desc: "Every build in our portfolio has a real address in McAllen or Mission you can drive to and inspect before you commit a dollar.",
     },
     {
       title: "Check the Lot Before You Buy",
@@ -157,10 +157,10 @@ export const companyInfo = {
     },
   ],
   stats: [
-    { value: "6", label: "Homes Built" },
-    { value: "1", label: "Point of Contact" },
-    { value: "0", label: "Handoffs to Other Firms" },
-    { value: "Free", label: "First Consultation" },
+    { value: "$2.1M+", label: "In Custom Homes Built" },
+    { value: "6", label: "Families' Dreams Made Real" },
+    { value: "5★", label: "Google Rating — Verified Reviews" },
+    { value: "Free", label: "First Call — Start Your Dream" },
   ],
   cities: ["McAllen", "Mission", "Pharr", "Harlingen", "Brownsville", "Edinburg"],
   hours: {
