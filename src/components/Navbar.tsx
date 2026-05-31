@@ -95,7 +95,7 @@ export default function Navbar() {
                 href="/contact"
                 className="btn-glow ml-4 px-5 py-2.5 bg-[#0A3594] hover:bg-[#072D82] text-white text-sm font-semibold rounded-lg transition-colors"
               >
-                Get a Quote
+                Contact Us
               </Link>
             </nav>
 
@@ -143,7 +143,7 @@ export default function Navbar() {
                 href="/contact"
                 className="mt-2 px-4 py-3 bg-[#0A3594] hover:bg-[#072D82] text-white text-sm font-semibold rounded-lg text-center transition-colors"
               >
-                Get a Quote
+                Contact Us
               </Link>
             </nav>
           </motion.div>
