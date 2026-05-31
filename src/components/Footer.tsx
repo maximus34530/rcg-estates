@@ -102,6 +102,18 @@ export default function Footer() {
             >
               <InstagramIcon className="w-4 h-4" />
             </a>
+            <a
+              href="https://linktr.ee/rceron.tx"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Raul Ceron on Linktree"
+              className="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 hover:bg-[#0A3594] text-gray-500 hover:text-white transition-all"
+            >
+              {/* Linktree icon */}
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M13.51 5.41 16.88 2l1.41 1.42-3.38 3.38 3.38 3.38-1.41 1.41-3.37-3.37-3.38 3.37-1.41-1.41 3.38-3.38L9.71 3.42 11.12 2l2.39 2.39v1.02ZM11.12 22l1.43-3.49h-4.1l1.42 3.49h1.25ZM9.09 17.09h5.82l1.59-3.89H7.5l1.59 3.89Z" />
+              </svg>
+            </a>
           </div>
         </div>
 

@@ -141,6 +141,14 @@ export default function ContactPage() {
                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                   </svg>
                 </a>
+                <a href="https://linktr.ee/rceron.tx"
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label="Raul Ceron on Linktree"
+                  className="w-10 h-10 rounded-lg border border-white/10 bg-white/5 hover:bg-[#1D52D4]/20 hover:border-[#1D52D4]/40 flex items-center justify-center transition-all">
+                  <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M13.51 5.41 16.88 2l1.41 1.42-3.38 3.38 3.38 3.38-1.41 1.41-3.37-3.37-3.38 3.37-1.41-1.41 3.38-3.38L9.71 3.42 11.12 2l2.39 2.39v1.02ZM11.12 22l1.43-3.49h-4.1l1.42 3.49h1.25ZM9.09 17.09h5.82l1.59-3.89H7.5l1.59 3.89Z" />
+                  </svg>
+                </a>
               </div>
             </FadeUp>
           </div>
