@@ -177,6 +177,74 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* ── Service Area Map ──────────────────────────────────────────────── */}
+      <section className="bg-white border-t border-neutral-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+            {/* Left — copy */}
+            <FadeUp className="lg:col-span-4">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="block w-8 h-[2px] bg-[#1D52D4]" />
+                <span className="text-[#0A3594] text-[11px] font-semibold tracking-[.24em] uppercase">Service Area</span>
+              </div>
+              <h2 className="text-3xl font-bold text-[#111827] tracking-tight leading-tight mb-4">
+                We Build Across the Rio Grande Valley
+              </h2>
+              <p className="text-gray-500 text-sm leading-relaxed mb-8">
+                If you&apos;re in South Texas, you&apos;re in our neighborhood. RCG Estates serves clients
+                across the entire Rio Grande Valley — from McAllen to Brownsville and everywhere in between.
+              </p>
+
+              <div className="space-y-0 divide-y divide-neutral-100 border border-neutral-100">
+                {[
+                  { city: "McAllen", note: "Primary market · Most active builds" },
+                  { city: "Mission", note: "Bette St collection & surrounding areas" },
+                  { city: "Harlingen", note: "Growing residential pipeline" },
+                  { city: "Pharr", note: "Active custom home projects" },
+                  { city: "Edinburg", note: "Available for new projects" },
+                  { city: "Brownsville", note: "South Valley coverage" },
+                ].map(({ city, note }) => (
+                  <div key={city} className="flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors">
+                    <span className="text-sm font-semibold text-[#111827]">{city}</span>
+                    <span className="text-xs text-gray-400">{note}</span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-xs text-gray-400 mt-4 leading-relaxed">
+                Don&apos;t see your city? Call us —{" "}
+                <a href="tel:+19564087136" className="text-[#0A3594] font-medium hover:underline">
+                  (956) 408-7136
+                </a>
+                . We evaluate every project individually.
+              </p>
+            </FadeUp>
+
+            {/* Right — map */}
+            <FadeUp delay={0.1} className="lg:col-span-8">
+              <div className="relative w-full overflow-hidden border border-neutral-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)]" style={{ height: 480 }}>
+                <iframe
+                  src="https://maps.google.com/maps?q=Rio+Grande+Valley+Texas&t=&z=10&ie=UTF8&iwloc=B&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="RCG Estates Service Area — Rio Grande Valley, Texas"
+                />
+                {/* Overlay label */}
+                <div className="absolute top-4 left-4 bg-[#111827]/90 backdrop-blur-sm border border-white/10 px-4 py-2.5">
+                  <p className="text-white text-xs font-semibold uppercase tracking-widest">RGV Service Area</p>
+                  <p className="text-white/40 text-[10px] font-mono mt-0.5">Rio Grande Valley · Texas</p>
+                </div>
+              </div>
+            </FadeUp>
+
+          </div>
+        </div>
+      </section>
+
       {/* ── Trust bar ─────────────────────────────────────────────────────── */}
       <section className="bg-[#111827] border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
