@@ -225,7 +225,7 @@ export default function ContactPage() {
             <FadeUp delay={0.1} className="lg:col-span-8">
               <div className="relative w-full overflow-hidden border border-neutral-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)]" style={{ height: 480 }}>
                 <iframe
-                  src="https://maps.google.com/maps?q=Rio+Grande+Valley+Texas&t=&z=10&ie=UTF8&iwloc=B&output=embed"
+                  src="https://maps.google.com/maps?q=RCG+Estates+McAllen+TX&t=&z=15&ie=UTF8&iwloc=B&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
