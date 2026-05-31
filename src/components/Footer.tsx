@@ -45,7 +45,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-white font-semibold text-lg">Ready to talk about your lot?</p>
-            <p className="text-gray-500 text-sm mt-0.5">Tell us where you are in the process — no commitment required.</p>
+            <p className="text-gray-500 text-sm mt-0.5">Tell us where you are in the process.</p>
           </div>
           <Link
             href="/contact"

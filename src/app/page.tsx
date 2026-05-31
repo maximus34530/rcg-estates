@@ -9,7 +9,7 @@ import {
   ArrowRight, MapPin, Star, CheckCircle, Quote, BadgeCheck,
 } from "lucide-react";
 import {
-  companyInfo, owner, processSteps, projects, blogPosts, images,
+  companyInfo, owner, processSteps, projects, blogPosts, images, videos,
 } from "@/data/mockData";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 import ContactForm from "@/components/ContactForm";
@@ -150,7 +150,7 @@ export default function HomePage() {
                   <Quote className="w-5 h-5 text-[#0A3594] shrink-0 mt-0.5" />
                   <div>
                     <p className="text-[#111827] font-medium leading-relaxed text-sm">
-                      "Every home we build is at a real address you can drive to. That&apos;s the standard we hold ourselves to."
+                      &ldquo;Every home in our portfolio has a street address in McAllen or Mission. Walk up to the door. Talk to the neighbor. That&apos;s our portfolio. Not renders, not promises.&rdquo;
                     </p>
                     <p className="text-xs text-[#0A3594] font-mono font-semibold tracking-widest mt-3 uppercase">
                       — Raul Ceron, Founder
@@ -221,7 +221,7 @@ export default function HomePage() {
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">See What We've Built</h2>
               <p className="text-white/40 mt-2 max-w-xl text-sm leading-relaxed">
-                Real homes at real addresses in McAllen and Mission — including the Bette Street collection
+                Real homes at real addresses in McAllen and Mission, including the Bette Street collection
                 and 816 N Trinity. Drive by them before you hire anyone.
               </p>
             </FadeUp>
@@ -299,6 +299,32 @@ export default function HomePage() {
               <Frame key={i} src={img} alt="RCG Estates interior" className="w-full h-40 rounded-none" />
             ))}
           </FadeUp>
+
+          {/* Video row */}
+          <FadeUp delay={0.14} className="mt-5">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="block w-8 h-[2px] bg-[#0A3594]" />
+              <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Build Footage</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-[1px] bg-white/8">
+              {videos.map((v, i) => (
+                <div key={i} className="bg-black relative overflow-hidden group">
+                  <video
+                    src={v.src}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover aspect-[9/16] sm:aspect-[9/16]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+                  <span className="absolute bottom-3 left-3 text-[10px] font-mono tracking-widest uppercase text-white/50">
+                    {v.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </FadeUp>
         </div>
       </section>
 
@@ -316,7 +342,7 @@ export default function HomePage() {
               <p className="text-gray-400 text-lg leading-relaxed">
                 First-time builders usually have the same questions: Can I afford this? Is this lot worth it?
                 Who do I call when something goes wrong? Raul walks you through financing, lot selection,
-                design, and construction — as your licensed agent and your builder.
+                design, and construction, as your licensed agent and your builder.
               </p>
             </FadeUp>
           </div>
@@ -336,12 +362,8 @@ export default function HomePage() {
                     <div className="w-8 h-[2px] bg-[#0A3594]" />
                   </div>
                   {/* Description box */}
-                  <div className="col-span-12 md:col-span-5 border-r border-white/10 flex items-center py-8 px-6">
+                  <div className="col-span-12 md:col-span-8 flex items-center py-8 px-6">
                     <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
-                  </div>
-                  {/* Detail box */}
-                  <div className="col-span-12 md:col-span-3 flex items-center py-8 px-6">
-                    <p className="text-[#6B93D6] text-xs font-mono leading-relaxed">{s.detail}</p>
                   </div>
                 </div>
               </FadeUp>
@@ -367,20 +389,19 @@ export default function HomePage() {
                 Why Families in the RGV<br />Choose RCG Estates
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Every home we&apos;ve built is at a real address in McAllen or Mission — a home you can
-                drive to, walk through, and inspect before you ever sign anything. That transparency,
-                combined with Italian luxury finishes and deep local knowledge of RGV land and permits,
-                is what makes RCG Estates different.
+                McAllen luxury values are up 16.7% year-over-year. Raul has been building inside that
+                growth as a licensed Realtor and a hands-on builder, so he knows which lots to buy
+                and which to skip. Every home in our portfolio has a real address you can inspect
+                before you sign anything.
               </p>
             </FadeUp>
 
             <FadeUp delay={0.1} className="lg:col-span-5">
               <div className="border border-white/10 divide-y divide-white/10">
                 {[
-                  { icon: BadgeCheck, label: "Real Homes at Real Addresses", sub: "Every build in our portfolio has a verifiable address you can visit" },
-                  { icon: BadgeCheck, label: "Custom Home Builder — RGV", sub: "Foundation through finish, with progress updates throughout" },
-                  { icon: BadgeCheck, label: "Royal Decor Gallery Partner", sub: "Italian luxury finishes and artisan hardware in every build" },
-                  { icon: BadgeCheck, label: "Built and Based in the RGV", sub: "Knows local soil, permits, and which lots are worth buying" },
+                  { icon: BadgeCheck, label: "10+ Builds at Real RGV Addresses", sub: "Drive by before you sign. Every home has a real street address in McAllen or Mission." },
+                  { icon: BadgeCheck, label: "Developer of the Bette Street Collection", sub: "Five luxury homes on one block in Mission. Not a one-off. A development." },
+                  { icon: BadgeCheck, label: "Licensed Realtor + Builder", sub: "Two licenses, one person. Raul handles your land deal and your build." },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4 px-6 py-5">
                     <item.icon className="w-5 h-5 text-[#6B93D6] shrink-0 mt-0.5" />
@@ -450,7 +471,7 @@ export default function HomePage() {
                 Tell Us About<br />Your Lot or Project
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Not sure if you&apos;re ready to build yet? That&apos;s fine — tell us where you are in the process
+                Not sure if you&apos;re ready to build yet? Tell us where you are in the process
                 and Raul will follow up within one business day with an honest answer on next steps.
               </p>
             </FadeUp>

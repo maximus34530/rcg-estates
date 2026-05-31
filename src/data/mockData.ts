@@ -117,12 +117,12 @@ export const owner = {
   name: "Raul Ceron",
   title: "Founder & Managing Principal",
   credentials: [
-    "Licensed Texas Real Estate Agent",
-    "Custom Home Builder — RGV",
+    "Primary REALTOR®, Greater McAllen Association of REALTORS (GMAR)",
+    "Custom Home Builder & Developer, 10+ Builds in McAllen & Mission",
     "RE/MAX Platinum RGV · Imperio Real Estate",
   ],
-  bio: `Raul Ceron is the founder and managing principal of RCG Estates Construction & Development. A licensed Texas real estate agent and experienced custom home builder, Raul operates a fully integrated model — acquiring premium lots through his LLC, overseeing every phase of construction, and listing the finished estates himself. The result: one trusted professional from raw land to closing table.`,
-  bioParagraph2: `His builds include the Bette Street collection in Mission and 816 N Trinity in McAllen — with finish selections sourced through his partnership with Royal Decor Gallery at 4003 W US Hwy 83, McAllen.`,
+  bio: `Raul Ceron is the founder of RCG Estates Construction & Development. A licensed TX Realtor and custom home builder, he handles everything: land acquisition, permits, construction, and closing. His Bette Street Collection in Mission is five luxury homes built on one block. That's not a contractor. That's a developer.`,
+  bioParagraph2: `His builds include the Bette Street collection in Mission and 816 N Trinity in McAllen (4,100 sqft), with finish selections sourced through his partnership with Royal Decor Gallery at 4003 W US Hwy 83, McAllen.`,
   partner: {
     name: "Royal Decor Gallery",
     address: "4003 W US Hwy 83, McAllen, TX",
@@ -134,9 +134,9 @@ export const owner = {
 export const companyInfo = {
   name: "RCG Estates Construction & Development",
   tagline: "Custom Home Builder in the Rio Grande Valley",
-  subTagline: "Custom home builder in the Rio Grande Valley. From lot selection through construction to move-in.",
-  about: `If you've never built before, the hardest part isn't the construction — it's knowing who to trust, whether the lot is any good, and who's actually responsible when something goes wrong. Raul Ceron is a licensed Texas real estate agent and custom home builder with a portfolio of completed homes at real addresses in McAllen and Mission you can visit before you commit.`,
-  mission: `Every home in our portfolio is at a real address you can drive to. That's the standard we hold ourselves to.`,
+  subTagline: "Builder. Licensed TX Agent. One call from raw dirt to your keys. No middlemen, no handoffs.",
+  about: `The hardest part of building isn't the construction. It's knowing who to trust. Raul Ceron is a licensed TX Realtor and custom home builder with 10+ completed homes at real addresses in McAllen and Mission you can visit before you commit a dollar.`,
+  mission: `Every home in our portfolio has a street address in the RGV you can walk up to right now. Talk to the neighbor. That's our proof of work. Not renders, not promises.`,
   founded: "2024",
   principles: [
     {
@@ -145,22 +145,22 @@ export const companyInfo = {
     },
     {
       title: "Check the Lot Before You Buy",
-      desc: "Soil, utilities, flood zone, and setbacks — evaluated before you commit. A bad lot costs more than it saves.",
+      desc: "Soil, utilities, flood zone, and setbacks all evaluated before you commit. A bad lot costs more than it saves.",
     },
     {
       title: "Straight Answers on Budget",
-      desc: "Financing, permits, and finish selections discussed early — so you're not surprised halfway through the build.",
+      desc: "Financing, permits, and finish selections discussed early so you're never surprised halfway through the build.",
     },
     {
       title: "Built Here, Not Outsourced",
-      desc: "McAllen, Mission, and the wider RGV — local codes, local subs, local knowledge of what actually works in South Texas heat and clay soil.",
+      desc: "McAllen, Mission, and the wider RGV. Local codes, local subs, local knowledge of what works in South Texas heat and clay soil.",
     },
   ],
   stats: [
-    { value: "$2.1M+", label: "In Custom Homes Built" },
-    { value: "6", label: "Families' Dreams Made Real" },
-    { value: "5★", label: "Google Rating — Verified Reviews" },
-    { value: "Free", label: "First Call — Start Your Dream" },
+    { value: "$10M+", label: "In RGV Custom Home Volume" },
+    { value: "10+", label: "Homes Built at Real Addresses" },
+    { value: "1 Call", label: "Covers Land + Build + Close" },
+    { value: "Zero", label: "Middlemen Between You and Raul" },
   ],
   cities: ["McAllen", "Mission", "Pharr", "Harlingen", "Brownsville", "Edinburg"],
   hours: {
@@ -206,7 +206,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.trinity816,
     description:
-      "A sleek modern build featuring floor-to-ceiling windows, open-concept great room, and premium finishes throughout — one of RCG Estates' most photographed projects.",
+      "A sleek modern build featuring floor-to-ceiling windows, open-concept great room, and premium finishes throughout. One of RCG Estates' most photographed projects.",
     features: ["Floor-to-Ceiling Windows", "Open Concept", "Premium Finishes", "Outdoor Kitchen", "Custom Cabinetry"],
   },
   {
@@ -222,7 +222,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1007,
     description:
-      "The capstone of the Bette Street collection — an open-concept estate with chef's kitchen, resort-style outdoor living, and RCG's signature architectural detailing.",
+      "The capstone of the Bette Street collection. Open-concept estate with chef's kitchen, resort-style outdoor living, and RCG's signature architectural detailing.",
     features: ["Chef's Kitchen", "Resort Pool", "3-Car Garage", "Smart Home", "Custom Millwork"],
     highlight: "Bette St Collection",
   },
@@ -239,7 +239,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1005,
     description:
-      "A warm transitional-style home blending classic South Texas character with modern luxury finishes — built for families who demand comfort and elegance in equal measure.",
+      "A warm transitional-style home blending classic South Texas character with modern luxury finishes, built for families who want comfort and elegance in equal measure.",
     features: ["Custom Millwork", "Spa Master Bath", "Covered Patio", "Game Room", "Mudroom"],
     highlight: "Bette St Collection",
   },
@@ -256,7 +256,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1003,
     description:
-      "Clean lines and functional luxury define this Mission custom build — designed for indoor-outdoor living with a spacious covered patio and oversized backyard.",
+      "Clean lines and functional luxury define this Mission custom build, designed for indoor-outdoor living with a spacious covered patio and oversized backyard.",
     features: ["Open Floor Plan", "Covered Patio", "Custom Cabinetry", "Spa Bath", "2-Car Garage"],
     highlight: "Bette St Collection",
   },
@@ -273,7 +273,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1001,
     description:
-      "The first home in the Bette Street collection — setting the architectural language for the entire development block with premium finishes and custom detailing.",
+      "The first home in the Bette Street collection, setting the architectural language for the entire development block with premium finishes and custom detailing.",
     features: ["Stone Exterior", "Custom Iron Doors", "Upgraded Fixtures", "Landscaping", "Open Concept"],
     highlight: "Bette St Collection",
   },
@@ -299,6 +299,13 @@ export const projects: Project[] = [
       "A luxury custom build featuring premium interior selections, designer-level fixtures, and Italian-sourced finishes from RCG's partnership with Royal Decor Gallery.",
     features: ["Italian Finishes", "Designer Fixtures", "Chef's Kitchen", "Luxury Master Suite", "Custom Millwork"],
   },
+];
+
+// ─── Videos ──────────────────────────────────────────────────────────────────
+export const videos = [
+  { src: "/videos/video1.mp4", label: "Build Footage" },
+  { src: "/videos/video2.mp4", label: "Build Footage" },
+  { src: "/videos/video3.mp4", label: "Build Footage" },
 ];
 
 // ─── Gallery images (for the /projects gallery page) ─────────────────────────
@@ -422,25 +429,21 @@ export const processSteps = [
     step: "01",
     title: "Get Pre-Approved",
     desc: "Connect with trusted local lenders and lock in construction financing before a single design decision is made.",
-    detail: "As your licensed agent, Raul represents you on the land purchase at no additional cost.",
   },
   {
     step: "02",
     title: "Choose Your Location",
     desc: "We evaluate soil, utilities, flood zones, and setbacks on every parcel before you commit a dollar.",
-    detail: "Bad lots cost far more than their purchase price.",
   },
   {
     step: "03",
     title: "Design Your Home",
     desc: "Design your floor plan with our architects, then select Italian-grade finishes through Royal Decor Gallery.",
-    detail: "Every decision is budget-aligned from day one. No surprises at bid time.",
   },
   {
     step: "04",
     title: "Build With Confidence",
-    desc: "We manage every subcontractor and inspection with weekly updates. Raul can also list and sell when you're ready.",
-    detail: "One professional. From raw lot to sold sign.",
+    desc: "We manage every subcontractor and inspection across 10+ completed RGV builds, with weekly updates direct from Raul.",
   },
 ];
 
@@ -465,7 +468,7 @@ export const blogPosts: BlogPost[] = [
     slug: "top-5-things-before-building-rgv",
     title: "Top 5 Things to Know Before Building in the RGV",
     excerpt:
-      "Building a custom home in the Rio Grande Valley comes with unique local nuances — from soil composition to permit timelines. Here's what every future homeowner must know before breaking ground.",
+      "Building a custom home in the Rio Grande Valley comes with unique local nuances, from soil composition to permit timelines. Here's what every future homeowner must know before breaking ground.",
     body: `
 # Top 5 Things to Know Before Building in the RGV
 
@@ -481,7 +484,7 @@ Mission, McAllen, Pharr, and Harlingen each operate their own permitting departm
 
 ## 3. Utility Infrastructure Is Your First Due Diligence Item
 
-Before purchasing land, confirm water, sewer, gas, and electric access. Rural parcels outside city limits often require private wells and septic systems — adding $15,000–$40,000 to your budget.
+Before purchasing land, confirm water, sewer, gas, and electric access. Rural parcels outside city limits often require private wells and septic systems, adding $15,000–$40,000 to your budget.
 
 ## 4. HOA Restrictions Can Shape Your Design
 
@@ -509,25 +512,25 @@ At RCG Estates, Raul Ceron walks every client through each of these steps before
     body: `
 # Modern vs. Traditional Home Design: What's Right for You?
 
-One of the first major decisions in any custom build is architectural style. At RCG Estates, we've built both — and here's what we've learned.
+One of the first major decisions in any custom build is architectural style. At RCG Estates, we've built both. Here's what we've learned.
 
 ## What Modern Design Delivers
 
 - Large format windows that flood interiors with natural light
 - Open floor plans with clean sightlines
-- Material honesty — concrete, steel, and glass as design elements
+- Material honesty: concrete, steel, and glass as design elements
 - Low-slope or flat rooflines with strong curb presence
 
 ## What Traditional Design Delivers
 
 - Arched entries and corridors that add spatial drama
-- Rich material palettes — terracotta, brick, carved wood, wrought iron
+- Rich material palettes: terracotta, brick, carved wood, wrought iron
 - Defined room structures with clear hierarchy
 - Timeless curb appeal that holds resale value broadly
 
 ## The Honest Answer
 
-Neither is objectively better. Our 816 N Trinity build in McAllen blends both — a modern exterior footprint with warm, custom interior finishes. That hybrid approach is increasingly what RGV luxury buyers want.
+Neither is objectively better. Our 816 N Trinity build in McAllen blends both: a modern exterior footprint with warm, custom interior finishes. That hybrid approach is increasingly what RGV luxury buyers want.
 
 As both your builder and your agent, Raul can advise on what style commands the strongest resale in each specific neighborhood.
     `.trim(),
@@ -547,7 +550,7 @@ As both your builder and your agent, Raul can advise on what style commands the 
     body: `
 # How to Choose the Right Lot for Your Custom Home in South Texas
 
-Your lot is the canvas — and a poor canvas will limit even the most talented architect.
+Your lot is the canvas, and a poor canvas will limit even the most talented architect.
 
 ## Orientation & Solar Exposure
 
@@ -563,13 +566,13 @@ Municipal setback requirements directly constrain your buildable envelope. Know 
 
 ## Utilities Confirmation
 
-Confirm water meter availability, sewer connection, gas service, and electric transformer capacity — in writing — before purchasing any lot.
+Confirm water meter availability, sewer connection, gas service, and electric transformer capacity in writing before purchasing any lot.
 
 ## Soil Report
 
 A geotechnical boring report ($1,500–$3,500) tells you exactly what foundation system your lot will require. It's one of the best investments you can make pre-purchase.
 
-As a licensed Texas real estate agent, Raul Ceron can represent you directly in your land purchase — evaluating every one of these factors before you sign anything.
+As a licensed Texas real estate agent, Raul Ceron can represent you directly in your land purchase, evaluating every one of these factors before you sign anything.
     `.trim(),
     category: "RGV-Specific Insights",
     author: "Raul Ceron",
