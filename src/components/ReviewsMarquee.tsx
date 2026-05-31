@@ -144,9 +144,7 @@ export default function ReviewsMarquee() {
               <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] tracking-tight mb-2">
                 From People Who Built With Raul
               </h2>
-              <p className="text-sm text-gray-500 max-w-xl">
-                Pulled from Google reviews — only from clients who mention home building or construction.
-              </p>
+
             </div>
             <a
               href="https://www.google.com/search?q=rcg%20estates%20google#lrd=0x8665a10a63699df7:0x97aa34bfe1fbcce8,1"
