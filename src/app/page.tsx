@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
@@ -62,6 +62,53 @@ function Frame({
   );
 }
 
+
+/* ─── Instagram reel thumbnail card ────────────────────────────────────── */
+function ReelThumbnail({ url, caption }: { url: string; caption: string }) {
+  const [thumb, setThumb] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch(`/api/instagram-thumbnail?url=${encodeURIComponent(url)}`)
+      .then((r) => r.json())
+      .then((d) => { if (d.thumbnail) setThumb(d.thumbnail); })
+      .catch(() => {});
+  }, [url]);
+
+  return (
+    <div className="flex flex-col">
+      <a href={url} target="_blank" rel="noopener noreferrer"
+        className="relative bg-[#111827] overflow-hidden group block"
+        style={{ aspectRatio: "9/16", maxHeight: 480 }}>
+        {thumb ? (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={thumb} alt={caption}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              referrerPolicy="no-referrer" />
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors" />
+          </>
+        ) : (
+          <div className="absolute inset-0 bg-[#0D1117] animate-pulse" />
+        )}
+        {/* Play button */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <svg className="w-5 h-5 text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+        {/* Instagram badge */}
+        <div className="absolute top-3 right-3">
+          <svg className="w-5 h-5 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+          </svg>
+        </div>
+      </a>
+      <p className="text-xs text-gray-400 mt-2 px-0.5">{caption}</p>
+    </div>
+  );
+}
 
 /* ═══════════════════════════════════════════════════════════════════════════ */
 export default function HomePage() {
@@ -287,30 +334,7 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {REELS.map((reel, i) => (
-                <div key={i} className="flex flex-col">
-                  <div className="relative bg-[#111827] overflow-hidden" style={{ aspectRatio: "9/16", maxHeight: 480 }}>
-                    {reel.url.startsWith("http") ? (
-                      <iframe
-                        src={`${reel.url}embed/`}
-                        className="absolute inset-0 w-full h-full border-0"
-                        scrolling="no"
-                        allowTransparency
-                        allow="encrypted-media; autoplay; clipboard-write; picture-in-picture"
-                        loading="lazy"
-                      />
-                    ) : (
-                      /* Placeholder until real URLs are added */
-                      <a href="https://www.instagram.com/rcg.estates/reels/" target="_blank" rel="noopener noreferrer"
-                        className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#0D1117] border border-white/8 hover:border-[#0A3594]/40 transition-colors group">
-                        <svg className="w-10 h-10 text-white/20 group-hover:text-[#6B93D6] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                          <rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                        </svg>
-                        <span className="text-white/30 text-xs font-mono">@rcg.estates</span>
-                      </a>
-                    )}
-                  </div>
-                  <p className="text-xs text-gray-400 mt-2 px-0.5">{reel.caption}</p>
-                </div>
+                <ReelThumbnail key={i} url={reel.url} caption={reel.caption} />
               ))}
             </div>
           </FadeUp>
