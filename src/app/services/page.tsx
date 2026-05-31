@@ -30,12 +30,7 @@ const iconMap: Record<string, React.ElementType> = {
   Home, PencilRuler, Wrench, MapPin, ClipboardList, BarChart3,
 };
 
-const serviceStats = [
-  { value: "50+", label: "Custom Homes Delivered" },
-  { value: "4", label: "Core Service Areas" },
-  { value: "100%", label: "Client Satisfaction Rate" },
-  { value: "1", label: "Professional, No Handoffs" },
-];
+const serviceStats = companyInfo.stats;
 
 export default function ServicesPage() {
   return (
@@ -199,7 +194,7 @@ export default function ServicesPage() {
               <div className="border border-white/10 divide-y divide-white/10">
                 {[
                   { credential: "Licensed Texas Real Estate Agent", note: "RE/MAX Platinum RGV · Imperio Real Estate" },
-                  { credential: "Custom Home Builder — RGV", note: "50+ homes delivered across the Rio Grande Valley" },
+                  { credential: "Custom Home Builder — RGV", note: "6 completed builds in McAllen and Mission — see the portfolio" },
                   { credential: "Royal Decor Gallery Partner", note: "Exclusive access to Italian luxury finishes & hardware" },
                   { credential: "RGV Land & Lot Expert", note: "Geotechnical, zoning, and flood zone evaluation" },
                 ].map((item) => (

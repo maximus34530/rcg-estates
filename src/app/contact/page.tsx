@@ -45,13 +45,13 @@ export default function ContactPage() {
               <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Get In Touch</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.05] mb-5">
-              Let's Build Your<br />Dream Home,<br />
-              <span className="text-[#6B93D6]">Together.</span>
+              Building a Home in the RGV?<br />
+              <span className="text-[#6B93D6]">Start Here.</span>
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed">
-              Whether you're ready to break ground or just starting to explore
-              what's possible — we're here. Fill out the form and we'll follow
-              up within one business day.
+              Whether you have a lot picked out or you&apos;re still figuring out
+              if building makes sense — fill out the form and we&apos;ll follow
+              up within one business day with an honest answer on next steps.
             </p>
           </motion.div>
         </div>
@@ -250,9 +250,9 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/8 py-12">
             {[
-              { value: "24hr", label: "Response Guarantee", sub: "Every inquiry answered within one business day" },
-              { value: "50+", label: "Homes Delivered", sub: "Across McAllen, Mission, Harlingen & Pharr" },
-              { value: "100%", label: "Referral Rate", sub: "Every client came from a satisfied past client" },
+              { value: "24hr", label: "Response Goal", sub: "We aim to reply to every inquiry within one business day" },
+              { value: "6", label: "Completed Builds", sub: "McAllen and Mission — addresses in our portfolio" },
+              { value: "1", label: "Point of Contact", sub: "Licensed agent and builder — no handoffs between companies" },
             ].map((item) => (
               <div key={item.label} className="px-8 py-6 text-center md:text-left">
                 <div className="text-3xl font-bold text-white tracking-tight mb-1">{item.value}</div>

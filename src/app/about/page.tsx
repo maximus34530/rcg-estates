@@ -57,7 +57,7 @@ export default function AboutPage() {
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
               Building With Purpose,<br />
-              <span className="text-[#0A3594]">Guided by Your Vision</span>
+              <span className="text-[#0A3594]">One Person, Lot to Keys</span>
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">{companyInfo.about}</p>
           </motion.div>
@@ -231,8 +231,8 @@ export default function AboutPage() {
                   <p className="text-sm text-gray-400 leading-relaxed flex-1 mb-5">{t.body}</p>
                   <div className="h-px w-full bg-gray-100 mb-4" />
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full overflow-hidden relative border-2 border-gray-100 shrink-0">
-                      <Image src={t.avatar} alt={t.name} fill className="object-cover" sizes="40px" />
+                    <div className="w-10 h-10 rounded-full bg-[#0A3594]/10 flex items-center justify-center shrink-0">
+                      <span className="text-[#0A3594] text-sm font-bold">{t.name.trim()[0]}</span>
                     </div>
                     <div>
                       <div className="font-semibold text-[#111827] text-sm">{t.name}</div>

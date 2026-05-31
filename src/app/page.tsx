@@ -1,23 +1,18 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
 import { motion, useInView } from "framer-motion";
 import {
-  ArrowRight, MapPin, Phone, Star, CheckCircle, Quote, BadgeCheck,
+  ArrowRight, MapPin, Star, CheckCircle, Quote, BadgeCheck,
 } from "lucide-react";
 import {
-  companyInfo, owner, processSteps, projects, blogPosts, images, services,
+  companyInfo, owner, processSteps, projects, blogPosts, images,
 } from "@/data/mockData";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
-
-const REELS: { url: string; caption: string }[] = [
-  { url: "https://www.instagram.com/p/DW5InDDDHVT/", caption: "Custom home build — Rio Grande Valley" },
-  { url: "https://www.instagram.com/reel/DTV7Rn1gdaS/", caption: "Interior finish walkthrough" },
-  { url: "https://www.instagram.com/p/DUWNx6IkcTV/", caption: "From foundation to final keys" },
-];
+import ContactForm from "@/components/ContactForm";
 
 /* ─── Scroll-reveal ────────────────────────────────────────────────────── */
 function FadeUp({
@@ -62,54 +57,6 @@ function Frame({
   );
 }
 
-
-/* ─── Instagram reel thumbnail card ────────────────────────────────────── */
-function ReelThumbnail({ url, caption }: { url: string; caption: string }) {
-  const [thumb, setThumb] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetch(`/api/instagram-thumbnail?url=${encodeURIComponent(url)}`)
-      .then((r) => r.json())
-      .then((d) => { if (d.thumbnail) setThumb(d.thumbnail); })
-      .catch(() => {});
-  }, [url]);
-
-  return (
-    <div className="flex flex-col">
-      <a href={url} target="_blank" rel="noopener noreferrer"
-        className="relative bg-[#111827] overflow-hidden group block"
-        style={{ aspectRatio: "9/16", maxHeight: 480 }}>
-        {thumb ? (
-          <>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={thumb} alt={caption}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              referrerPolicy="no-referrer" />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors" />
-          </>
-        ) : (
-          <div className="absolute inset-0 bg-[#0D1117] animate-pulse" />
-        )}
-        {/* Play button */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <svg className="w-5 h-5 text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </div>
-        </div>
-        {/* Instagram badge */}
-        <div className="absolute top-3 right-3">
-          <svg className="w-5 h-5 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-          </svg>
-        </div>
-      </a>
-      <p className="text-xs text-gray-400 mt-2 px-0.5">{caption}</p>
-    </div>
-  );
-}
-
 /* ═══════════════════════════════════════════════════════════════════════════ */
 export default function HomePage() {
   return (
@@ -150,26 +97,11 @@ export default function HomePage() {
 
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}>
-              {/* Scarcity nudge */}
-              <div className="flex items-center gap-2 mb-5 text-white/55 text-xs font-mono tracking-wide">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse shrink-0" />
-                Currently accepting new 2025 builds
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 mb-5">
-                <Link href="/contact"
+              <div className="mb-5">
+                <a href="#contact"
                   className="btn-glow inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-base">
-                  Get a Free Quote <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link href="/projects"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/15 hover:border-white/30 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl transition-all text-base">
-                  View Our Work
-                </Link>
-              </div>
-              {/* Phone inline */}
-              <div className="flex items-center gap-2 text-white/45 text-sm">
-                <Phone className="w-3.5 h-3.5" />
-                <span>Or call Raul directly:</span>
-                <a href="tel:+19564087136" className="text-white/80 font-medium hover:text-white transition-colors">(956) 408-7136</a>
+                  Contact Us <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
             </motion.div>
           </div>
@@ -202,11 +134,9 @@ export default function HomePage() {
             <div className="lg:col-span-7">
               <FadeUp><SectionLabel text="Who We Are" /></FadeUp>
               <FadeUp delay={0.05}>
-                <h2 className="text-4xl sm:text-5xl font-bold text-[#111827] leading-tight tracking-tight mb-2">
-                  Your Vision.
-                </h2>
-                <h2 className="text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-7">
-                  <span className="text-[#0A3594]">Our Expertise.</span>
+                <h2 className="text-4xl sm:text-5xl font-bold text-[#111827] leading-tight tracking-tight mb-7">
+                  One Person Runs Your Build.<br />
+                  <span className="text-[#0A3594]">From the Lot to Move-In.</span>
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
@@ -260,197 +190,27 @@ export default function HomePage() {
                 </div>
               </FadeUp>
 
-              {/* Stats */}
+              {/* Credentials */}
               <FadeUp delay={0.4}>
-                <div className="grid grid-cols-3 border-t border-neutral-100 pt-5 gap-0">
-                  {[
-                    { value: "50+", label: "Homes Built" },
-                    { value: "5", label: "RGV Cities" },
-                    { value: "100%", label: "Referral Rate" },
-                  ].map((s, i) => (
-                    <div key={s.label} className={`pr-4 ${i > 0 ? "pl-4 border-l border-neutral-200" : ""}`}>
-                      <div className="text-3xl font-bold text-[#111827] tracking-tight leading-none mb-1.5">{s.value}</div>
-                      <div className="text-[10px] text-gray-400 uppercase tracking-[.18em] font-medium">{s.label}</div>
+                <div className="border-t border-neutral-100 pt-5 space-y-3">
+                  {owner.credentials.map((c) => (
+                    <div key={c} className="flex items-start gap-2">
+                      <BadgeCheck className="w-4 h-4 text-[#0A3594] shrink-0 mt-0.5" />
+                      <span className="text-sm text-gray-600">{c}</span>
                     </div>
                   ))}
+                  <Link href="/projects"
+                    className="inline-flex items-center gap-1.5 text-sm text-[#0A3594] font-medium hover:underline pt-2">
+                    See completed builds at real addresses <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
                 </div>
               </FadeUp>
             </div>
           </div>
-          {/* ── Instagram Reels strip ──────────────────────────────────────── */}
-          <FadeUp delay={0.1} className="mt-16 pt-10 border-t border-neutral-200">
-            <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-3">
-                {/* Instagram icon */}
-                <svg className="w-5 h-5 text-[#0A3594]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                </svg>
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[.2em] text-gray-400">Follow the Build</p>
-                  <a href="https://www.instagram.com/rcg.estates/" target="_blank" rel="noopener noreferrer"
-                    className="text-sm text-[#0A3594] font-medium hover:underline">@rcg.estates</a>
-                </div>
-              </div>
-              <a href="https://www.instagram.com/rcg.estates/reels/" target="_blank" rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 text-xs text-[#0A3594] font-semibold border-b border-[#0A3594]/30 hover:border-[#0A3594] pb-px transition-all">
-                View All Reels <ArrowRight className="w-3 h-3" />
-              </a>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {REELS.map((reel, i) => (
-                <ReelThumbnail key={i} url={reel.url} caption={reel.caption} />
-              ))}
-            </div>
-          </FadeUp>
         </div>
       </section>
 
-      {/* ── 3. PROCESS — charcoal with boxed bordered rows ────────────────── */}
-      <section className="bg-[#111827] border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
-            <FadeUp className="lg:col-span-5">
-              <SectionLabel text="The Process" light />
-              <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight tracking-tight">
-                From Pre-Approval<br />to Move-In
-              </h2>
-            </FadeUp>
-            <FadeUp delay={0.08} className="lg:col-span-7 flex items-end">
-              <p className="text-gray-400 text-lg leading-relaxed">
-                As your builder and licensed agent, Raul guides every phase — no handoffs, no dropped balls.
-                One professional from the lot to the keys.
-              </p>
-            </FadeUp>
-          </div>
-
-          {/* Boxed bordered process rows */}
-          <div className="border border-white/10">
-            {processSteps.map((s, i) => (
-              <FadeUp key={s.step} delay={i * 0.07}>
-                <div className={`grid grid-cols-12 gap-0 items-stretch ${i > 0 ? "border-t border-white/10" : ""}`}>
-                  {/* Step number box */}
-                  <div className="col-span-2 md:col-span-1 border-r border-white/10 flex items-center justify-center py-8 px-4">
-                    <span className="text-4xl font-bold text-white/12 font-mono">{s.step}</span>
-                  </div>
-                  {/* Title box */}
-                  <div className="col-span-10 md:col-span-3 border-r border-white/10 flex flex-col justify-center py-8 px-6">
-                    <h3 className="text-sm font-bold text-white mb-2">{s.title}</h3>
-                    <div className="w-8 h-[2px] bg-[#0A3594]" />
-                  </div>
-                  {/* Description box */}
-                  <div className="col-span-12 md:col-span-5 border-r border-white/10 flex items-center py-8 px-6">
-                    <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
-                  </div>
-                  {/* Detail box */}
-                  <div className="col-span-12 md:col-span-3 flex items-center py-8 px-6">
-                    <p className="text-[#6B93D6] text-xs font-mono leading-relaxed">{s.detail}</p>
-                  </div>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 4. SERVICES ───────────────────────────────────────────────────── */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
-            <FadeUp>
-              <SectionLabel text="Our Services" />
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] tracking-tight">
-                Construction Built Around Your Vision
-              </h2>
-            </FadeUp>
-            <FadeUp>
-              <Link href="/services"
-                className="inline-flex items-center gap-2 text-[#0A3594] font-medium text-sm border-b border-[#0A3594]/30 hover:border-[#0A3594] pb-px transition-all">
-                View All Services <ArrowRight className="w-4 h-4" />
-              </Link>
-            </FadeUp>
-          </div>
-
-          {/* 2x2 service grid — soft shadow lift */}
-          <div className="border border-neutral-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.07)] transition-all duration-500 ease-out grid grid-cols-1 md:grid-cols-2 divide-y divide-x divide-neutral-100">
-            {services.map((svc, i) => (
-              <FadeUp key={svc.id} delay={i * 0.07}>
-                <Link href="/services" className="group block h-full">
-                  <motion.div whileHover={{ backgroundColor: "#FAFAFA" }} transition={{ duration: 0.2 }}
-                    className="h-full bg-white overflow-hidden flex flex-col">
-                    <div className="h-44 relative overflow-hidden">
-                      <Image src={svc.image} alt={svc.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width:768px) 100vw,50vw" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/65 to-[#111827]/0" />
-                      <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <h3 className="font-bold text-white text-sm">{svc.title}</h3>
-                      </div>
-                    </div>
-                    <div className="p-6 flex flex-col flex-1">
-                      <p className="text-xs text-gray-400 leading-relaxed mb-4 flex-1">{svc.description}</p>
-                      <span className="inline-flex items-center gap-1 text-xs text-[#0A3594] font-semibold group-hover:gap-2 transition-all">
-                        Learn more <ArrowRight className="w-3 h-3" />
-                      </span>
-                    </div>
-                  </motion.div>
-                </Link>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── REVIEWS MARQUEE (live Google data) ────────────────────────────── */}
-      <ReviewsMarquee />
-
-      {/* ── UVP — Charcoal with credential grid ──────────────────────────── */}
-      <section className="bg-[#111827]">
-        <div className="max-w-7xl mx-auto">
-          {/* UVP body */}
-          <div className="px-4 sm:px-6 lg:px-8 py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <FadeUp className="lg:col-span-7">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="block w-8 h-[2px] bg-white/20" />
-                <span className="text-white/40 text-[11px] font-semibold tracking-[.24em] uppercase">The RCG Difference</span>
-              </div>
-              <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-                One Professional.<br />From Raw Land<br />to Closing Table.
-              </h2>
-              <p className="text-gray-400 text-lg leading-relaxed">
-                Most builders stop at the slab. Most agents stop at the contract. Raul Ceron does both —
-                licensed to represent you on the land purchase and qualified to build the home. No referrals,
-                no markups, no coordination gaps.
-              </p>
-            </FadeUp>
-
-            <FadeUp delay={0.1} className="lg:col-span-5">
-              <div className="border border-white/10 divide-y divide-white/10">
-                {[
-                  { icon: BadgeCheck, label: "Licensed TX Real Estate Agent", sub: "Represent you on every land and resale transaction" },
-                  { icon: BadgeCheck, label: "Custom Home Builder", sub: "Foundation, framing, finish — full construction oversight" },
-                  { icon: BadgeCheck, label: "Royal Decor Gallery Partner", sub: "Exclusive Italian luxury finishes in every premium build" },
-                  { icon: BadgeCheck, label: "Local RGV Expert", sub: "Deep knowledge of soil, codes, and neighborhoods since day one" },
-                ].map((item) => (
-                  <div key={item.label} className="flex items-start gap-4 px-6 py-5">
-                    <item.icon className="w-5 h-5 text-[#6B93D6] shrink-0 mt-0.5" />
-                    <div>
-                      <div className="text-white font-semibold text-sm">{item.label}</div>
-                      <div className="text-gray-500 text-xs mt-0.5 leading-relaxed">{item.sub}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6">
-                <Link href="/contact"
-                  className="btn-glow inline-flex items-center gap-2 px-7 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-bold rounded-lg transition-colors text-sm w-full justify-center">
-                  Book a Free Consultation <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </FadeUp>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 5. GALLERY / PROJECTS — pitch black ──────────────────────────── */}
+      {/* ── PORTFOLIO / PROJECTS — pitch black ──────────────────────────── */}
       <section className="py-24 bg-[#000000]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
@@ -461,8 +221,8 @@ export default function HomePage() {
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">See What We've Built</h2>
               <p className="text-white/40 mt-2 max-w-xl text-sm leading-relaxed">
-                From the Bette Street collection in Mission to 816 N Trinity in McAllen — every build
-                reflects a distinct client story and RCG's commitment to premium craftsmanship.
+                Real homes at real addresses in McAllen and Mission — including the Bette Street collection
+                and 816 N Trinity. Drive by them before you hire anyone.
               </p>
             </FadeUp>
             <FadeUp>
@@ -542,6 +302,99 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 3. PROCESS — charcoal with boxed bordered rows ────────────────── */}
+      <section className="bg-[#111827] border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
+            <FadeUp className="lg:col-span-5">
+              <SectionLabel text="The Process" light />
+              <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight tracking-tight">
+                From Pre-Approval<br />to Move-In
+              </h2>
+            </FadeUp>
+            <FadeUp delay={0.08} className="lg:col-span-7 flex items-end">
+              <p className="text-gray-400 text-lg leading-relaxed">
+                First-time builders usually have the same questions: Can I afford this? Is this lot worth it?
+                Who do I call when something goes wrong? Raul walks you through financing, lot selection,
+                design, and construction — as your licensed agent and your builder.
+              </p>
+            </FadeUp>
+          </div>
+
+          {/* Boxed bordered process rows */}
+          <div className="border border-white/10">
+            {processSteps.map((s, i) => (
+              <FadeUp key={s.step} delay={i * 0.07}>
+                <div className={`grid grid-cols-12 gap-0 items-stretch ${i > 0 ? "border-t border-white/10" : ""}`}>
+                  {/* Step number box */}
+                  <div className="col-span-2 md:col-span-1 border-r border-white/10 flex items-center justify-center py-8 px-4">
+                    <span className="text-4xl font-bold text-white/12 font-mono">{s.step}</span>
+                  </div>
+                  {/* Title box */}
+                  <div className="col-span-10 md:col-span-3 border-r border-white/10 flex flex-col justify-center py-8 px-6">
+                    <h3 className="text-sm font-bold text-white mb-2">{s.title}</h3>
+                    <div className="w-8 h-[2px] bg-[#0A3594]" />
+                  </div>
+                  {/* Description box */}
+                  <div className="col-span-12 md:col-span-5 border-r border-white/10 flex items-center py-8 px-6">
+                    <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+                  </div>
+                  {/* Detail box */}
+                  <div className="col-span-12 md:col-span-3 flex items-center py-8 px-6">
+                    <p className="text-[#6B93D6] text-xs font-mono leading-relaxed">{s.detail}</p>
+                  </div>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── REVIEWS MARQUEE (live Google data) ────────────────────────────── */}
+      <ReviewsMarquee />
+
+      {/* ── UVP — Charcoal with credential grid ──────────────────────────── */}
+      <section className="bg-[#111827]">
+        <div className="max-w-7xl mx-auto">
+          {/* UVP body */}
+          <div className="px-4 sm:px-6 lg:px-8 py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <FadeUp className="lg:col-span-7">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="block w-8 h-[2px] bg-white/20" />
+                <span className="text-white/40 text-[11px] font-semibold tracking-[.24em] uppercase">The RCG Difference</span>
+              </div>
+              <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
+                Why Hire a Builder<br />Who&apos;s Also Your Agent?
+              </h2>
+              <p className="text-gray-400 text-lg leading-relaxed">
+                With most contractors, you buy the lot through one person and build through another —
+                and when there&apos;s a problem, each one points at the other. Raul is licensed to represent
+                you on the land purchase and to manage the construction. One person accountable for the whole thing.
+              </p>
+            </FadeUp>
+
+            <FadeUp delay={0.1} className="lg:col-span-5">
+              <div className="border border-white/10 divide-y divide-white/10">
+                {[
+                  { icon: BadgeCheck, label: "Licensed TX Real Estate Agent", sub: "Represents you on the lot purchase — not just the build" },
+                  { icon: BadgeCheck, label: "Custom Home Builder", sub: "Foundation through finish, with weekly progress updates" },
+                  { icon: BadgeCheck, label: "Royal Decor Gallery Partner", sub: "Finish selections at 4003 W US Hwy 83, McAllen" },
+                  { icon: BadgeCheck, label: "RGV Local", sub: "Knows RGV soil, permits, and which lots are worth buying" },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-start gap-4 px-6 py-5">
+                    <item.icon className="w-5 h-5 text-[#6B93D6] shrink-0 mt-0.5" />
+                    <div>
+                      <div className="text-white font-semibold text-sm">{item.label}</div>
+                      <div className="text-gray-500 text-xs mt-0.5 leading-relaxed">{item.sub}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </FadeUp>
+          </div>
+        </div>
+      </section>
+
       {/* ── 7. BLOG PREVIEW ───────────────────────────────────────────────── */}
       <section className="py-24 bg-white border-t border-neutral-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -583,30 +436,42 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 8. CTA ────────────────────────────────────────────────────────── */}
-      <section className="py-28 bg-[#111827] border-t border-white/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeUp>
-            <div className="w-12 h-[2px] bg-[#0A3594] mx-auto mb-8" />
-            <p className="text-[#6B93D6] text-xs font-mono tracking-[.25em] uppercase mb-4">Let's Build Together</p>
-            <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-5 leading-tight">
-              Let's Build Your Dream<br />Home, Together
-            </h2>
-            <p className="text-gray-400 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
-              Ready to build? Raul is available for a free, no-pressure consultation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact"
-                className="btn-glow inline-flex items-center justify-center gap-2 px-9 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-bold rounded-xl transition-all text-base">
-                Get a Free Quote <ArrowRight className="w-4 h-4" />
-              </Link>
-              <a href="tel:+19564087136"
-                className="inline-flex items-center justify-center gap-2 px-9 py-4 border border-white/15 hover:border-white/30 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl transition-all text-base">
-                <Phone className="w-4 h-4" /> (956) 408-7136
-              </a>
-            </div>
-            <div className="w-12 h-[2px] bg-[#0A3594]/30 mx-auto mt-14" />
-          </FadeUp>
+      {/* ── CONTACT ───────────────────────────────────────────────────────── */}
+      <section id="contact" className="py-28 bg-[#111827] border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <FadeUp className="lg:col-span-5">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="block w-8 h-[2px] bg-[#0A3594]" />
+                <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Get In Touch</span>
+              </div>
+              <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-5">
+                Tell Us About<br />Your Lot or Project
+              </h2>
+              <p className="text-gray-400 text-lg leading-relaxed">
+                Not sure if you&apos;re ready to build yet? That&apos;s fine — tell us where you are in the process
+                and Raul will follow up within one business day with an honest answer on next steps.
+              </p>
+            </FadeUp>
+
+            <FadeUp delay={0.1} className="lg:col-span-7">
+              <div className="relative backdrop-blur-xl bg-white/5 border border-white/12 shadow-[0_0_60px_rgba(29,82,212,0.12),0_30px_60px_rgba(0,0,0,0.4)] p-8 sm:p-10">
+                <div className="absolute -top-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1D52D4]/40 to-transparent" />
+                <div className="mb-8">
+                  <p className="text-[#6B93D6] text-[10px] font-mono tracking-[.22em] uppercase mb-2">
+                    Free Consultation
+                  </p>
+                  <h3 className="text-2xl font-bold text-white tracking-tight">
+                    Tell Us About Your Project
+                  </h3>
+                  <p className="text-gray-500 text-sm mt-1.5 leading-relaxed">
+                    The more detail you share, the better we can prepare for our first conversation.
+                  </p>
+                </div>
+                <ContactForm glass />
+              </div>
+            </FadeUp>
+          </div>
         </div>
       </section>
     </>
