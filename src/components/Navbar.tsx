@@ -48,16 +48,14 @@ export default function Navbar() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="flex items-center justify-center bg-white rounded-sm px-2 py-1.5 shrink-0">
-                <Image
-                  src="/logo.png"
-                  alt="RCG Estates logo"
-                  width={120}
-                  height={48}
-                  className="h-7 w-auto object-contain"
-                  priority
-                />
-              </div>
+              <Image
+                src="/logo.png"
+                alt="RCG Estates logo"
+                width={120}
+                height={76}
+                className="h-9 w-auto object-contain shrink-0"
+                priority
+              />
               <div className="flex flex-col leading-none">
                 <span className="text-white font-bold text-lg tracking-tight">
                   RCG<span className="text-[#6B93D6]"> Estates</span>

@@ -63,15 +63,13 @@ export default function Footer() {
         {/* Brand */}
         <div className="lg:col-span-1">
           <Link href="/" className="flex items-center gap-2.5 mb-5">
-            <div className="flex items-center justify-center bg-white rounded-sm px-2 py-1.5 shrink-0">
               <Image
                 src="/logo.png"
                 alt="RCG Estates logo"
                 width={100}
-                height={40}
-                className="h-6 w-auto object-contain"
+                height={63}
+                className="h-8 w-auto object-contain shrink-0"
               />
-            </div>
             <div className="flex flex-col leading-none">
               <span className="text-white font-bold text-lg tracking-tight">
                 RCG<span className="text-[#6B93D6]"> Estates</span>

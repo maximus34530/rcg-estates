@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import { motion, useInView } from "framer-motion";
 import {
   ArrowRight, MapPin, Phone, Star, CheckCircle, Quote, BadgeCheck,
@@ -10,6 +11,12 @@ import {
 import {
   companyInfo, owner, processSteps, projects, blogPosts, images, services,
 } from "@/data/mockData";
+
+const REELS: { url: string; caption: string }[] = [
+  { url: "https://www.instagram.com/reel/DVuTP5NjTbE/", caption: "Custom home build — Rio Grande Valley" },
+  { url: "https://www.instagram.com/reel/DTV7Rn1gdaS/", caption: "Interior finish walkthrough" },
+  { url: "https://www.instagram.com/reel/DWxZF05jIn3/", caption: "From foundation to final keys" },
+];
 
 /* ─── Scroll-reveal ────────────────────────────────────────────────────── */
 function FadeUp({
@@ -120,6 +127,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-black/35" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/95 via-[#111827]/30 to-[#111827]/0" />
+        <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[#111827]/65 to-[#111827]/0" />
 
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-40">
           <div className="max-w-3xl">
@@ -133,7 +141,7 @@ export default function HomePage() {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.04] tracking-tight mb-6">
               Custom Homes<br />
-              <span className="text-[#0A3594]">Built for the RGV</span>
+              <span className="text-neutral-100">Built for the RGV</span>
             </motion.h1>
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
@@ -247,21 +255,70 @@ export default function HomePage() {
                 <Frame src={images.bette1007[1]} alt="1007 Bette exterior" className="w-4/5 h-48 rounded-none" />
               </FadeUp>
               <FadeUp delay={0.38}>
-                <div className="bg-[#111827] border border-white/8 px-6 py-5 flex items-center justify-between">
+                <div className="grid grid-cols-3 border-t border-neutral-100 pt-6 gap-0">
                   {[
-                    { value: "50+", label: "Custom Homes" },
+                    { value: "50+", label: "Homes Built" },
                     { value: "5", label: "RGV Cities" },
                     { value: "100%", label: "Referral Rate" },
                   ].map((s, i) => (
-                    <div key={s.label} className={`text-center flex-1 ${i > 0 ? "border-l border-white/10" : ""}`}>
-                      <div className="text-2xl font-bold text-white">{s.value}</div>
-                      <div className="text-[10px] text-white/40 font-mono uppercase tracking-wider mt-0.5">{s.label}</div>
+                    <div key={s.label} className={`pr-4 ${i > 0 ? "pl-4 border-l border-neutral-200" : ""}`}>
+                      <div className="text-3xl font-bold text-[#111827] tracking-tight leading-none mb-1.5">{s.value}</div>
+                      <div className="text-[10px] text-gray-400 uppercase tracking-[.18em] font-medium">{s.label}</div>
                     </div>
                   ))}
                 </div>
               </FadeUp>
             </div>
           </div>
+          {/* ── Instagram Reels strip ──────────────────────────────────────── */}
+          <FadeUp delay={0.1} className="mt-16 pt-10 border-t border-neutral-200">
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-3">
+                {/* Instagram icon */}
+                <svg className="w-5 h-5 text-[#0A3594]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[.2em] text-gray-400">Follow the Build</p>
+                  <a href="https://www.instagram.com/rcg.estates/" target="_blank" rel="noopener noreferrer"
+                    className="text-sm text-[#0A3594] font-medium hover:underline">@rcg.estates</a>
+                </div>
+              </div>
+              <a href="https://www.instagram.com/rcg.estates/reels/" target="_blank" rel="noopener noreferrer"
+                className="hidden sm:inline-flex items-center gap-1.5 text-xs text-[#0A3594] font-semibold border-b border-[#0A3594]/30 hover:border-[#0A3594] pb-px transition-all">
+                View All Reels <ArrowRight className="w-3 h-3" />
+              </a>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {REELS.map((reel, i) => (
+                <div key={i} className="flex flex-col">
+                  <div className="relative bg-[#111827] overflow-hidden" style={{ aspectRatio: "9/16", maxHeight: 480 }}>
+                    {reel.url.startsWith("http") ? (
+                      <iframe
+                        src={`${reel.url}embed/`}
+                        className="absolute inset-0 w-full h-full border-0"
+                        scrolling="no"
+                        allowTransparency
+                        allow="encrypted-media; autoplay; clipboard-write; picture-in-picture"
+                        loading="lazy"
+                      />
+                    ) : (
+                      /* Placeholder until real URLs are added */
+                      <a href="https://www.instagram.com/rcg.estates/reels/" target="_blank" rel="noopener noreferrer"
+                        className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#0D1117] border border-white/8 hover:border-[#0A3594]/40 transition-colors group">
+                        <svg className="w-10 h-10 text-white/20 group-hover:text-[#6B93D6] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                          <rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg>
+                        <span className="text-white/30 text-xs font-mono">@rcg.estates</span>
+                      </a>
+                    )}
+                  </div>
+                  <p className="text-xs text-gray-400 mt-2 px-0.5">{reel.caption}</p>
+                </div>
+              ))}
+            </div>
+          </FadeUp>
         </div>
       </section>
 

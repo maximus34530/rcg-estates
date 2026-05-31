@@ -23,11 +23,38 @@ export const metadata: Metadata = {
     "RCG Estates builds premium custom homes across the Rio Grande Valley — McAllen, Mission, Harlingen, and Pharr. From pre-approval to move-in, we handle every detail.",
   keywords:
     "custom home builder RGV, Rio Grande Valley real estate, McAllen homes, luxury homes RGV, RCG Estates",
+  metadataBase: new URL("https://rcgestatesconstruction.com"),
   openGraph: {
     title: "RCG Estates | Custom Home Builder — Rio Grande Valley",
     description:
       "Premium custom estate development in the Rio Grande Valley. Built to your vision, managed from foundation to finish.",
     type: "website",
+    url: "https://rcgestatesconstruction.com",
+    siteName: "RCG Estates",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "RCG Estates — Custom Home Builder, Rio Grande Valley",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RCG Estates | Custom Home Builder — Rio Grande Valley",
+    description:
+      "Premium custom estate development in the Rio Grande Valley. Built to your vision, managed from foundation to finish.",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-192x192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
   },
 };
 
