@@ -1,11 +1,113 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { MapPin, Maximize2, BedDouble, Bath, ArrowRight, Phone } from "lucide-react";
+import { MapPin, Maximize2, BedDouble, Bath, ArrowRight, Phone, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { projects, ProjectCategory, companyInfo } from "@/data/mockData";
+
+type Project = typeof projects[0];
+
+/* ─── Gallery Modal ──────────────────────────────────────────────────────── */
+function GalleryModal({ project, onClose }: { project: Project; onClose: () => void }) {
+  const [idx, setIdx] = useState(0);
+  const total = project.images.length;
+
+  const prev = useCallback(() => setIdx((i) => (i - 1 + total) % total), [total]);
+  const next = useCallback(() => setIdx((i) => (i + 1) % total), [total]);
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
+    };
+    window.addEventListener("keydown", handler);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", handler);
+      document.body.style.overflow = "";
+    };
+  }, [onClose, prev, next]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className="fixed inset-0 z-50 bg-black/95 flex flex-col"
+      onClick={onClose}
+    >
+      {/* Header */}
+      <div className="flex items-center justify-between px-5 py-4 border-b border-white/8 shrink-0" onClick={(e) => e.stopPropagation()}>
+        <div>
+          <h2 className="text-white font-bold text-lg leading-none">{project.title}</h2>
+          <p className="text-white/40 text-xs mt-0.5 flex items-center gap-1">
+            <MapPin className="w-3 h-3" />{project.address}, {project.city}
+          </p>
+        </div>
+        <div className="flex items-center gap-4">
+          <span className="text-white/30 text-xs font-mono">{idx + 1} / {total}</span>
+          <button onClick={onClose} className="w-9 h-9 flex items-center justify-center rounded-full border border-white/15 hover:border-white/40 hover:bg-white/10 transition-all text-white/60 hover:text-white">
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+
+      {/* Main image */}
+      <div className="flex-1 relative flex items-center justify-center min-h-0 px-14" onClick={(e) => e.stopPropagation()}>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, scale: 0.97 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.02 }}
+            transition={{ duration: 0.22 }}
+            className="relative w-full h-full max-h-[calc(100vh-220px)]"
+          >
+            <Image
+              src={project.images[idx]}
+              alt={`${project.title} — photo ${idx + 1}`}
+              fill
+              className="object-contain"
+              sizes="100vw"
+              priority
+            />
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Prev / Next */}
+        <button onClick={prev}
+          className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/60 border border-white/10 hover:bg-[#0A3594]/80 hover:border-[#0A3594]/60 text-white transition-all">
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <button onClick={next}
+          className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/60 border border-white/10 hover:bg-[#0A3594]/80 hover:border-[#0A3594]/60 text-white transition-all">
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </div>
+
+      {/* Thumbnail strip */}
+      <div className="shrink-0 border-t border-white/8 px-5 py-3" onClick={(e) => e.stopPropagation()}>
+        <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none justify-center">
+          {project.images.map((img, i) => (
+            <button
+              key={i}
+              onClick={() => setIdx(i)}
+              className={`relative shrink-0 w-14 h-14 overflow-hidden transition-all ${
+                i === idx ? "ring-2 ring-[#0A3594] opacity-100" : "opacity-40 hover:opacity-70"
+              }`}
+            >
+              <Image src={img} alt="" fill className="object-cover" sizes="56px" />
+            </button>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 function FadeUp({
   children, delay = 0, className = "",
@@ -44,7 +146,7 @@ const statusStyles: Record<string, string> = {
 };
 
 /* ─── Project card (dark-surface) ─────────────────────────────────────── */
-function ProjectCard({ project, tall = false }: { project: typeof projects[0]; tall?: boolean }) {
+function ProjectCard({ project, tall = false, onClick }: { project: Project; tall?: boolean; onClick: () => void }) {
   return (
     <motion.div
       layout
@@ -52,13 +154,17 @@ function ProjectCard({ project, tall = false }: { project: typeof projects[0]; t
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.96 }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-      className="border border-white/8 bg-[#0D1117] hover:border-white/15 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.4)] hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)] transition-all duration-500 ease-out flex flex-col overflow-hidden"
+      onClick={onClick}
+      className="cursor-pointer border border-white/8 bg-[#0D1117] hover:border-white/20 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.4)] hover:shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)] transition-all duration-500 ease-out flex flex-col overflow-hidden group/card"
     >
-      <ImageFrame
-        src={project.images[0]}
-        alt={project.title}
-        className={`w-full ${tall ? "h-72" : "h-52"}`}
-      />
+      <div className={`relative w-full ${tall ? "h-72" : "h-52"} overflow-hidden`}>
+        <ImageFrame src={project.images[0]} alt={project.title} className="absolute inset-0 w-full h-full" />
+        {/* Photo count badge */}
+        <div className="absolute bottom-3 right-3 flex items-center gap-1.5 px-2.5 py-1 bg-black/60 backdrop-blur-sm border border-white/10 text-white text-xs font-mono opacity-0 group-hover/card:opacity-100 transition-opacity duration-300">
+          <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          {project.images.length} photos
+        </div>
+      </div>
 
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center gap-2 mb-3">
@@ -103,6 +209,7 @@ function ProjectCard({ project, tall = false }: { project: typeof projects[0]; t
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState<ProjectCategory | "All">("All");
+  const [selected, setSelected] = useState<Project | null>(null);
   const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   const col0 = filtered.filter((_, i) => i % 3 === 0);
@@ -111,6 +218,10 @@ export default function ProjectsPage() {
 
   return (
     <>
+      <AnimatePresence>
+        {selected && <GalleryModal project={selected} onClose={() => setSelected(null)} />}
+      </AnimatePresence>
+
       {/* Hero */}
       <section className="pt-32 pb-0 bg-[#111827] relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-96 bg-[#0A3594]/8 rounded-full blur-3xl pointer-events-none" />
@@ -189,21 +300,21 @@ export default function ProjectsPage() {
                 <div className="flex flex-col gap-[1px]">
                   {col0.map((p, i) => (
                     <motion.div key={p.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.06 }}>
-                      <ProjectCard project={p} tall={i % 2 === 0} />
+                      <ProjectCard project={p} tall={i % 2 === 0} onClick={() => setSelected(p)} />
                     </motion.div>
                   ))}
                 </div>
                 <div className="flex flex-col gap-[1px] mt-14">
                   {col1.map((p, i) => (
                     <motion.div key={p.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 + i * 0.06 }}>
-                      <ProjectCard project={p} tall={i % 2 !== 0} />
+                      <ProjectCard project={p} tall={i % 2 !== 0} onClick={() => setSelected(p)} />
                     </motion.div>
                   ))}
                 </div>
                 <div className="flex flex-col gap-[1px] mt-7">
                   {col2.map((p, i) => (
                     <motion.div key={p.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.04 + i * 0.06 }}>
-                      <ProjectCard project={p} tall={i % 2 === 0} />
+                      <ProjectCard project={p} tall={i % 2 === 0} onClick={() => setSelected(p)} />
                     </motion.div>
                   ))}
                 </div>
@@ -213,7 +324,7 @@ export default function ProjectsPage() {
               <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/8">
                 {filtered.map((p, i) => (
                   <motion.div key={p.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.06 }}>
-                    <ProjectCard project={p} />
+                    <ProjectCard project={p} onClick={() => setSelected(p)} />
                   </motion.div>
                 ))}
               </div>
