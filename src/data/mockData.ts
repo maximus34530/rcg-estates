@@ -80,15 +80,24 @@ export const images = {
     "/projects/1005-bette/9-2.webp",
   ],
 
+  // ── Custom Luxury — local images ──
+  customLuxury: [
+    "/projects/custom-luxury/home.png",
+    "/projects/custom-luxury/exterior.png",
+    "/projects/custom-luxury/living_room.png",
+    "/projects/custom-luxury/sala2.png",
+    "/projects/custom-luxury/bath.png",
+  ],
+
   // ── 1007 Bette — local images ──
   bette1007: [
-    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (7).png",
-    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq.png",
-    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (2).png",
-    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (3).png",
-    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (4).png",
-    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (5).png",
-    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (6).png",
+    "/projects/1007-bette/7.png",
+    "/projects/1007-bette/1.png",
+    "/projects/1007-bette/2.png",
+    "/projects/1007-bette/3.png",
+    "/projects/1007-bette/4.png",
+    "/projects/1007-bette/5.png",
+    "/projects/1007-bette/6.png",
   ],
 
   // ── 1001 Bette — 9 local images ──
@@ -289,15 +298,9 @@ export const projects: Project[] = [
     year: 2024,
     status: "Completed",
     category: "Custom Build",
-    images: [
-      images.houseFinished,
-      images.livingRoom,
-      images.luxuryLiving,
-      images.house53ea,
-      images.housef375,
-    ],
+    images: images.customLuxury,
     description:
-      "A custom build focused on high end interior selections, including imported hardware and custom woodwork.",
+      "Custom builds focused on luxurious interior selections, including imported hardware and custom woodwork and luxurious ambiance all decided by you.",
     features: ["Premium Finishes", "Designer Fixtures", "Chef's Kitchen", "Luxury Master Suite", "Custom Millwork"],
   },
 ];

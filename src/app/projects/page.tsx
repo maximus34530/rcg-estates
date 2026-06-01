@@ -340,8 +340,8 @@ export default function ProjectsPage() {
 
             {/* Side stat */}
             <div className="lg:col-span-4 px-8 py-16 flex flex-col justify-center">
-              <div className="text-[10px] text-white/30 font-mono uppercase tracking-[.2em] mb-3">Current Pipeline</div>
-              <div className="text-5xl font-bold text-white mb-3">{projects.length}</div>
+              <div className="text-xs text-white/70 font-mono uppercase tracking-[.2em] mb-3 font-semibold">Current Pipeline</div>
+              <div className="text-5xl font-bold text-white mb-3">10+</div>
               <div className="text-sm text-white/50 leading-relaxed mb-6">
                 Projects completed or in active development across McAllen, Mission, Pharr, Harlingen, and Brownsville.
               </div>
