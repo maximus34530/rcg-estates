@@ -75,15 +75,15 @@ export default function HomePage() {
       {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-end bg-[#111827] overflow-hidden">
         <Image
-          src={images.trinity816[0]}
-          alt="RCG Estates custom home — 816 N Trinity, McAllen TX"
+          src={images.bette1001[0]}
+          alt="RCG Estates custom home — 1001 Bette, Mission TX"
           fill priority
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/35" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/95 via-[#111827]/30 to-[#111827]/0" />
-        <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[#111827]/65 to-[#111827]/0" />
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/90 via-[#111827]/20 to-[#111827]/0" />
+        <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[#111827]/40 to-[#111827]/0" />
 
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-40">
           <div className="max-w-3xl">
@@ -96,8 +96,8 @@ export default function HomePage() {
             <motion.h1 initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.04] tracking-tight mb-6">
-              Custom Homes<br />
-              <span className="text-neutral-100">Built for the RGV</span>
+              Your Vision.<br />
+              <span className="text-neutral-100">Our Craftsmanship.</span>
             </motion.h1>
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
@@ -152,7 +152,7 @@ export default function HomePage() {
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="text-gray-500 text-lg leading-relaxed mb-4">{companyInfo.about}</p>
-                <p className="text-gray-400 leading-relaxed mb-10">{companyInfo.mission}</p>
+                <p className="text-gray-400 leading-relaxed mb-10 whitespace-pre-line">{companyInfo.mission}</p>
               </FadeUp>
 
               {/* Raul quote */}
@@ -363,8 +363,8 @@ export default function HomePage() {
             <FadeUp delay={0.08} className="lg:col-span-7 flex items-end">
               <p className="text-gray-400 text-lg leading-relaxed">
                 First-time builders usually have the same questions: Can I afford this? Is this lot worth it?
-                Who do I call when something goes wrong? Raul walks you through financing, lot selection,
-                design, and construction, as your licensed agent and your builder.
+                Who do I call when something goes wrong? We walk you through financing, lot selection,
+                design, and construction, so you never have to guess what happens next.
               </p>
             </FadeUp>
           </div>
@@ -410,11 +410,14 @@ export default function HomePage() {
               <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
                 Why Families in the RGV<br />Choose RCG Estates
               </h2>
+              <p className="text-gray-400 text-lg leading-relaxed mb-4">
+                Building a custom home is a massive decision. It&apos;s natural to worry about choosing a builder who won&apos;t listen.
+              </p>
+              <p className="text-gray-400 text-lg leading-relaxed mb-4">
+                Families in the RGV choose RCG Estates because we put your peace of mind first. We guide you from finding the perfect lot to handing over the keys. We protect your time and respect your budget.
+              </p>
               <p className="text-gray-400 text-lg leading-relaxed">
-                McAllen luxury values are up 16.7% year-over-year. Raul has been building inside that
-                growth as a licensed Realtor and a hands-on builder, so he knows which lots to buy
-                and which to skip. Every home in our portfolio has a real address you can inspect
-                before you sign anything.
+                We handle the heavy lifting, the permits, and the daily grind. You just enjoy watching your dream home come to life.
               </p>
             </FadeUp>
 
@@ -423,7 +426,7 @@ export default function HomePage() {
                 {[
                   { icon: BadgeCheck, label: "10+ Builds at Real RGV Addresses", sub: "Drive by before you sign. Every home has a real street address in McAllen or Mission." },
                   { icon: BadgeCheck, label: "Developer of the Bette Street Collection", sub: "Five luxury homes on one block in Mission. Not a one-off. A development." },
-                  { icon: BadgeCheck, label: "Licensed Realtor + Builder", sub: "Two licenses, one person. Raul handles your land deal and your build." },
+                  { icon: BadgeCheck, label: "Licensed Realtor + Builder", sub: "A seamless experience. We guide you through finding the perfect lot and building your home, all under one roof." },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4 px-6 py-5">
                     <item.icon className="w-5 h-5 text-[#6B93D6] shrink-0 mt-0.5" />
@@ -494,7 +497,7 @@ export default function HomePage() {
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
                 Not sure if you&apos;re ready to build yet? Tell us where you are in the process
-                and Raul will follow up within one business day with an honest answer on next steps.
+                and we&apos;ll follow up within one business day with an honest answer on next steps.
               </p>
             </FadeUp>
 

@@ -147,7 +147,7 @@ export default function AboutPage() {
                   <div>
                     <p className="text-[#111827] font-medium leading-relaxed italic text-sm">
                       "I built RCG Estates to give Rio Grande Valley families something that didn't exist — a builder
-                      who is also your licensed agent, giving you one trusted professional from the lot to the closing table."
+                      who is also your licensed agent, guiding you from the lot purchase to the closing table."
                     </p>
                     <p className="text-xs text-[#0A3594] font-mono tracking-widest mt-3 uppercase font-bold">
                       — Raul Ceron, Founder

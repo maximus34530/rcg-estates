@@ -121,7 +121,7 @@ export const owner = {
     "Custom Home Builder & Developer, 10+ Builds in McAllen & Mission",
     "RE/MAX Platinum RGV · Imperio Real Estate",
   ],
-  bio: `Raul Ceron is the founder of RCG Estates Construction & Development. A licensed TX Realtor and custom home builder, he handles everything: land acquisition, permits, construction, and closing. His Bette Street Collection in Mission is five luxury homes built on one block.`,
+  bio: `Raul Ceron is the founder of RCG Estates Construction & Development. As a licensed TX Realtor and custom home builder, he ensures every family is completely taken care of from land acquisition to the final walkthrough. His Bette Street Collection in Mission features five luxury homes built on one block.`,
   bioParagraph2: `His builds include the Bette Street collection in Mission and 816 N Trinity in McAllen (4,100 sqft), with finish selections sourced through his partnership with Royal Decor Gallery at 4003 W US Hwy 83, McAllen.`,
   partner: {
     name: "Royal Decor Gallery",
@@ -134,33 +134,33 @@ export const owner = {
 export const companyInfo = {
   name: "RCG Estates Construction & Development",
   tagline: "Custom Home Builder in the Rio Grande Valley",
-  subTagline: "Custom homes, built by hand, managed by one.",
-  about: `The hardest part of building isn't the construction. It's knowing who to trust. Raul Ceron is a licensed TX Realtor and custom home builder with 10+ completed homes at real addresses in McAllen and Mission you can visit before you commit a dollar.`,
-  mission: `Every home in our portfolio has a street address in the RGV you can walk up to right now. Talk to the neighbor. That's our proof of work. Not renders, not promises.`,
+  subTagline: "We don’t sell 3D renderings. We give you real addresses in the RGV to drive by and see for yourself. High-end custom homes built for families who want a builder they can actually trust.",
+  about: `I’m Raul Ceron. You’ve probably heard the horror stories about building in South Texas. You sign a contract, and suddenly the builder stops listening. Your calls go to voicemail. Your vision gets lost.`,
+  mission: `That’s not how we operate.\n\nWe’ve built over a dozen homes across McAllen and Mission by treating your investment with the respect it deserves. We answer the phone, we communicate clearly, and we build homes you’ll be proud of.`,
   founded: "2024",
   principles: [
     {
-      title: "Real Homes at Real Addresses",
-      desc: "Every build in our portfolio has a real address in McAllen or Mission you can drive to and inspect before you commit a dollar.",
+      title: "See the Work First",
+      desc: "Before you sign anything, we’ll give you the addresses of our completed homes. Look at the masonry, walk the neighborhood, and see the craftsmanship yourself.",
     },
     {
-      title: "Check the Lot Before You Buy",
-      desc: "Soil, utilities, flood zone, and setbacks all evaluated before you commit. A bad lot costs more than it saves.",
+      title: "Your Vision Drives the Build",
+      desc: "This is your home, not ours. Your questions get answered, your concerns are addressed, and you stay in control of the project from start to finish.",
     },
     {
-      title: "Straight Answers on Budget",
-      desc: "Financing, permits, and finish selections discussed early so you're never surprised halfway through the build.",
+      title: "No Hidden Math",
+      desc: "High-end shouldn't mean high-stress. We price our builds with precision and manage the budget with total transparency. You always know exactly where your money is going.",
     },
     {
-      title: "Built Here, Not Outsourced",
-      desc: "McAllen, Mission, and the wider RGV. Local codes, local subs, local knowledge of what works in South Texas heat.",
+      title: "Built for Generations",
+      desc: "We don't cut corners behind the drywall. We pour thicker foundations and obsess over the structural details that weather the South Texas climate. Built to last.",
     },
   ],
   stats: [
     { value: "$10M+", label: "In RGV Custom Home Volume" },
-    { value: "10+", label: "Homes Built at Real Addresses" },
-    { value: "1 Call", label: "Covers Land + Build + Close" },
-    { value: "Zero", label: "Middlemen Between You and Raul" },
+    { value: "10+", label: "Completed Custom Builds" },
+    { value: "100%", label: "Dedicated to Your Vision" },
+    { value: "Zero", label: "Hidden Costs or Surprises" },
   ],
   cities: ["McAllen", "Mission", "Pharr", "Harlingen", "Brownsville", "Edinburg"],
   hours: {
@@ -206,7 +206,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.trinity816,
     description:
-      "A masterclass in modern design. This sleek, custom build features striking floor-to-ceiling windows, an expansive open-concept great room, and premium finishes at every turn. As one of RCG Estates' most photographed projects, it perfectly balances bold architecture with everyday luxury.",
+      "A modern custom build featuring floor-to-ceiling windows and an open-concept great room. Built with a focus on natural light and premium interior finishes.",
     features: ["Floor-to-Ceiling Windows", "Open Concept", "Premium Finishes", "Outdoor Kitchen", "Custom Cabinetry"],
   },
   {
@@ -222,7 +222,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1007,
     description:
-      "The capstone of the Bette Street collection. Open-concept estate with chef's kitchen, resort-style outdoor living, and RCG's signature architectural detailing.",
+      "An open-concept estate featuring a custom chef's kitchen and a large outdoor living space. Part of the five-home Bette Street development.",
     features: ["Chef's Kitchen", "Resort Pool", "3-Car Garage", "Smart Home", "Custom Millwork"],
     highlight: "Bette St Collection",
   },
@@ -239,7 +239,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1005,
     description:
-      "A warm transitional-style home blending classic South Texas character with modern luxury finishes, built for families who want comfort and elegance in equal measure.",
+      "A transitional-style home that blends classic brickwork with modern interior upgrades. Designed for a growing family needing functional, durable spaces.",
     features: ["Custom Millwork", "Spa Master Bath", "Covered Patio", "Game Room", "Mudroom"],
     highlight: "Bette St Collection",
   },
@@ -256,7 +256,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1003,
     description:
-      "Clean lines and functional luxury define this Mission custom build, designed for indoor-outdoor living with a spacious covered patio and oversized backyard.",
+      "Built for indoor-outdoor living, this home includes a spacious covered patio and an oversized backyard, with clean lines and custom cabinetry throughout.",
     features: ["Open Floor Plan", "Covered Patio", "Custom Cabinetry", "Spa Bath", "2-Car Garage"],
     highlight: "Bette St Collection",
   },
@@ -273,7 +273,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1001,
     description:
-      "The first home in the Bette Street collection, setting the architectural language for the entire development block with premium finishes and custom detailing.",
+      "The first completed home in the Bette Street collection. Features a full stone exterior, custom iron doors, and upgraded fixtures.",
     features: ["Stone Exterior", "Custom Iron Doors", "Upgraded Fixtures", "Landscaping", "Open Concept"],
     highlight: "Bette St Collection",
   },
@@ -296,7 +296,7 @@ export const projects: Project[] = [
       images.housef375,
     ],
     description:
-      "A luxury custom build featuring premium interior selections, designer-level fixtures, and custom finishes throughout.",
+      "A custom build focused on high-end interior selections, including imported hardware and custom woodwork.",
     features: ["Premium Finishes", "Designer Fixtures", "Chef's Kitchen", "Luxury Master Suite", "Custom Millwork"],
   },
 ];
@@ -377,7 +377,7 @@ export const services: Service[] = [
     id: "custom-builds",
     title: "Custom Home Construction",
     description:
-      "Full-scope custom construction from pre-approval through final walkthrough. Every home designed around your lifestyle, not a template.",
+      "We manage the entire build from breaking ground to the final walkthrough. Your home is built exactly to your plans, with no cut corners.",
     details: [
       "Financing and pre-approval assistance",
       "Lot selection across the RGV",
@@ -393,7 +393,7 @@ export const services: Service[] = [
     id: "design-consultation",
     title: "Design and Architectural Services",
     description:
-      "Pre-construction design with access to premium finish selections and artisan hardware.",
+      "We help you lock in your floor plan and interior finishes before construction starts so there are no surprises later.",
     details: [
       "Custom floor plan development",
       "Interior and exterior design guidance",
@@ -409,7 +409,7 @@ export const services: Service[] = [
     id: "pre-construction",
     title: "Pre-Construction Services",
     description:
-      "Everything before the first nail: lender coordination, permit strategy, lot evaluation, and construction loan guidance.",
+      "We handle the prep work: lender coordination, permits, lot evaluation, and construction loan guidance.",
     details: [
       "Construction loan advisory",
       "Lender package preparation",
@@ -428,22 +428,22 @@ export const processSteps = [
   {
     step: "01",
     title: "Get Pre-Approved",
-    desc: "Connect with trusted local lenders and lock in construction financing before a single design decision is made.",
+    desc: "We connect you with local lenders to lock in your construction financing before any design decisions are made.",
   },
   {
     step: "02",
     title: "Choose Your Location",
-    desc: "We evaluate soil, utilities, flood zones, and setbacks on every parcel before you commit a dollar.",
+    desc: "We evaluate the soil, utilities, flood zones, and setbacks on your lot before you commit a dollar.",
   },
   {
     step: "03",
     title: "Design Your Home",
-    desc: "Design your floor plan with our architects, then lock in your finish selections before ground breaks.",
+    desc: "You finalize your floor plan and lock in your finish selections before we break ground.",
   },
   {
     step: "04",
     title: "Build With Confidence",
-    desc: "We manage every subcontractor and inspection across 10+ completed RGV builds, with weekly updates direct from Raul.",
+    desc: "We manage the subcontractors and inspections, keeping you updated every week until move-in day.",
   },
 ];
 
