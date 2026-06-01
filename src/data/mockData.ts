@@ -82,14 +82,13 @@ export const images = {
 
   // ── 1007 Bette — local images ──
   bette1007: [
-    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (1).jpeg",
+    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (7).png",
     "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq.png",
     "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (2).png",
     "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (3).png",
     "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (4).png",
     "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (5).png",
     "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (6).png",
-    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (7).png",
   ],
 
   // ── 1001 Bette — 9 local images ──
