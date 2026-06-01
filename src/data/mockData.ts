@@ -134,32 +134,32 @@ export const owner = {
 export const companyInfo = {
   name: "RCG Estates Construction & Development",
   tagline: "Custom Home Builder in the Rio Grande Valley",
-  subTagline: "Building a custom home in the Rio Grande Valley shouldn't be overwhelming. We make the process seamless from start to finish, with honest pricing and clear communication every step of the way.",
+  subTagline: "Building a home in the Valley shouldn't feel like a gamble with your life savings. We eliminate the fear of the unknown with locked in milestone pricing, zero communication blackouts, and a process designed to protect your investment from start to finish.",
   about: `I’m Raul Ceron. I know the emotional barrier that stops most families from building—the fear of the unknown. You’ve probably heard the horror stories: contractors who go ghost, hidden costs that ruin the budget, and the anxiety of being left in the dark. It's stressful.`,
   mission: `We eliminate that stress.\n\nFrom the moment we break ground to the final walkthrough, we communicate clearly, protect your budget, and remain fully committed to turning your vision into reality. We want building your home to be one of the best decisions you've ever made.`,
   founded: "2024",
   principles: [
     {
       title: "See the Work First",
-      desc: "Before you sign anything, we’ll give you the addresses of our completed homes. Look at the masonry, walk the neighborhood, and see the craftsmanship yourself.",
+      desc: "We don't sell houses using 3D digital renders. We give you real street addresses of our completed builds in McAllen and Mission so you can see the quality yourself.",
     },
     {
       title: "Your Vision Drives the Build",
-      desc: "This is your home, not ours. Your questions get answered, your concerns are addressed, and you stay in control of the project from start to finish.",
+      desc: "This is your home, not our pet project. We never gatekeep info or shut you out. Your questions get answered, and you remain in control from start to finish.",
     },
     {
       title: "No Hidden Math",
-      desc: "High end shouldn't mean high stress. We price our builds with precision and manage the budget with total transparency. You always know exactly where your money is going.",
+      desc: "High-end shouldn't mean high stress. We calculate site prep, material, and labor costs upfront. The price we lock in is the price you pay.",
     },
     {
       title: "Built for Generations",
-      desc: "We don't cut corners behind the drywall. We pour thicker foundations and obsess over the structural details that weather the South Texas climate. Built to last.",
+      desc: "We build past the minimum local codes. We pour thicker foundations for RGV clay soil and optimize insulation to keep summer cooling bills low.",
     },
   ],
   stats: [
-    { value: "$10M+", label: "In RGV Custom Home Volume" },
+    { value: "$10M+", label: "Trusted RGV Volume" },
     { value: "10+", label: "Completed Custom Builds" },
-    { value: "100%", label: "Dedicated to Your Vision" },
+    { value: "100%", label: "Communication Guarantee" },
     { value: "Zero", label: "Hidden Costs or Surprises" },
   ],
   cities: ["McAllen", "Mission", "Pharr", "Harlingen", "Brownsville", "Edinburg"],
@@ -430,8 +430,8 @@ export const services: Service[] = [
 export const processSteps = [
   {
     step: "01",
-    title: "The Vision",
-    desc: "We sit down to understand your ideas, your must haves, and your budget. No pressure, just a clear path forward.",
+    title: "The Low Stakes Coffee Chat",
+    desc: "We sit down together to look at your rough ideas, must haves, and budget boundaries. You don't need blueprints or a perfect plan to start. No pressure, no sales pitches—just an honest look at whether you're ready to take the leap.",
   },
   {
     step: "02",
