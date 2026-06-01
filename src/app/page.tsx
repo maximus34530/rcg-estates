@@ -102,7 +102,7 @@ export default function HomePage() {
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.22 }}
               className="text-white/85 font-medium text-lg leading-relaxed mb-10 max-w-xl drop-shadow-md [text-shadow:_0_1px_10px_rgb(0_0_0_/_40%)]">
-              You’ve spent years planning this moment. You shouldn’t have to risk your life savings to see it through. We protect your investment with fixed pricing and absolute transparency from day one.
+              You’ve spent years planning this moment. We protect your investment with fixed pricing and absolute transparency from day one.
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
