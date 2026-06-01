@@ -149,7 +149,7 @@ export const companyInfo = {
     },
     {
       title: "No Hidden Math",
-      desc: "High-end shouldn't mean high-stress. We price our builds with precision and manage the budget with total transparency. You always know exactly where your money is going.",
+      desc: "High end shouldn't mean high stress. We price our builds with precision and manage the budget with total transparency. You always know exactly where your money is going.",
     },
     {
       title: "Built for Generations",
@@ -209,8 +209,8 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.trinity816,
     description:
-      "A modern custom build featuring floor-to-ceiling windows and an open-concept great room. Built with a focus on natural light and premium interior finishes.",
-    features: ["Floor-to-Ceiling Windows", "Open Concept", "Premium Finishes", "Outdoor Kitchen", "Custom Cabinetry"],
+      "A modern custom build featuring floor to ceiling windows and an open concept great room. Built with a focus on natural light and premium interior finishes.",
+    features: ["Floor to Ceiling Windows", "Open Concept", "Premium Finishes", "Outdoor Kitchen", "Custom Cabinetry"],
   },
   {
     id: "bette-1007",
@@ -225,8 +225,8 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1007,
     description:
-      "An open-concept estate featuring a custom chef's kitchen and a large outdoor living space. Part of the five-home Bette Street development.",
-    features: ["Chef's Kitchen", "Resort Pool", "3-Car Garage", "Smart Home", "Custom Millwork"],
+      "An open concept estate featuring a custom chef's kitchen and a large outdoor living space. Part of the five home Bette Street development.",
+    features: ["Chef's Kitchen", "Resort Pool", "3 Car Garage", "Smart Home", "Custom Millwork"],
     highlight: "Bette St Collection",
   },
   {
@@ -242,7 +242,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1005,
     description:
-      "A transitional-style home that blends classic brickwork with modern interior upgrades. Designed for a growing family needing functional, durable spaces.",
+      "A transitional style home that blends classic brickwork with modern interior upgrades. Designed for a growing family needing functional, durable spaces.",
     features: ["Custom Millwork", "Spa Master Bath", "Covered Patio", "Game Room", "Mudroom"],
     highlight: "Bette St Collection",
   },
@@ -259,8 +259,8 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1003,
     description:
-      "Built for indoor-outdoor living, this home includes a spacious covered patio and an oversized backyard, with clean lines and custom cabinetry throughout.",
-    features: ["Open Floor Plan", "Covered Patio", "Custom Cabinetry", "Spa Bath", "2-Car Garage"],
+      "Built for indoor outdoor living, this home includes a spacious covered patio and an oversized backyard, with clean lines and custom cabinetry throughout.",
+    features: ["Open Floor Plan", "Covered Patio", "Custom Cabinetry", "Spa Bath", "2 Car Garage"],
     highlight: "Bette St Collection",
   },
   {
@@ -299,7 +299,7 @@ export const projects: Project[] = [
       images.housef375,
     ],
     description:
-      "A custom build focused on high-end interior selections, including imported hardware and custom woodwork.",
+      "A custom build focused on high end interior selections, including imported hardware and custom woodwork.",
     features: ["Premium Finishes", "Designer Fixtures", "Chef's Kitchen", "Luxury Master Suite", "Custom Millwork"],
   },
 ];
@@ -382,7 +382,7 @@ export const services: Service[] = [
     description:
       "We manage the entire build from breaking ground to the final walkthrough. Your home is built exactly to your plans, with no cut corners.",
     details: [
-      "Financing and pre-approval assistance",
+      "Financing and pre approval assistance",
       "Lot selection across the RGV",
       "Collaborative design with your architect of choice",
       "Permit procurement and full compliance",
@@ -410,7 +410,7 @@ export const services: Service[] = [
   },
   {
     id: "pre-construction",
-    title: "Pre-Construction Services",
+    title: "Pre Construction Services",
     description:
       "We handle the prep work: lender coordination, permits, lot evaluation, and construction loan guidance.",
     details: [
@@ -431,7 +431,7 @@ export const processSteps = [
   {
     step: "01",
     title: "The Vision",
-    desc: "We sit down to understand your ideas, your must-haves, and your budget. No pressure, just a clear path forward.",
+    desc: "We sit down to understand your ideas, your must haves, and your budget. No pressure, just a clear path forward.",
   },
   {
     step: "02",
@@ -493,9 +493,9 @@ Before purchasing land, confirm water, sewer, gas, and electric access. Rural pa
 
 Many premier subdivisions carry architectural review committees that dictate exterior materials, roof colors, and landscaping. Review CC&Rs before you fall in love with a lot.
 
-## 5. Pre-Approval Is a Builder's Best Friend
+## 5. Pre Approval Is a Builder's Best Friend
 
-Construction-to-permanent loans require a solid pre-approval and lender approval of your builder. Getting this sorted saves 4–8 weeks of delay.
+Construction to permanent loans require a solid pre approval and lender approval of your builder. Getting this sorted saves 4–8 weeks of delay.
 
 At RCG Estates, Raul Ceron walks every client through each of these steps before a single design decision is made.
     `.trim(),
@@ -504,7 +504,7 @@ At RCG Estates, Raul Ceron walks every client through each of these steps before
     date: "2025-01-14",
     readTime: "6 min read",
     image: images.houseFinished,
-    tags: ["RGV", "Custom Build", "Pre-Construction", "Permits"],
+    tags: ["RGV", "Custom Build", "Pre Construction", "Permits"],
   },
   {
     id: "2",
@@ -522,7 +522,7 @@ One of the first major decisions in any custom build is architectural style. At 
 - Large format windows that flood interiors with natural light
 - Open floor plans with clean sightlines
 - Material honesty: concrete, steel, and glass as design elements
-- Low-slope or flat rooflines with strong curb presence
+- Low slope or flat rooflines with strong curb presence
 
 ## What Traditional Design Delivers
 
@@ -577,7 +577,7 @@ A geotechnical boring report ($1,500–$3,500) tells you exactly what foundation
 
 As a licensed Texas real estate agent, Raul Ceron can represent you directly in your land purchase, evaluating every one of these factors before you sign anything.
     `.trim(),
-    category: "RGV-Specific Insights",
+    category: "RGV Specific Insights",
     author: "Raul Ceron",
     date: "2025-07-22",
     readTime: "6 min read",

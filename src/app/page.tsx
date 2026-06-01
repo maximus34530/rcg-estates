@@ -152,7 +152,7 @@ export default function HomePage() {
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="text-gray-500 text-lg leading-relaxed mb-4">{companyInfo.about}</p>
-                <p className="text-gray-400 leading-relaxed mb-10 whitespace-pre-line">{companyInfo.mission}</p>
+                <p className="text-gray-500 font-medium leading-relaxed mb-10 whitespace-pre-line">{companyInfo.mission}</p>
               </FadeUp>
 
               {/* Raul quote */}
@@ -415,7 +415,7 @@ export default function HomePage() {
                 Building a custom home shouldn&apos;t feel like a gamble with your life savings.
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-4">
-                You start the process excited, but the local horror stories are everywhere. &quot;Bait and switch&quot; quotes that explode into $20,000 site-prep change orders. The stress of the &quot;subcontractor lottery,&quot; where the name on the brochure isn&apos;t the person swinging the hammer.
+                You start the process excited, but the local horror stories are everywhere. &quot;Bait and switch&quot; quotes that explode into $20,000 site prep change orders. The stress of the &quot;subcontractor lottery,&quot; where the name on the brochure isn&apos;t the person swinging the hammer.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed mb-4">
                 And the ultimate frustration: builders who ghost you the second the final check clears, leaving you to deal with sloppy finishing work or soaring summer AC bills.
@@ -429,10 +429,10 @@ export default function HomePage() {
               <div className="border border-white/10 divide-y divide-white/10">
                 {[
                   { icon: BadgeCheck, label: "Built to Save® Certification", sub: "We build to strict energy standards, saving you up to 40% on South Texas cooling costs from day one." },
-                  { icon: BadgeCheck, label: "Pre-Construction Discovery", sub: "No guessing games. We lock in site prep, soil realities, and material selections before we break ground." },
-                  { icon: BadgeCheck, label: "Vetted Local Trades", sub: "No cheap, revolving-door crews. We rely on long-term, trusted relationships with the Valley's best craftsmen." },
-                  { icon: BadgeCheck, label: "Radical Transparency", sub: "Real-time schedule tracking, photos, and updates in our digital portal so you never have to wonder what's happening." },
-                  { icon: BadgeCheck, label: "Relentless Warranty", sub: "We guarantee a 24-hour response time on warranty items and schedule proactive check-ins at 3 and 11 months." },
+                  { icon: BadgeCheck, label: "Pre Construction Discovery", sub: "No guessing games. We lock in site prep, soil realities, and material selections before we break ground." },
+                  { icon: BadgeCheck, label: "Vetted Local Trades", sub: "No cheap, revolving door crews. We rely on long term, trusted relationships with the Valley's best craftsmen." },
+                  { icon: BadgeCheck, label: "Radical Transparency", sub: "Real time schedule tracking, photos, and updates in our digital portal so you never have to wonder what's happening." },
+                  { icon: BadgeCheck, label: "Relentless Warranty", sub: "We guarantee a 24 hour response time on warranty items and schedule proactive check ins at 3 and 11 months." },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4 px-6 py-5">
                     <item.icon className="w-5 h-5 text-[#6B93D6] shrink-0 mt-0.5" />
