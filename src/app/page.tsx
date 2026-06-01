@@ -96,7 +96,7 @@ export default function HomePage() {
             <motion.h1 initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.04] tracking-tight mb-6">
-              Turning Your Vision<br />
+              Turn Your Vision<br />
               <span className="text-neutral-100">Into Reality.</span>
             </motion.h1>
 
@@ -357,14 +357,12 @@ export default function HomePage() {
             <FadeUp className="lg:col-span-5">
               <SectionLabel text="The Process" light />
               <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight tracking-tight">
-                From Pre-Approval<br />to Move-In
+                A Seamless Process,<br />From Start to Finish
               </h2>
             </FadeUp>
             <FadeUp delay={0.08} className="lg:col-span-7 flex items-end">
               <p className="text-gray-400 text-lg leading-relaxed">
-                First-time builders usually have the same questions: Can I afford this? Is this lot worth it?
-                Who do I call when something goes wrong? We walk you through financing, lot selection,
-                design, and construction, so you never have to guess what happens next.
+                People fear what they don&apos;t understand. We remove the fear of the unknown by laying out a clear, predictable path. From our very first conversation to the moment you step into your new home, you will always know exactly what happens next.
               </p>
             </FadeUp>
           </div>
@@ -408,25 +406,25 @@ export default function HomePage() {
                 <span className="text-white/40 text-[11px] font-semibold tracking-[.24em] uppercase">The RCG Difference</span>
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-                Overcoming The Fear<br />Of Building
+                Building a home can feel scary when you don&apos;t know where to begin.
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-4">
-                We know it can be scary to start the process of building a home when you don&apos;t know where to begin. The fear of delays, hidden costs, and poor communication stops many from getting their dream home.
+                You&apos;ve probably heard the construction horror stories. Budgets spiraling out of control. Vague timelines. Unexpected surprises. And the frustrating feeling of being left completely out of the loop by your builder.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed mb-4">
-                Families in the RGV choose RCG Estates because we remove those emotional barriers. We guide you from finding the perfect lot to handing over the keys, remaining fully committed to your vision.
+                When you are making one of the biggest investments of your life, you shouldn&apos;t have to chase down your contractor just to find out what&apos;s happening with your own home.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed">
-                We handle the heavy lifting, so you can look back and say building your home was one of the best decisions you&apos;ve ever made.
+                At RCG Estates, we replace the anxiety of building with a positive, <span className="italic text-white/80">&quot;we&apos;ve got this&quot;</span> approach. We handle the heavy lifting, so you can look back and say building your home was one of the best decisions you&apos;ve ever made.
               </p>
             </FadeUp>
 
             <FadeUp delay={0.1} className="lg:col-span-5">
               <div className="border border-white/10 divide-y divide-white/10">
                 {[
-                  { icon: BadgeCheck, label: "10+ Builds at Real RGV Addresses", sub: "Drive by before you sign. Every home has a real street address in McAllen or Mission." },
-                  { icon: BadgeCheck, label: "Developer of the Bette Street Collection", sub: "Five luxury homes on one block in Mission. Not a one-off. A development." },
-                  { icon: BadgeCheck, label: "Licensed Realtor + Builder", sub: "A seamless experience. We guide you through finding the perfect lot and building your home, all under one roof." },
+                  { icon: BadgeCheck, label: "No Hidden Surprises", sub: "Honest, accurate pricing so you never have to worry about costs spiraling out of control." },
+                  { icon: BadgeCheck, label: "You're Never in the Dark", sub: "Proactive, clear communication so you always know exactly where your project stands." },
+                  { icon: BadgeCheck, label: "Your Vision, Brought to Life", sub: "Whether you have architectural plans or just a few ideas sketched on a napkin, nothing is too hard for our team." },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4 px-6 py-5">
                     <item.icon className="w-5 h-5 text-[#6B93D6] shrink-0 mt-0.5" />

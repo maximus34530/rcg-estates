@@ -134,7 +134,7 @@ export const owner = {
 export const companyInfo = {
   name: "RCG Estates Construction & Development",
   tagline: "Custom Home Builder in the Rio Grande Valley",
-  subTagline: "Building a home can be scary when you don't know where to begin. We make it seamless from start to finish, turning your vision into a reality.",
+  subTagline: "Building a custom home in the Rio Grande Valley shouldn't be overwhelming. We make the process seamless from start to finish, with honest pricing and clear communication every step of the way.",
   about: `I’m Raul Ceron. I know the emotional barrier that stops most families from building—the fear of the unknown. You’ve probably heard the horror stories: contractors who go ghost, hidden costs that ruin the budget, and the anxiety of being left in the dark. It's stressful.`,
   mission: `We eliminate that stress.\n\nFrom the moment we break ground to the final walkthrough, we communicate clearly, protect your budget, and remain fully committed to turning your vision into reality. We want building your home to be one of the best decisions you've ever made.`,
   founded: "2024",
@@ -427,23 +427,23 @@ export const services: Service[] = [
 export const processSteps = [
   {
     step: "01",
-    title: "Get Pre-Approved",
-    desc: "We connect you with local lenders to lock in your construction financing before any design decisions are made.",
+    title: "The Vision",
+    desc: "We sit down to understand your ideas, your must-haves, and your budget. No pressure, just a clear path forward.",
   },
   {
     step: "02",
-    title: "Choose Your Location",
-    desc: "We evaluate the soil, utilities, flood zones, and setbacks on your lot before you commit a dollar.",
+    title: "The Plan",
+    desc: "We handle the heavy lifting—from permits to precise timelines—so you know exactly what to expect.",
   },
   {
     step: "03",
-    title: "Design Your Home",
-    desc: "You finalize your floor plan and lock in your finish selections before we break ground.",
+    title: "The Build",
+    desc: "Watch your home come to life with regular updates and a team that treats your property with care.",
   },
   {
     step: "04",
-    title: "Build With Confidence",
-    desc: "We manage the subcontractors and inspections, keeping you updated every week until move-in day.",
+    title: "The Reality",
+    desc: "You step into a custom space that looks and feels exactly the way you imagined it.",
   },
 ];
 
