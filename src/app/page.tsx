@@ -102,7 +102,7 @@ export default function HomePage() {
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.22 }}
               className="text-white/85 font-medium text-lg leading-relaxed mb-10 max-w-xl drop-shadow-md [text-shadow:_0_1px_10px_rgb(0_0_0_/_40%)]">
-              You’ve planned this home for years. You shouldn't have to gamble your life savings to build it. We protect your journey with locked pricing, absolute honesty, and a team that always answers your calls.
+              You’ve spent years planning this moment. You shouldn’t have to risk your life savings to see it through. We protect your investment with fixed pricing and absolute transparency from day one.
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export default function HomePage() {
               <div className="mb-5">
                   <a href="#contact"
                   className="btn-glow inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-base">
-                  Explore Your Options <ArrowRight className="w-4 h-4" />
+                  Explore the Process <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </motion.div>
@@ -128,7 +128,7 @@ export default function HomePage() {
                 transition={{ duration: 0.5, delay: 0.55 + i * 0.08 }}
                 className="px-8 py-9 flex flex-col items-start">
                 <span className="text-4xl font-bold text-white tracking-tight leading-none mb-2">{s.value}</span>
-                <span className="text-xs text-white/40 font-mono uppercase tracking-[.2em]">{s.label}</span>
+                <span className="text-xs text-white/50 font-mono uppercase tracking-[.2em]">{s.label}</span>
               </motion.div>
             ))}
           </div>
@@ -149,8 +149,9 @@ export default function HomePage() {
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
-                <p className="text-gray-500 text-lg leading-relaxed mb-4">{companyInfo.about}</p>
-                <p className="text-gray-500 font-medium leading-relaxed mb-10 whitespace-pre-line">{companyInfo.mission}</p>
+                <p className="text-gray-600 text-lg leading-relaxed mb-10">
+                  You shouldn't have to sacrifice your peace of mind to build the home you’ve dreamed of. The stories that make families hesitate happen when a builder prioritizes their process over your life's investment. We design the entire journey around your absolute security, from day one until we hand over the keys.
+                </p>
               </FadeUp>
 
               {/* Raul quote */}
@@ -159,7 +160,7 @@ export default function HomePage() {
                   <Quote className="w-5 h-5 text-[#0A3594] shrink-0 mt-0.5" />
                   <div>
                     <p className="text-[#111827] font-medium leading-relaxed text-sm">
-                      &ldquo;Every home we build has a real street address in McAllen or Mission. Don't base your life savings on digital renders. Drive by our projects, talk to our clients, and see exactly what we will deliver for you.&rdquo;
+                      &ldquo;A custom home is likely the largest investment your family will ever make—it should be a journey defined by excitement, never anxiety.&rdquo;
                     </p>
                     <p className="text-xs text-[#0A3594] font-mono font-semibold tracking-widest mt-3 uppercase">
                       — RAUL CERON, FOUNDER
@@ -178,7 +179,7 @@ export default function HomePage() {
                         <CheckCircle className="w-4 h-4 text-[#0A3594] shrink-0 mt-0.5" />
                         <div>
                           <h4 className="font-semibold text-[#111827] text-sm mb-1">{p.title}</h4>
-                          <p className="text-xs text-gray-400 leading-relaxed">{p.desc}</p>
+                          <p className="text-sm text-gray-500 leading-relaxed">{p.desc}</p>
                         </div>
                       </div>
                     </FadeUp>
@@ -345,7 +346,7 @@ export default function HomePage() {
               ))}
             </div>
             <div className="mt-8 flex justify-center">
-              <a href={companyInfo.socials.instagram} target="_blank" rel="noopener noreferrer"
+              <a href="https://www.instagram.com/rcg.estates?igsh=MTZ0c2JwNTNreWVjbg==" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-[#6B93D6] font-medium text-sm border-b border-[#0A3594]/40 hover:border-[#0A3594] pb-px transition-all">
                 Watch More Reels on Instagram <ArrowRight className="w-4 h-4" />
               </a>
@@ -361,12 +362,12 @@ export default function HomePage() {
             <FadeUp className="lg:col-span-5">
               <SectionLabel text="The Process" light />
               <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight tracking-tight">
-                A Seamless Process,<br />From Start to Finish
+                How We Protect<br />Your Building Journey
               </h2>
             </FadeUp>
             <FadeUp delay={0.08} className="lg:col-span-7 flex items-end">
               <p className="text-gray-400 text-lg leading-relaxed">
-                People fear what they don&apos;t understand. We remove the fear of the unknown by laying out a clear, predictable path. From our very first conversation to the moment you step into your new home, you will always know exactly what happens next.
+                Building your home should be a journey defined by clarity, not guesswork. By replacing the unexpected with a transparent, predictable roadmap, you remain completely in control of your timeline, your budget, and your decisions from the first sketch to the day you move in.
               </p>
             </FadeUp>
           </div>

@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import {
   ArrowRight, CheckCircle, Phone, MapPin, Quote, BadgeCheck, Building2,
 } from "lucide-react";
@@ -38,7 +39,22 @@ function Frame({
   );
 }
 
+const mapContainerStyle = {
+  width: "100%",
+  height: "100%"
+};
+
+const center = {
+  lat: 26.200,
+  lng: -98.183
+};
+
 export default function AboutPage() {
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""
+  });
+
   return (
     <>
       {/* Hero */}
@@ -226,17 +242,33 @@ export default function AboutPage() {
             </FadeUp>
 
             <FadeUp delay={0.12} className="lg:col-span-7">
-              <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm" style={{ height: "420px" }}>
-                <iframe
-                  title="RCG Estates Service Area — Rio Grande Valley"
-                  src="https://maps.google.com/maps?q=Rio+Grande+Valley+Texas&t=&z=9&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
+              <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm relative bg-gray-50" style={{ height: "420px" }}>
+                {isLoaded ? (
+                  <GoogleMap
+                    mapContainerStyle={mapContainerStyle}
+                    center={center}
+                    zoom={12}
+                    options={{
+                      disableDefaultUI: true,
+                      zoomControl: true,
+                      scrollwheel: false,
+                      streetViewControl: false,
+                      mapTypeControl: false,
+                      fullscreenControl: false,
+                      styles: [
+                        {
+                          featureType: "poi",
+                          elementType: "labels",
+                          stylers: [{ visibility: "off" }]
+                        }
+                      ]
+                    }}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm">
+                    Loading Map...
+                  </div>
+                )}
               </div>
             </FadeUp>
           </div>

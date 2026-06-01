@@ -142,26 +142,26 @@ export const companyInfo = {
   principles: [
     {
       title: "See the Work First",
-      desc: "You deserve to see real craftsmanship before you commit. We give you the street addresses of our completed builds so you can judge our quality in person.",
+      desc: "Walk through our finished homes in person to experience our quality firsthand before making any commitments.",
     },
     {
       title: "Your Vision Drives the Build",
-      desc: "This is your family’s legacy, not our pet project. You are never left in the dark, you never lose control, and your voice guides every single decision.",
+      desc: "This is your future home. Every final choice belongs to you, guided by a team that honors your decisions.",
     },
     {
       title: "No Hidden Math",
-      desc: "Your budget shouldn't be a guessing game. We calculate site prep, labor, and material costs with absolute precision upfront. The price we lock in is the price you pay.",
+      desc: "We calculate every detail upfront so you can build with a guaranteed, locked-in budget from day one.",
     },
     {
       title: "Built for Generations",
-      desc: "Your home is engineered to last. We pour thicker foundations for RGV clay soils and optimize insulation to keep your summer cooling bills low.",
+      desc: "We engineer every foundation and roof structure to handle the South Texas heat and shifting soil for decades to come",
     },
   ],
   stats: [
-    { value: "$10M+", label: "In RGV Custom Volume" },
-    { value: "10+", label: "Completed Custom Builds" },
-    { value: "100%", label: "Dedicated to Your Vision" },
-    { value: "Zero", label: "Hidden Costs or Surprises" },
+    { value: "$10M+", label: "Trusted with local investments" },
+    { value: "10+", label: "Families safely moved in" },
+    { value: "100%", label: "Focused entirely on you" },
+    { value: "Zero", label: "Surprises or hidden fees" },
   ],
   cities: ["McAllen", "Mission", "Pharr", "Harlingen", "Brownsville", "Edinburg"],
   socials: {
@@ -226,7 +226,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1007,
     description:
-      "An open concept estate featuring a custom chef's kitchen and a large outdoor living space. Part of the five home Bette Street development.",
+      "Designed for effortless hosting, featuring an expansive chef's kitchen that flows seamlessly into your private outdoor living space.",
     features: ["Chef's Kitchen", "Resort Pool", "3 Car Garage", "Smart Home", "Custom Millwork"],
     highlight: "Bette St Collection",
   },
@@ -243,7 +243,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1005,
     description:
-      "A transitional style home that blends classic brickwork with modern interior upgrades. Designed for a growing family needing functional, durable spaces.",
+      "A perfect balance of timeless character and modern detailing, crafted with deep durability to handle every stage of your family's life.",
     features: ["Custom Millwork", "Spa Master Bath", "Covered Patio", "Game Room", "Mudroom"],
     highlight: "Bette St Collection",
   },
@@ -260,7 +260,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.bette1003,
     description:
-      "Built for indoor outdoor living, this home includes a spacious covered patio and an oversized backyard, with clean lines and custom cabinetry throughout.",
+      "Blurring the line between indoor comfort and outdoor freedom, complete with an oversized backyard patio designed for quiet mornings or lively family weekends.",
     features: ["Open Floor Plan", "Covered Patio", "Custom Cabinetry", "Spa Bath", "2 Car Garage"],
     highlight: "Bette St Collection",
   },
@@ -431,23 +431,23 @@ export const services: Service[] = [
 export const processSteps = [
   {
     step: "01",
-    title: "The Low Stakes Coffee Chat",
-    desc: "We sit down together to look at your rough ideas, must haves, and budget boundaries. You don't need blueprints or a perfect plan to start. No pressure, no sales pitches—just an honest look at whether you're ready to take the leap.",
+    title: "The Initial Alignment",
+    desc: "Bring your rough ideas, inspirations, and budget boundaries to a low-pressure conversation. Without needing blueprints or finalized plans, this step ensures your goals align perfectly with structural reality before you spend a single dollar.",
   },
   {
     step: "02",
-    title: "The Plan",
-    desc: "We handle the heavy lifting—from permits to precise timelines—so you know exactly what to expect.",
+    title: "The Blueprint & Timeline",
+    desc: "Your concept transitions into precise engineering blueprints, absolute cost breakdowns, and clear permitting. Every milestone is fully mapped out upfront so you always know exactly what to expect before ground is broken.",
   },
   {
     step: "03",
-    title: "The Build",
-    desc: "Watch your home come to life with regular updates and a team that treats your property with care.",
+    title: "The Active Build",
+    desc: "Track your home’s progress with continuous updates, site walk-throughs, and structural milestones. Your project is closely supervised to ensure your exact specifications are honored at every phase.",
   },
   {
     step: "04",
-    title: "The Reality",
-    desc: "You step into a custom space that looks and feels exactly the way you imagined it.",
+    title: "The Handover",
+    desc: "Take possession of your fully finished, custom property following a meticulous final walkthrough. You step into an immaculate space built precisely to your vision, backed by long-term structural assurance.",
   },
 ];
 
