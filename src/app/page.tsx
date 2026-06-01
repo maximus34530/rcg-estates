@@ -111,7 +111,7 @@ export default function HomePage() {
               <div className="mb-5">
                   <a href="#contact"
                   className="btn-glow inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-base">
-                  Start With a Free Call <ArrowRight className="w-4 h-4" />
+                  Let's Build Together <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </motion.div>

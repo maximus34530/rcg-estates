@@ -134,7 +134,7 @@ export const owner = {
 export const companyInfo = {
   name: "RCG Estates Construction & Development",
   tagline: "Custom Home Builder in the Rio Grande Valley",
-  subTagline: "Builder. Licensed TX Agent. One call from raw dirt to your keys. No middlemen, no handoffs.",
+  subTagline: "Custom homes, built by hand, managed by one.",
   about: `The hardest part of building isn't the construction. It's knowing who to trust. Raul Ceron is a licensed TX Realtor and custom home builder with 10+ completed homes at real addresses in McAllen and Mission you can visit before you commit a dollar.`,
   mission: `Every home in our portfolio has a street address in the RGV you can walk up to right now. Talk to the neighbor. That's our proof of work. Not renders, not promises.`,
   founded: "2024",
@@ -206,7 +206,7 @@ export const projects: Project[] = [
     category: "Custom Build",
     images: images.trinity816,
     description:
-      "A sleek modern build featuring floor-to-ceiling windows, open-concept great room, and premium finishes throughout. One of RCG Estates' most photographed projects.",
+      "A masterclass in modern design. This sleek, custom build features striking floor-to-ceiling windows, an expansive open-concept great room, and premium finishes at every turn. As one of RCG Estates' most photographed projects, it perfectly balances bold architecture with everyday luxury.",
     features: ["Floor-to-Ceiling Windows", "Open Concept", "Premium Finishes", "Outdoor Kitchen", "Custom Cabinetry"],
   },
   {
