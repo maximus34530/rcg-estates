@@ -96,8 +96,8 @@ export default function HomePage() {
             <motion.h1 initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.04] tracking-tight mb-6">
-              Your Vision.<br />
-              <span className="text-neutral-100">Our Craftsmanship.</span>
+              Turning Your Vision<br />
+              <span className="text-neutral-100">Into Reality.</span>
             </motion.h1>
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
@@ -146,8 +146,8 @@ export default function HomePage() {
               <FadeUp><SectionLabel text="Who We Are" /></FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="text-4xl sm:text-5xl font-bold text-[#111827] leading-tight tracking-tight mb-7">
-                  Custom Homes Built Right<br />
-                  <span className="text-[#0A3594]">For the Rio Grande Valley.</span>
+                  A Seamless Process<br />
+                  <span className="text-[#0A3594]">From Start to Finish.</span>
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
@@ -408,16 +408,16 @@ export default function HomePage() {
                 <span className="text-white/40 text-[11px] font-semibold tracking-[.24em] uppercase">The RCG Difference</span>
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-                Why Families in the RGV<br />Choose RCG Estates
+                Overcoming The Fear<br />Of Building
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-4">
-                Building a custom home is a massive decision. It&apos;s natural to worry about choosing a builder who won&apos;t listen.
+                We know it can be scary to start the process of building a home when you don&apos;t know where to begin. The fear of delays, hidden costs, and poor communication stops many from getting their dream home.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed mb-4">
-                Families in the RGV choose RCG Estates because we put your peace of mind first. We guide you from finding the perfect lot to handing over the keys. We protect your time and respect your budget.
+                Families in the RGV choose RCG Estates because we remove those emotional barriers. We guide you from finding the perfect lot to handing over the keys, remaining fully committed to your vision.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed">
-                We handle the heavy lifting, the permits, and the daily grind. You just enjoy watching your dream home come to life.
+                We handle the heavy lifting, so you can look back and say building your home was one of the best decisions you&apos;ve ever made.
               </p>
             </FadeUp>
 

@@ -134,9 +134,9 @@ export const owner = {
 export const companyInfo = {
   name: "RCG Estates Construction & Development",
   tagline: "Custom Home Builder in the Rio Grande Valley",
-  subTagline: "We don’t sell 3D renderings. We give you real addresses in the RGV to drive by and see for yourself. High-end custom homes built for families who want a builder they can actually trust.",
-  about: `I’m Raul Ceron. You’ve probably heard the horror stories about building in South Texas. You sign a contract, and suddenly the builder stops listening. Your calls go to voicemail. Your vision gets lost.`,
-  mission: `That’s not how we operate.\n\nWe’ve built over a dozen homes across McAllen and Mission by treating your investment with the respect it deserves. We answer the phone, we communicate clearly, and we build homes you’ll be proud of.`,
+  subTagline: "Building a home can be scary when you don't know where to begin. We make it seamless from start to finish, turning your vision into a reality.",
+  about: `I’m Raul Ceron. I know the emotional barrier that stops most families from building—the fear of the unknown. You’ve probably heard the horror stories: contractors who go ghost, hidden costs that ruin the budget, and the anxiety of being left in the dark. It's stressful.`,
+  mission: `We eliminate that stress.\n\nFrom the moment we break ground to the final walkthrough, we communicate clearly, protect your budget, and remain fully committed to turning your vision into reality. We want building your home to be one of the best decisions you've ever made.`,
   founded: "2024",
   principles: [
     {
