@@ -148,7 +148,7 @@ export default function ServicesPage() {
           {/* Proof bar */}
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/8 border-b border-white/8">
             {[
-              { label: "Custom Home Builder — McAllen & Mission", sub: "Every build managed from permit to final walkthrough at a real address you can visit" },
+              { label: "Custom Home Builder — McAllen & Mission", sub: "Every build managed from permit to final walkthrough" },
               { label: "Premium Finish Selections", sub: "Access to artisan hardware and high-end materials for every build" },
               { label: "RGV Land & Lot Expert", sub: "Soil, zoning, flood zone, and setback evaluation before you commit a dollar" },
             ].map((item) => (
@@ -167,10 +167,10 @@ export default function ServicesPage() {
                 <span className="text-white/40 text-[11px] font-semibold tracking-[.24em] uppercase">The RCG Difference</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-5 leading-tight">
-                Built in the RGV.<br />For the RGV.<br />At Every Price Point.
+                Built in the RGV.<br />For the RGV.
               </h2>
               <p className="text-gray-400 leading-relaxed mb-8 text-lg">
-                Drive by our completed projects before you sign a single paper. You don&apos;t have to second guess.
+                We know South Texas soil, local codes, and the best local trades. We build homes that are designed specifically to thrive in this climate.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact"

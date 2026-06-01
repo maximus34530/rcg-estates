@@ -88,7 +88,7 @@ export default function ContactPage() {
                 Your builder from call one to keys in hand.
               </h2>
               <p className="text-gray-400 leading-relaxed text-sm mb-10">
-                No gatekeepers. Raul reviews every inquiry personally. Drop your budget or your lot details below, and we&apos;ll get back to you within 24 hours with real next steps.
+                We review every inquiry personally. Drop your budget or your lot details below, and we&apos;ll get back to you within 24 hours with real next steps.
               </p>
             </FadeUp>
 
@@ -241,7 +241,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/8 py-12">
             {[
               { value: "24hr", label: "Response Goal", sub: "We aim to reply to every inquiry within one business day" },
-              { value: "$2.1M+", label: "In Custom Homes Built", sub: "McAllen and Mission — real addresses you can drive to" },
+              { value: "$10M+", label: "In Custom Homes Built", sub: "McAllen and Mission — real addresses you can visit" },
               { value: "Your Turn", label: "Start Building", sub: "One call is all it takes. Tell us your vision and let's make it happen." },
             ].map((item) => (
               <div key={item.label} className="px-8 py-6 text-center md:text-left">

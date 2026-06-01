@@ -344,7 +344,7 @@ export default function ProjectsPage() {
                 Want to Be Our Next Project?
               </h2>
               <p className="text-gray-400 mb-8 leading-relaxed max-w-lg">
-                Tell us about your lot, your vision, and your timeline. As your builder and licensed agent, Raul handles every step from land search to move-in day.
+                Tell us about your lot, your vision, and your timeline. We handle every step from the land search to move-in day.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact"
