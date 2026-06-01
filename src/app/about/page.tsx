@@ -64,24 +64,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-            {companyInfo.stats.map((s, i) => (
-              <FadeUp key={s.label} delay={i * 0.07}>
-                <div className="rounded-xl border border-gray-100 shadow-sm bg-white px-5 py-5 text-center hover:border-gray-200 hover:shadow-md transition-all">
-                  <div className="text-3xl font-bold text-[#111827]">{s.value}</div>
-                  <div className="text-xs text-gray-400 mt-1 font-mono uppercase tracking-wider">{s.label}</div>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Raul Bio */}
-      <section className="py-28 bg-white overflow-hidden">
+      <section className="py-20 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-start">
 

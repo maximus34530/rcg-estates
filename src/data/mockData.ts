@@ -80,17 +80,18 @@ export const images = {
     "/projects/1005-bette/9-2.webp",
   ],
 
-  // ── 1007 Bette — 9 local images ──
+  // ── 1007 Bette — local images ──
   bette1007: [
-    "/projects/1007-bette/1-3-scaled.webp",
-    "/projects/1007-bette/2-3-scaled.webp",
-    "/projects/1007-bette/3-3-scaled.webp",
-    "/projects/1007-bette/4-3-scaled.webp",
-    "/projects/1007-bette/5-3-scaled.webp",
-    "/projects/1007-bette/6-3-scaled.webp",
-    "/projects/1007-bette/7-3-scaled.webp",
-    "/projects/1007-bette/8-3-scaled.webp",
-    "/projects/1007-bette/9-3-scaled.webp",
+    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq.jpeg",
+    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq.png",
+    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (1).jpeg",
+    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (1).png",
+    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (2).png",
+    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (3).png",
+    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (4).png",
+    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (5).png",
+    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (6).png",
+    "/projects/1007-bette/Gemini_Generated_Image_nhbqtrnhbqtrnhbq (7).png",
   ],
 
   // ── 1001 Bette — 9 local images ──
@@ -141,25 +142,25 @@ export const companyInfo = {
   principles: [
     {
       title: "See the Work First",
-      desc: "We don't sell houses using 3D digital renders. We give you real street addresses of our completed builds in McAllen and Mission so you can see the quality yourself.",
+      desc: "You deserve to see real craftsmanship before you commit. We give you the street addresses of our completed builds so you can judge our quality in person.",
     },
     {
       title: "Your Vision Drives the Build",
-      desc: "This is your home, not our pet project. We never gatekeep info or shut you out. Your questions get answered, and you remain in control from start to finish.",
+      desc: "This is your family’s legacy, not our pet project. You are never left in the dark, you never lose control, and your voice guides every single decision.",
     },
     {
       title: "No Hidden Math",
-      desc: "High-end shouldn't mean high stress. We calculate site prep, material, and labor costs upfront. The price we lock in is the price you pay.",
+      desc: "Your budget shouldn't be a guessing game. We calculate site prep, labor, and material costs with absolute precision upfront. The price we lock in is the price you pay.",
     },
     {
       title: "Built for Generations",
-      desc: "We build past the minimum local codes. We pour thicker foundations for RGV clay soil and optimize insulation to keep summer cooling bills low.",
+      desc: "Your home is engineered to last. We pour thicker foundations for RGV clay soils and optimize insulation to keep your summer cooling bills low.",
     },
   ],
   stats: [
-    { value: "$10M+", label: "Trusted RGV Volume" },
+    { value: "$10M+", label: "In RGV Custom Volume" },
     { value: "10+", label: "Completed Custom Builds" },
-    { value: "100%", label: "Communication Guarantee" },
+    { value: "100%", label: "Dedicated to Your Vision" },
     { value: "Zero", label: "Hidden Costs or Surprises" },
   ],
   cities: ["McAllen", "Mission", "Pharr", "Harlingen", "Brownsville", "Edinburg"],

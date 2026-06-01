@@ -1,4 +1,4 @@
-# Supabase Migrations — RCG Estates
+# Supabase Migrations - RCG Estates
 
 > Run these SQL statements in the Supabase Dashboard → SQL Editor, or via the Supabase CLI.
 

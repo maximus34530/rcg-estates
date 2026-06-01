@@ -245,26 +245,6 @@ export default function ProjectsPage() {
             </p>
           </motion.div>
         </div>
-
-        {/* Stats bar */}
-        <div className="relative border-t border-white/10">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/10">
-              {companyInfo.stats.map((s, i) => (
-                <motion.div
-                  key={s.label}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.25 + i * 0.07 }}
-                  className="px-8 py-8 flex flex-col items-start"
-                >
-                  <span className="text-3xl font-bold text-white tracking-tight leading-none mb-1.5">{s.value}</span>
-                  <span className="text-[10px] text-white/65 font-mono uppercase tracking-[.2em]">{s.label}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Filter Bar */}

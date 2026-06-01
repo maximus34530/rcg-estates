@@ -96,14 +96,13 @@ export default function HomePage() {
             <motion.h1 initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.04] tracking-tight mb-6">
-              You&apos;ve Planned. You&apos;ve Waited.<br />
-              <span className="text-neutral-100">Now, Let&apos;s Build Safely.</span>
+              Your Vision. Your Investment. Built Safely.
             </motion.h1>
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.22 }}
               className="text-white/85 font-medium text-lg leading-relaxed mb-10 max-w-xl drop-shadow-md [text-shadow:_0_1px_10px_rgb(0_0_0_/_40%)]">
-              Building a custom home in the Valley shouldn&apos;t feel like a gamble with your life savings. We eliminate the fear of the unknown with locked-in milestone pricing, zero communication blackouts, and complete structural transparency.
+              You’ve planned this home for years. You shouldn't have to gamble your life savings to build it. We protect your journey with locked pricing, absolute honesty, and a team that always answers your calls.
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
@@ -111,7 +110,7 @@ export default function HomePage() {
               <div className="mb-5">
                   <a href="#contact"
                   className="btn-glow inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-base">
-                  Book a Low-Stakes 15-Minute Chat <ArrowRight className="w-4 h-4" />
+                  Explore Your Options <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </motion.div>
@@ -146,8 +145,7 @@ export default function HomePage() {
               <FadeUp><SectionLabel text="Who We Are" /></FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="text-4xl sm:text-5xl font-bold text-[#111827] leading-tight tracking-tight mb-7">
-                  The Real Reason Most Families<br />
-                  <span className="text-[#0A3594]">Put Off Building (And How We Fix It)</span>
+                  Why Most Families Put Off Building Their Dream
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
@@ -161,7 +159,7 @@ export default function HomePage() {
                   <Quote className="w-5 h-5 text-[#0A3594] shrink-0 mt-0.5" />
                   <div>
                     <p className="text-[#111827] font-medium leading-relaxed text-sm">
-                      &ldquo;Every home in our portfolio has a real street address in McAllen or Mission. Don&apos;t look at 3D digital renders. Drive by our builds, knock on the door, and ask the neighbors what it was like to work with us. That&apos;s our true reputation.&rdquo;
+                      &ldquo;Every home we build has a real street address in McAllen or Mission. Don't base your life savings on digital renders. Drive by our projects, talk to our clients, and see exactly what we will deliver for you.&rdquo;
                     </p>
                     <p className="text-xs text-[#0A3594] font-mono font-semibold tracking-widest mt-3 uppercase">
                       — RAUL CERON, FOUNDER
@@ -428,11 +426,11 @@ export default function HomePage() {
             <FadeUp delay={0.1} className="lg:col-span-5">
               <div className="border border-white/10 divide-y divide-white/10">
                 {[
-                  { icon: BadgeCheck, label: "Built to Save® Certification", sub: "We don't just use 'efficiency' as a buzzword. We use independent third-party inspectors to pressure-test your home, saving you up to 40% on South Texas cooling costs." },
-                  { icon: BadgeCheck, label: "Pre Construction Discovery", sub: "No guessing games. We lock in site prep, soil realities, and material selections before we break ground." },
-                  { icon: BadgeCheck, label: "Vetted Local Trades", sub: "No cheap, revolving door crews. We rely on long term, trusted relationships with the Valley's best craftsmen." },
-                  { icon: BadgeCheck, label: "Radical Transparency", sub: "No ghosting or communication blackouts. Get real-time schedule tracking, daily photos, and construction updates sent straight to your phone via our digital client portal." },
-                  { icon: BadgeCheck, label: "Relentless Warranty", sub: "We don't disappear when the final check clears. We guarantee a 24-hour response time on warranty items and schedule proactive check-ins at 3 and 11 months." },
+                  { icon: BadgeCheck, label: "Built to Save® Certification", sub: "Your energy efficiency is verified by independent inspectors, cutting your South Texas cooling costs by up to 40%." },
+                  { icon: BadgeCheck, label: "Pre Construction Discovery", sub: "No guessing games. We lock in your site prep, soil realities, and material selections before we ever break ground." },
+                  { icon: BadgeCheck, label: "Vetted Local Trades", sub: "No cheap, revolving door crews. We work exclusively with long term, trusted local craftsmen who treat your property with care." },
+                  { icon: BadgeCheck, label: "Radical Transparency", sub: "You are always in the loop. Access your private digital portal anytime to see real time schedules, daily photos, and regular updates." },
+                  { icon: BadgeCheck, label: "Relentless Warranty", sub: "We protect your peace of mind long after the keys are yours. Enjoy a 24 hour response guarantee and proactive structural check ins." },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4 px-6 py-5">
                     <item.icon className="w-5 h-5 text-[#6B93D6] shrink-0 mt-0.5" />
@@ -502,7 +500,7 @@ export default function HomePage() {
                 Tell Us Where You Are<br />In The Process
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Not sure if you&apos;re actually ready to build yet? That&apos;s entirely okay. Tell us where you are in the process and we&apos;ll follow up within one business day with a straightforward, honest perspective on your next best step. No pressure.
+                Not sure if you’re entirely ready to take the leap yet? That’s okay. Tell us where you are in your thinking, and we will help you map out your next best step. No pressure.
               </p>
             </FadeUp>
 

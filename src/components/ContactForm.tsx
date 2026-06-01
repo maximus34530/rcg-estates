@@ -232,7 +232,7 @@ export default function ContactForm({ glass = false }: { glass?: boolean }) {
             </>
           ) : (
             <>
-              Take the First Low-Stakes Step
+              Start Your Journey
               <ArrowRight className="w-4 h-4" />
             </>
           )}
