@@ -163,6 +163,9 @@ export const companyInfo = {
     { value: "Zero", label: "Hidden Costs or Surprises" },
   ],
   cities: ["McAllen", "Mission", "Pharr", "Harlingen", "Brownsville", "Edinburg"],
+  socials: {
+    instagram: "https://www.instagram.com/rcgestates",
+  },
   hours: {
     weekdays: "Mon – Fri: 9 AM – 5 PM",
     saturday: "Saturday: By Appointment",

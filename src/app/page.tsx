@@ -346,6 +346,12 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+            <div className="mt-8 flex justify-center">
+              <a href={companyInfo.socials.instagram} target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#6B93D6] font-medium text-sm border-b border-[#0A3594]/40 hover:border-[#0A3594] pb-px transition-all">
+                Watch More Reels on Instagram <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
           </FadeUp>
         </div>
       </section>
@@ -406,25 +412,27 @@ export default function HomePage() {
                 <span className="text-white/40 text-[11px] font-semibold tracking-[.24em] uppercase">The RCG Difference</span>
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-                Building a home can feel scary when you don&apos;t know where to begin.
+                Building a custom home shouldn&apos;t feel like a gamble with your life savings.
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-4">
-                You&apos;ve probably heard the construction horror stories. Budgets spiraling out of control. Vague timelines. Unexpected surprises. And the frustrating feeling of being left completely out of the loop by your builder.
+                You start the process excited, but the local horror stories are everywhere. &quot;Bait and switch&quot; quotes that explode into $20,000 site-prep change orders. The stress of the &quot;subcontractor lottery,&quot; where the name on the brochure isn&apos;t the person swinging the hammer.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed mb-4">
-                When you are making one of the biggest investments of your life, you shouldn&apos;t have to chase down your contractor just to find out what&apos;s happening with your own home.
+                And the ultimate frustration: builders who ghost you the second the final check clears, leaving you to deal with sloppy finishing work or soaring summer AC bills.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed">
-                At RCG Estates, we replace the anxiety of building with a positive, <span className="italic text-white/80">&quot;we&apos;ve got this&quot;</span> approach. We handle the heavy lifting, so you can look back and say building your home was one of the best decisions you&apos;ve ever made.
+                You aren&apos;t just buying wood and concrete. You are making a massive investment, and you deserve to feel protected.
               </p>
             </FadeUp>
 
             <FadeUp delay={0.1} className="lg:col-span-5">
               <div className="border border-white/10 divide-y divide-white/10">
                 {[
-                  { icon: BadgeCheck, label: "No Hidden Surprises", sub: "Honest, accurate pricing so you never have to worry about costs spiraling out of control." },
-                  { icon: BadgeCheck, label: "You're Never in the Dark", sub: "Proactive, clear communication so you always know exactly where your project stands." },
-                  { icon: BadgeCheck, label: "Your Vision, Brought to Life", sub: "Whether you have architectural plans or just a few ideas sketched on a napkin, nothing is too hard for our team." },
+                  { icon: BadgeCheck, label: "Built to Save® Certification", sub: "We build to strict energy standards, saving you up to 40% on South Texas cooling costs from day one." },
+                  { icon: BadgeCheck, label: "Pre-Construction Discovery", sub: "No guessing games. We lock in site prep, soil realities, and material selections before we break ground." },
+                  { icon: BadgeCheck, label: "Vetted Local Trades", sub: "No cheap, revolving-door crews. We rely on long-term, trusted relationships with the Valley's best craftsmen." },
+                  { icon: BadgeCheck, label: "Radical Transparency", sub: "Real-time schedule tracking, photos, and updates in our digital portal so you never have to wonder what's happening." },
+                  { icon: BadgeCheck, label: "Relentless Warranty", sub: "We guarantee a 24-hour response time on warranty items and schedule proactive check-ins at 3 and 11 months." },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4 px-6 py-5">
                     <item.icon className="w-5 h-5 text-[#6B93D6] shrink-0 mt-0.5" />
