@@ -143,7 +143,7 @@ export default function HomePage() {
               <FadeUp><SectionLabel text="Who We Are" /></FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="text-4xl sm:text-5xl font-bold text-[#111827] leading-tight tracking-tight mb-7">
-                  You've Done the Research. Now You're Looking for Someone You Can Trust.
+                  The Hardest Part Isn't Finding a Builder. It's Finding One You Believe.
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
