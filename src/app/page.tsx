@@ -165,18 +165,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── PRICE CERTAINTY CALLOUT ─────────────────────────────────────── */}
-      <section className="bg-[#0A3594] py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
-          <span className="text-white font-bold text-lg tracking-tight">The price you sign on is the price you pay.</span>
-          <span className="hidden sm:block text-white/40">—</span>
-          <span className="text-white/70 text-sm">No change orders. No surprises. Ever.</span>
-        </div>
-      </section>
-
-      {/* ── REVIEWS ─────────────────────────────────────────────────────── */}
-      <ReviewsMarquee />
-
       {/* ── 2. WHO WE ARE ─────────────────────────────────────────────────── */}
       <section className="py-28 bg-white overflow-hidden border-t border-neutral-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -187,7 +175,7 @@ export default function HomePage() {
               <FadeUp><SectionLabel text="Who We Are" /></FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="text-4xl sm:text-5xl font-bold text-[#111827] leading-tight tracking-tight mb-7">
-                  The Hardest Part Isn't Finding a Builder. It's Finding One You Believe in.
+                  You've Done the Research. Now You're Looking for Someone You Can Trust.
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
@@ -423,6 +411,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── REVIEWS MARQUEE (live Google data) ────────────────────────────── */}
+      <ReviewsMarquee />
 
       {/* ── UVP — Charcoal with credential grid ──────────────────────────── */}
       <section className="bg-[#111827]">

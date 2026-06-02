@@ -239,7 +239,7 @@ export default function ContactForm({ glass = false }: { glass?: boolean }) {
         </motion.button>
 
         <p className={`text-xs text-center mt-4 ${glass ? "text-white/25" : "text-gray-400"}`}>
-          No commitment. Most people hear back the same day.
+          Your information is kept private and never shared with third parties.
         </p>
       </div>
     </form>
