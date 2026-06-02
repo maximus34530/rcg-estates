@@ -142,33 +142,33 @@ export const companyInfo = {
   name: "RCG Estates Construction & Development",
   tagline: "Custom Home Builder in the Rio Grande Valley",
   subTagline: "Building a home in the Valley shouldn't feel like a gamble with your life savings. We eliminate the fear of the unknown with locked in milestone pricing, zero communication blackouts, and a process designed to protect your investment from start to finish.",
-  about: `You’ve earned the right to build without compromise. From initial lot selection to final handover, your journey is completely protected by fixed pricing and zero hidden math.`,
+  about: `We create spaces that reflect your lifestyle and values. Based in the Rio Grande Valley, we specialize in custom home construction and commercial building, serving communities from McAllen to Brownsville—empowering you throughout the entire process.`,
   mission: `We eliminate that stress.\n\nFrom the moment we break ground to the final walkthrough, we communicate clearly, protect your budget, and remain fully committed to turning your vision into reality. We want building your home to be one of the best decisions you've ever made.`,
   founded: "2024",
   principles: [
     {
-      title: "See the Work First",
-      desc: "Walk through our finished homes in person to experience our quality firsthand before making any commitments.",
+      title: "Custom-Centered Design",
+      desc: "Your home or commercial space starts with your ideas. We take the time to understand your lifestyle, needs, and aesthetic preferences.",
     },
     {
-      title: "Your Vision Drives the Build",
-      desc: "This is your future home. Every final choice belongs to you, guided by a team that honors your decisions.",
+      title: "Clear, Transparent Process",
+      desc: "No guesswork. We walk you through financing, lot selection, architecture, permits, and construction with full transparency.",
     },
     {
-      title: "No Hidden Math",
-      desc: "We calculate every detail upfront so you can build with a guaranteed, locked-in budget from day one.",
+      title: "Local Knowledge",
+      desc: "We understand the region's land, climate, and building codes.",
     },
     {
-      title: "Built for Generations",
-      desc: "We engineer every foundation and roof structure to handle the South Texas heat and shifting soil for decades to come",
+      title: "Reliable Partnerships",
+      desc: "We work with architects, lenders, and vendors committed to excellence.",
     },
   ],
   stats: [
-    { value: "$10M+", label: "Trusted with local investments" },
+    { value: "100+", label: "Homes Built" },
     { value: "10+", label: "Families moved in" },
     // TODO: Confirm "10+ Years building in the RGV" with Raul before publishing — pending client verification
     { value: "10+", label: "Years building in the RGV" },
-    { value: "Zero", label: "Surprises or hidden fees" },
+    { value: "100%", label: "Transparency" },
   ],
   cities: ["McAllen", "Mission", "Pharr", "Harlingen", "Brownsville", "Edinburg"],
   socials: {
@@ -432,23 +432,23 @@ export const services: Service[] = [
 export const processSteps = [
   {
     step: "01",
-    title: "The Initial Alignment",
-    desc: "Bring your rough ideas, inspirations, and budget boundaries to a low-pressure conversation. Without needing blueprints or finalized plans, this step ensures your goals align perfectly with structural reality before you spend a single dollar.",
+    title: "Get Pre-Approved",
+    desc: "We connect you with trusted lenders.",
   },
   {
     step: "02",
-    title: "The Blueprint & Timeline",
-    desc: "Your concept transitions into precise engineering blueprints, absolute cost breakdowns, and clear permitting. Every milestone is fully mapped out upfront so you always know exactly what to expect before ground is broken.",
+    title: "Choose Your Location",
+    desc: "We help you secure the ideal lot.",
   },
   {
     step: "03",
-    title: "The Active Build",
-    desc: "Track your home’s progress with continuous updates, site walk-throughs, and structural milestones. Your project is closely supervised to ensure your exact specifications are honored at every phase.",
+    title: "Design Your Home",
+    desc: "Collaborate with our award-winning architect.",
   },
   {
     step: "04",
-    title: "The Handover",
-    desc: "Take possession of your fully finished, custom property following a meticulous final walkthrough. You step into an immaculate space built precisely to your vision, backed by long-term structural assurance.",
+    title: "Build With Confidence",
+    desc: "We keep you informed every step of the way.",
   },
 ];
 

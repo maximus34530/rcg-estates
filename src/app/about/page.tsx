@@ -54,11 +54,11 @@ export default function AboutPage() {
           >
             <div className="flex items-center gap-3 mb-5">
               <span className="block w-8 h-[2px] bg-[#0A3594]" />
-              <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">About RCG Estates</span>
+              <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">About Us</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
-              Built Around You.<br />
-              Every Step.
+              Building With Purpose,<br />
+              Guided by Your Vision
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">{companyInfo.about}</p>
           </motion.div>
@@ -167,10 +167,10 @@ export default function AboutPage() {
           <FadeUp className="text-center mb-14">
             <div className="inline-flex items-center gap-4 mb-4">
               <div className="w-8 h-[2px] bg-[#0A3594]" />
-              <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Core Principles</span>
+              <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">What Sets Us Apart</span>
               <div className="w-8 h-[2px] bg-[#0A3594]" />
             </div>
-            <h2 className="text-4xl font-bold text-white tracking-tight">How We Build</h2>
+            <h2 className="text-4xl font-bold text-white tracking-tight">What Sets Us Apart</h2>
           </FadeUp>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

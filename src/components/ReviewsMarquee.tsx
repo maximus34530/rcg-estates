@@ -120,7 +120,7 @@ export default function ReviewsMarquee() {
           <div className="flex items-center gap-3 mb-4">
             <span className="block w-8 h-[2px] bg-[#0A3594]" />
             <span className="text-[#0A3594] text-[11px] font-semibold tracking-[.24em] uppercase">
-              Homeowner Reviews
+              Testimonials
             </span>
           </div>
         </FadeUp>
@@ -128,7 +128,7 @@ export default function ReviewsMarquee() {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] tracking-tight mb-2">
-                From People Who Built With Raul
+                What Our Clients Are Saying
               </h2>
 
             </div>

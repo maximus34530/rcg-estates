@@ -34,10 +34,10 @@ export default function ServicesPage() {
           >
             <div className="flex items-center gap-3 mb-5">
               <span className="block w-8 h-[2px] bg-[#0A3594]" />
-              <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">What We Do</span>
+              <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Our Services</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight mb-5">
-              Full-Scope Services for Every Stage of Your Build
+              Construction Built Around Your Vision
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed">
               From lot selection to final walkthrough, every phase handled by our team of experts.

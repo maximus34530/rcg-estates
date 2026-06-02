@@ -6,7 +6,7 @@ import Image from "next/image";
 import Script from "next/script";
 import { motion } from "framer-motion";
 import {
-  ArrowRight, MapPin, Star, CheckCircle, Quote, BadgeCheck, Volume2, VolumeX,
+  ArrowRight, MapPin, Star, CheckCircle, BadgeCheck, Volume2, VolumeX,
 } from "lucide-react";
 import {
   companyInfo, owner, processSteps, projects, blogPosts, images, videos,
@@ -54,10 +54,30 @@ export default function HomePage() {
     setUnmutedIndex(next);
   }
 
+  const headlineParts = 3;
+  const lineDuration = 2.4;
+  const lineStagger = 0.9;
+  const lineStart = 0.2;
+  const revealEase = [0.16, 1, 0.3, 1] as const;
+  const inMindStart = lineStart + lineStagger * (headlineParts - 1);
+  const inMindDuration = 3.2;
+  const lineReveal = {
+    initial: { opacity: 0, y: 36, filter: "blur(10px)" },
+    animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+  };
+  const revealDuration = 0.35;
+  const revealEaseSnappy = [0.25, 0.1, 0.25, 1] as const;
+  const revealStart = inMindStart + 1.25;
+  const revealTransition = { duration: revealDuration, delay: revealStart, ease: revealEaseSnappy };
+  const revealMotion = {
+    initial: { opacity: 0, y: 10, filter: "blur(4px)" },
+    animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+  };
+
   return (
     <>
       {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-end bg-[#111827] overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center bg-[#111827] overflow-hidden">
         <Image
           src={images.bette1001[0]}
           alt="RCG Estates custom home — 1001 Bette, Mission TX"
@@ -65,59 +85,64 @@ export default function HomePage() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/90 via-[#111827]/20 to-[#111827]/0" />
-        <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[#111827]/40 to-[#111827]/0" />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#111827]/75 via-[#111827]/50 to-[#111827]/85" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(17,24,39,0.35)_100%)]" />
 
-        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 pt-40">
-          <div className="max-w-3xl">
-            <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 mb-7 rounded-full bg-white/8 border border-white/12 text-white/70 text-xs font-mono tracking-[.2em] uppercase backdrop-blur-sm">
-              <MapPin className="w-3 h-3 text-[#0A3594]" /> Rio Grande Valley, Texas
-            </motion.div>
+        <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-32 text-center">
+          <div className="mx-auto max-w-4xl flex flex-col items-center">
+            <div className="relative w-full">
+              <motion.div
+                {...revealMotion}
+                transition={revealTransition}
+                className="absolute bottom-full left-1/2 -translate-x-1/2 mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-white/85 text-sm font-mono tracking-[.2em] uppercase backdrop-blur-sm whitespace-nowrap">
+                <MapPin className="w-4 h-4 text-[#6B93D6]" /> Rio Grande Valley, Texas
+              </motion.div>
 
-            <motion.h1 initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.04] tracking-tight mb-6">
-              You've been comparing prices.<br />What you're actually looking for is trust.
-            </motion.h1>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.05] tracking-tight mb-8 [text-shadow:_0_2px_24px_rgb(0_0_0_/_55%)]">
+                <motion.span
+                  {...lineReveal}
+                  transition={{ duration: lineDuration, delay: lineStart, ease: revealEase }}
+                  className="block"
+                >
+                  Homes
+                </motion.span>
 
-            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.22 }}
-              className="text-white/85 font-medium text-lg leading-relaxed mb-10 max-w-xl drop-shadow-md [text-shadow:_0_1px_10px_rgb(0_0_0_/_40%)]">
-              A custom home is the largest investment your family will ever make. We make it an exciting journey.
+                <motion.span
+                  initial={{ opacity: 0, x: -120, filter: "blur(10px)" }}
+                  animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                  transition={{ duration: lineDuration, delay: lineStart + lineStagger, ease: revealEase }}
+                  className="block"
+                >
+                  Built With You
+                </motion.span>
+
+                <motion.span
+                  initial={{ opacity: 0, filter: "blur(10px)" }}
+                  animate={{ opacity: 1, filter: "blur(0px)" }}
+                  transition={{ duration: inMindDuration, delay: inMindStart, ease: revealEase }}
+                  className="block"
+                >
+                  In Mind
+                </motion.span>
+              </h1>
+            </div>
+
+            <motion.p
+              {...revealMotion}
+              transition={revealTransition}
+              className="text-white/90 font-medium text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 max-w-3xl mx-auto [text-shadow:_0_2px_16px_rgb(0_0_0_/_50%)]">
+              You don&apos;t need to be an expert in construction to call this your home. Experience your vision come to life. Unlock the door and...
             </motion.p>
 
-            <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.28 }}
-              className="flex items-start gap-4 p-5 border-l-4 border-white/40 bg-white/8 backdrop-blur-sm mb-8 max-w-xl">
-              <Quote className="w-4 h-4 text-white/60 shrink-0 mt-0.5" />
-              <div>
-                <p className="text-white/85 font-medium leading-relaxed text-sm">
-                  &ldquo;Every family I&apos;ve worked with came in nervous. That&apos;s the problem I built RCG to solve.&rdquo;
-                </p>
-                <p className="text-xs text-white/50 font-mono font-semibold tracking-widest mt-3 uppercase">
-                  — Raul Ceron, Founder
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}>
-              <div className="mb-4">
-                <a href="#contact"
-                  className="btn-glow inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-base">
-                  Start Your Journey <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-              <div className="flex items-center gap-5 text-white/50 text-xs font-mono tracking-widest uppercase">
-                <span className="flex items-center gap-1.5"><CheckCircle className="w-3 h-3 text-[#6B93D6]" /> Fixed Pricing</span>
-                <span className="text-white/20">·</span>
-                <span className="flex items-center gap-1.5"><CheckCircle className="w-3 h-3 text-[#6B93D6]" /> Licensed TX Agent</span>
-                <span className="text-white/20">·</span>
-                <span className="flex items-center gap-1.5"><CheckCircle className="w-3 h-3 text-[#6B93D6]" /> 24hr Response</span>
-              </div>
+            <motion.div
+              {...revealMotion}
+              transition={revealTransition}
+              className="mb-6">
+              <a href="#contact"
+                className="btn-glow inline-flex items-center justify-center gap-2 px-10 py-5 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-lg">
+                  Take Your First Step <ArrowRight className="w-5 h-5" />
+              </a>
             </motion.div>
           </div>
         </div>
@@ -167,7 +192,7 @@ export default function HomePage() {
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="text-gray-600 text-lg leading-relaxed mb-10">
-                  You’ve done your research. You’ve toured other builds and sat through other pitches. What you haven’t found yet is a builder you actually believe. At RCG, every process, every guarantee, and every conversation is designed around one outcome — that you move in knowing you made the right call.
+                  At RCG Estates Construction &amp; Development, we specialize in building custom homes and commercial spaces across the Rio Grande Valley. While we do have a strong reputation in cities like McAllen, Mission, and Edinburg, we value you the most. We bring together expert design, skilled craftsmanship, and personalized service—ensuring every project meets your goals and exceeds your expectations.
                 </p>
               </FadeUp>
 
@@ -230,12 +255,11 @@ export default function HomePage() {
             <FadeUp>
               <div className="flex items-center gap-3 mb-4">
                 <span className="block w-8 h-[2px] bg-[#0A3594]" />
-                <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Portfolio</span>
+                <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Our Gallery</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">See What We've Built</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">See Our Recent Builds Across the Rio Grande Valley</h2>
               <p className="text-white/40 mt-2 max-w-xl text-sm leading-relaxed">
-                Real homes at real addresses in McAllen and Mission, including the Bette Street collection
-                and 816 N Trinity. Drive by them before you hire anyone.
+                Explore our custom homes and commercial projects in McAllen, Mission, Harlingen &amp; more.
               </p>
             </FadeUp>
             <FadeUp>
@@ -363,14 +387,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-14">
             <FadeUp className="lg:col-span-5">
-              <SectionLabel text="The Process" light />
+              <SectionLabel text="From Pre-Approval to Move-In" light />
               <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight tracking-tight">
-                How We Make<br />the Journey Feel Easy
+                We Guide You<br />Every Step
               </h2>
             </FadeUp>
             <FadeUp delay={0.08} className="lg:col-span-7 flex items-end">
               <p className="text-gray-400 text-lg leading-relaxed">
-                Most people expect building a custom home to be stressful. We built a process so transparent and predictable that all you have to do is watch your vision come to life — we handle everything else.
+                Building a home doesn&apos;t have to be overwhelming. Here&apos;s how we make it simple.
               </p>
             </FadeUp>
           </div>
@@ -452,8 +476,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
             <FadeUp>
-              <SectionLabel text="Build Journal" />
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] tracking-tight">Before You Break Ground</h2>
+              <SectionLabel text="Blog" />
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] tracking-tight">Building Insights &amp; Tips from the Experts</h2>
             </FadeUp>
             <FadeUp>
               <Link href="/blog"
@@ -495,10 +519,10 @@ export default function HomePage() {
             <FadeUp className="lg:col-span-5">
               <div className="flex items-center gap-3 mb-6">
                 <span className="block w-8 h-[2px] bg-[#0A3594]" />
-                <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Get In Touch</span>
+                <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Contact Us</span>
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-5">
-                Let’s Talk About<br />Your Build
+                Let’s Build Your Dream<br />Home, Together
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
                 Whether you have a lot, a budget, or just an idea — bring it. We’ll tell you exactly what’s possible and what it takes to get there.
