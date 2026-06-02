@@ -95,21 +95,28 @@ export default function HomePage() {
               <Quote className="w-4 h-4 text-white/60 shrink-0 mt-0.5" />
               <div>
                 <p className="text-white/85 font-medium leading-relaxed text-sm">
-                  &ldquo;A custom home is likely the largest investment your family will ever make. It should be an exciting journey.&rdquo;
+                  &ldquo;Every family I&apos;ve worked with came in nervous. That&apos;s the problem I built RCG to solve.&rdquo;
                 </p>
                 <p className="text-xs text-white/50 font-mono font-semibold tracking-widest mt-3 uppercase">
-                  — RAUL CERON, FOUNDER
+                  — Raul Ceron, Founder
                 </p>
               </div>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}>
-              <div className="mb-5">
-                  <a href="#contact"
+              <div className="mb-4">
+                <a href="#contact"
                   className="btn-glow inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-base">
                   Start Your Journey <ArrowRight className="w-4 h-4" />
                 </a>
+              </div>
+              <div className="flex items-center gap-5 text-white/50 text-xs font-mono tracking-widest uppercase">
+                <span className="flex items-center gap-1.5"><CheckCircle className="w-3 h-3 text-[#6B93D6]" /> Fixed Pricing</span>
+                <span className="text-white/20">·</span>
+                <span className="flex items-center gap-1.5"><CheckCircle className="w-3 h-3 text-[#6B93D6]" /> Licensed TX Agent</span>
+                <span className="text-white/20">·</span>
+                <span className="flex items-center gap-1.5"><CheckCircle className="w-3 h-3 text-[#6B93D6]" /> 24hr Response</span>
               </div>
             </motion.div>
           </div>
@@ -133,6 +140,18 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── PRICE CERTAINTY CALLOUT ─────────────────────────────────────── */}
+      <section className="bg-[#0A3594] py-5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
+          <span className="text-white font-bold text-lg tracking-tight">The price you sign on is the price you pay.</span>
+          <span className="hidden sm:block text-white/40">—</span>
+          <span className="text-white/70 text-sm">No change orders. No surprises. Ever.</span>
+        </div>
+      </section>
+
+      {/* ── REVIEWS ─────────────────────────────────────────────────────── */}
+      <ReviewsMarquee />
+
       {/* ── 2. WHO WE ARE ─────────────────────────────────────────────────── */}
       <section className="py-28 bg-white overflow-hidden border-t border-neutral-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,7 +162,7 @@ export default function HomePage() {
               <FadeUp><SectionLabel text="Who We Are" /></FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="text-4xl sm:text-5xl font-bold text-[#111827] leading-tight tracking-tight mb-7">
-                  The Hardest Part Isn't Finding a Builder. It's Finding One You Believe.
+                  The Hardest Part Isn't Finding a Builder. It's Finding One You Believe in.
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
@@ -380,9 +399,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ── REVIEWS MARQUEE (live Google data) ────────────────────────────── */}
-      <ReviewsMarquee />
 
       {/* ── UVP — Charcoal with credential grid ──────────────────────────── */}
       <section className="bg-[#111827]">
