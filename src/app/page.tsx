@@ -132,7 +132,7 @@ export default function HomePage() {
               {...revealMotion}
               transition={revealTransition}
               className="text-white/90 font-medium text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 max-w-3xl mx-auto [text-shadow:_0_2px_16px_rgb(0_0_0_/_50%)]">
-              You don&apos;t need to be an expert in construction to call this your home. Experience your vision come to life. Unlock the door and...
+              You don&apos;t need to be an expert in construction to call this your home. All you have to do is watch your vision come to life — we handle everything else.
             </motion.p>
 
             <motion.div
@@ -175,7 +175,7 @@ export default function HomePage() {
               <FadeUp><SectionLabel text="Who We Are" /></FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="text-4xl sm:text-5xl font-bold text-[#111827] leading-tight tracking-tight mb-7">
-                  You've Done the Research. Now You're Looking for Someone You Can Trust.
+                  You&apos;ve been comparing prices. But what you&apos;re actually looking for is trust.
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
