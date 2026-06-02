@@ -145,12 +145,12 @@ export default function HomePage() {
               <FadeUp><SectionLabel text="Who We Are" /></FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="text-4xl sm:text-5xl font-bold text-[#111827] leading-tight tracking-tight mb-7">
-                  Why Most Families Put Off Building Their Dream
+                  You've Done the Research. Now You're Looking for Someone You Can Trust.
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="text-gray-600 text-lg leading-relaxed mb-10">
-                  You shouldn't have to sacrifice your peace of mind to build the home you’ve dreamed of. The stories that make families hesitate happen when a builder prioritizes their process over your life's investment. We design the entire journey around your absolute security, from day one until we hand over the keys.
+                  Comparing prices and floor plans gets you close — but what really drives the decision is confidence in your builder. At RCG, trust isn’t a promise we make, it’s a process we’ve built, so every step from blueprint to keys feels certain, not stressful.
                 </p>
               </FadeUp>
 
