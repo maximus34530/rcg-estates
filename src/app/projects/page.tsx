@@ -79,11 +79,11 @@ function GalleryModal({ project, onClose }: { project: Project; onClose: () => v
         </AnimatePresence>
 
         {/* Prev / Next */}
-        <button onClick={prev}
+        <button onClick={prev} aria-label="Previous image"
           className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/60 border border-white/10 hover:bg-[#0A3594]/80 hover:border-[#0A3594]/60 text-white transition-all">
           <ChevronLeft className="w-5 h-5" />
         </button>
-        <button onClick={next}
+        <button onClick={next} aria-label="Next image"
           className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-black/60 border border-white/10 hover:bg-[#0A3594]/80 hover:border-[#0A3594]/60 text-white transition-all">
           <ChevronRight className="w-5 h-5" />
         </button>
@@ -109,21 +109,7 @@ function GalleryModal({ project, onClose }: { project: Project; onClose: () => v
   );
 }
 
-function FadeUp({
-  children, delay = 0, className = "",
-}: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={className}>
-      {children}
-    </motion.div>
-  );
-}
+import FadeUp from "@/components/FadeUp";
 
 /* ─── Corner-accent image frame ─────────────────────────────────────────── */
 function ImageFrame({
@@ -275,6 +261,12 @@ export default function ProjectsPage() {
           <AnimatePresence mode="wait">
             <motion.div key={filter} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
 
+              {filtered.length === 0 && (
+                <div className="py-32 text-center text-white/30 text-sm font-mono tracking-widest uppercase">
+                  No projects in this category yet.
+                </div>
+              )}
+
               {/* Desktop: 3-col masonry */}
               <div className="hidden lg:grid grid-cols-3 gap-[1px] items-start bg-white/8">
                 <div className="flex flex-col gap-[1px]">
@@ -321,7 +313,7 @@ export default function ProjectsPage() {
             <FadeUp className="lg:col-span-8 px-8 py-16">
               <div className="w-8 h-[2px] bg-[#0A3594] mb-8" />
               <h2 className="text-3xl font-bold text-white mb-4 tracking-tight">
-                Want to Be Our Next Project?
+                Ready to Build Something You&apos;ll Never Regret?
               </h2>
               <p className="text-gray-400 mb-8 leading-relaxed max-w-lg">
                 Tell us about your lot, your vision, and your timeline. We handle every step from the land search to move-in day.

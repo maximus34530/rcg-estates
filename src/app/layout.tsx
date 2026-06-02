@@ -58,6 +58,32 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://rcgestatesconstruction.com",
+  name: "RCG Estates",
+  description: "Custom home builder in the Rio Grande Valley. Fixed pricing, transparent process, from lot to keys.",
+  url: "https://rcgestatesconstruction.com",
+  telephone: "+19564087136",
+  email: "rceron.tx@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "McAllen",
+    addressRegion: "TX",
+    addressCountry: "US",
+  },
+  areaServed: ["McAllen", "Mission", "Pharr", "Harlingen", "Brownsville", "Edinburg"],
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "17:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday"], opens: "09:00", closes: "17:00" },
+  ],
+  sameAs: [
+    "https://www.facebook.com/profile.php?id=61552752162933",
+    "https://www.instagram.com/rcg.estates",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,6 +94,12 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-white text-gray-900">
         <Navbar />
         <main className="flex-1">{children}</main>

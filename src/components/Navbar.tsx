@@ -53,7 +53,6 @@ export default function Navbar() {
                 alt="RCG Estates logo"
                 width={120}
                 height={76}
-                unoptimized
                 className="h-9 w-auto object-contain shrink-0"
                 priority
               />
@@ -76,7 +75,7 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+                    className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A3594] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827] ${
                       active ? "text-white" : "text-gray-400 hover:text-white"
                     }`}
                   >
@@ -129,7 +128,7 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                    className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0A3594] ${
                       active
                         ? "bg-white/8 text-white border border-white/10"
                         : "text-gray-400 hover:text-white hover:bg-white/5"

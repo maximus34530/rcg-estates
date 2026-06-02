@@ -44,8 +44,8 @@ export default function Footer() {
       <div className="border-t border-white/8 bg-[#0D1117]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-white font-semibold text-lg">Ready to talk about your lot?</p>
-            <p className="text-gray-500 text-sm mt-0.5">Tell us where you are in the process.</p>
+            <p className="text-white font-semibold text-lg">The hardest part is starting.</p>
+            <p className="text-gray-500 text-sm mt-0.5">We make that part easy too.</p>
           </div>
           <Link
             href="/contact"
@@ -67,7 +67,6 @@ export default function Footer() {
                 alt="RCG Estates logo"
                 width={100}
                 height={63}
-                unoptimized
                 className="h-8 w-auto object-contain shrink-0"
               />
             <div className="flex flex-col leading-none">
@@ -80,8 +79,7 @@ export default function Footer() {
             </div>
           </Link>
           <p className="text-sm leading-relaxed text-gray-500 mb-6">
-            Building premium custom homes across the Rio Grande Valley. Your vision,
-            our craftsmanship — from lot to closing table.
+            The price you sign on is the price you pay. Built for how your family actually lives, moves, and grows.
           </p>
           <div className="flex gap-3">
             <a

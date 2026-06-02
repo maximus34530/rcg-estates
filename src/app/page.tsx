@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   ArrowRight, MapPin, Star, CheckCircle, Quote, BadgeCheck, Volume2, VolumeX,
 } from "lucide-react";
@@ -13,23 +13,7 @@ import {
 } from "@/data/mockData";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 import ContactForm from "@/components/ContactForm";
-
-/* ─── Scroll-reveal ────────────────────────────────────────────────────── */
-function FadeUp({
-  children, delay = 0, className = "",
-}: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref}
-      initial={{ opacity: 0, y: 32 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={className}>
-      {children}
-    </motion.div>
-  );
-}
+import FadeUp from "@/components/FadeUp";
 
 /* ─── Section label ─────────────────────────────────────────────────────── */
 function SectionLabel({ text, light = false }: { text: string; light?: boolean }) {
@@ -96,21 +80,35 @@ export default function HomePage() {
             <motion.h1 initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.04] tracking-tight mb-6">
-              Your vision.<br />Built for your future.
+              You've been comparing prices.<br />What you're actually looking for is trust.
             </motion.h1>
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.22 }}
               className="text-white/85 font-medium text-lg leading-relaxed mb-10 max-w-xl drop-shadow-md [text-shadow:_0_1px_10px_rgb(0_0_0_/_40%)]">
-              You’ve spent years planning this moment. We protect your investment with fixed pricing and absolute transparency from day one.
+              A custom home is the largest investment your family will ever make. We make it an exciting journey.
             </motion.p>
+
+            <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.28 }}
+              className="flex items-start gap-4 p-5 border-l-4 border-white/40 bg-white/8 backdrop-blur-sm mb-8 max-w-xl">
+              <Quote className="w-4 h-4 text-white/60 shrink-0 mt-0.5" />
+              <div>
+                <p className="text-white/85 font-medium leading-relaxed text-sm">
+                  &ldquo;A custom home is likely the largest investment your family will ever make. It should be an exciting journey.&rdquo;
+                </p>
+                <p className="text-xs text-white/50 font-mono font-semibold tracking-widest mt-3 uppercase">
+                  — RAUL CERON, FOUNDER
+                </p>
+              </div>
+            </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}>
               <div className="mb-5">
                   <a href="#contact"
                   className="btn-glow inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-base">
-                  Explore the Process <ArrowRight className="w-4 h-4" />
+                  Start Your Journey <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </motion.div>
@@ -150,24 +148,10 @@ export default function HomePage() {
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="text-gray-600 text-lg leading-relaxed mb-10">
-                  Comparing prices and floor plans gets you close — but what really drives the decision is confidence in your builder. At RCG, trust isn’t a promise we make, it’s a process we’ve built, so every step from blueprint to keys feels certain, not stressful.
+                  You’ve done your research. You’ve toured other builds and sat through other pitches. What you haven’t found yet is a builder you actually believe. At RCG, every process, every guarantee, and every conversation is designed around one outcome — that you move in knowing you made the right call.
                 </p>
               </FadeUp>
 
-              {/* Raul quote */}
-              <FadeUp delay={0.14}>
-                <div className="flex items-start gap-4 p-6 border-l-4 border-[#0A3594] bg-gray-50 mb-10">
-                  <Quote className="w-5 h-5 text-[#0A3594] shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-[#111827] font-medium leading-relaxed text-sm">
-                      &ldquo;A custom home is likely the largest investment your family will ever make—it should be a journey defined by excitement, never anxiety.&rdquo;
-                    </p>
-                    <p className="text-xs text-[#0A3594] font-mono font-semibold tracking-widest mt-3 uppercase">
-                      — RAUL CERON, FOUNDER
-                    </p>
-                  </div>
-                </div>
-              </FadeUp>
 
               {/* Principles — boxed grid on white */}
               <div className="border-t border-gray-200 pt-8">
@@ -362,12 +346,12 @@ export default function HomePage() {
             <FadeUp className="lg:col-span-5">
               <SectionLabel text="The Process" light />
               <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight tracking-tight">
-                How We Protect<br />Your Building Journey
+                How We Make<br />the Journey Feel Easy
               </h2>
             </FadeUp>
             <FadeUp delay={0.08} className="lg:col-span-7 flex items-end">
               <p className="text-gray-400 text-lg leading-relaxed">
-                Building your home should be a journey defined by clarity, not guesswork. By replacing the unexpected with a transparent, predictable roadmap, you remain completely in control of your timeline, your budget, and your decisions from the first sketch to the day you move in.
+                Most people expect building a custom home to be stressful. We built a process so transparent and predictable that all you have to do is watch your vision come to life — we handle everything else.
               </p>
             </FadeUp>
           </div>
@@ -411,16 +395,16 @@ export default function HomePage() {
                 <span className="text-white/40 text-[11px] font-semibold tracking-[.24em] uppercase">The RCG Difference</span>
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-                Building a custom home shouldn&apos;t feel like a gamble with your life savings.
+                Building a custom home is one of the most exciting decisions your family will ever make. At RCG, our job is to make sure it stays that way.
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-4">
-                You start the process excited, but the local horror stories are everywhere. &quot;Bait and switch&quot; quotes that explode into $20,000 site prep change orders. The stress of the &quot;subcontractor lottery,&quot; where the name on the brochure isn&apos;t the person swinging the hammer.
+                From the first call to the day you get your keys, every step is designed so you always know what&apos;s happening, what it costs, and what comes next.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed mb-4">
-                And the ultimate frustration: builders who ghost you the second the final check clears, leaving you to deal with sloppy finishing work or soaring summer AC bills.
+                You don&apos;t need to become an expert in construction to build a great home. All you have to do is watch your vision come to life — we handle everything else.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed">
-                You aren&apos;t just buying wood and concrete. You are making a massive investment, and you deserve to feel protected.
+                The price you sign on is the price you pay. No surprises, no change order ambushes, no chasing your builder for updates.
               </p>
             </FadeUp>
 
@@ -498,10 +482,10 @@ export default function HomePage() {
                 <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Get In Touch</span>
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-5">
-                Tell Us Where You Are<br />In The Process
+                Let’s Talk About<br />Your Build
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Not sure if you’re entirely ready to take the leap yet? That’s okay. Tell us where you are in your thinking, and we will help you map out your next best step. No pressure.
+                Whether you have a lot, a budget, or just an idea — bring it. We’ll tell you exactly what’s possible and what it takes to get there.
               </p>
             </FadeUp>
 

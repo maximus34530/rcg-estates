@@ -165,8 +165,9 @@ export const companyInfo = {
   ],
   stats: [
     { value: "$10M+", label: "Trusted with local investments" },
-    { value: "10+", label: "Families safely moved in" },
-    { value: "100%", label: "Focused entirely on you" },
+    { value: "10+", label: "Families moved in" },
+    // TODO: Confirm "10+ Years building in the RGV" with Raul before publishing — pending client verification
+    { value: "10+", label: "Years building in the RGV" },
     { value: "Zero", label: "Surprises or hidden fees" },
   ],
   cities: ["McAllen", "Mission", "Pharr", "Harlingen", "Brownsville", "Edinburg"],

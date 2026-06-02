@@ -1,30 +1,15 @@
 "use client";
 
-import { useRef } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Home, PencilRuler, ClipboardList,
   ArrowRight, CheckCircle, Phone,
 } from "lucide-react";
 import { services, companyInfo } from "@/data/mockData";
-
-function FadeUp({
-  children, delay = 0, className = "",
-}: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={className}>
-      {children}
-    </motion.div>
-  );
-}
+import FadeUp from "@/components/FadeUp";
 
 const iconMap: Record<string, React.ElementType> = {
   Home, PencilRuler, ClipboardList,
@@ -154,7 +139,7 @@ export default function ServicesPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact"
                   className="btn-glow inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#0A3594] hover:bg-[#072D82] text-white font-bold rounded-none transition-colors text-sm">
-                  Book a Free Consultation <ArrowRight className="w-4 h-4" />
+                  Start a Free Consultation <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a href="tel:+19564087136"
                   className="inline-flex items-center justify-center gap-2 px-7 py-4 border border-white/20 text-white font-semibold rounded-none hover:bg-white/5 transition-colors text-sm">

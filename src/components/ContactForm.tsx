@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, ChangeEvent, FormEvent } from "react";
+import { useState, useEffect, useRef, ChangeEvent, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle, AlertCircle, Loader2, ArrowRight } from "lucide-react";
 import { supabase, LeadInsert } from "@/lib/supabaseClient";
@@ -78,6 +78,7 @@ export default function ContactForm({ glass = false }: { glass?: boolean }) {
   const [form, setForm] = useState<FormState>(INITIAL);
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     try {
@@ -89,7 +90,10 @@ export default function ContactForm({ glass = false }: { glass?: boolean }) {
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const updated = { ...form, [e.target.name]: e.target.value };
     setForm(updated);
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(updated)); } catch { /* ignore */ }
+    if (saveTimer.current) clearTimeout(saveTimer.current);
+    saveTimer.current = setTimeout(() => {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(updated)); } catch { /* ignore */ }
+    }, 500);
   };
 
   const handleSubmit = async (e: FormEvent) => {
@@ -106,13 +110,9 @@ export default function ContactForm({ glass = false }: { glass?: boolean }) {
     };
 
     try {
-      const webhookUrl =
-        process.env.WEBHOOK_CONTACT_URL ||
-        "https://neuronex-n8n.com/webhook-test/806ce233-411b-4843-a211-19615d3af0a6";
-
       const [supabaseResult, webhookResult] = await Promise.allSettled([
         supabase.from("leads").insert([payload]),
-        fetch(webhookUrl, {
+        fetch("/api/contact", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),

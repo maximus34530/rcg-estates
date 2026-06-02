@@ -3,28 +3,13 @@
 import { useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import {
   ArrowRight, CheckCircle, Phone, MapPin, Quote, BadgeCheck, Building2,
 } from "lucide-react";
 import { companyInfo, owner, projects, images } from "@/data/mockData";
-
-function FadeUp({
-  children, delay = 0, className = "",
-}: { children: React.ReactNode; delay?: number; className?: string }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  return (
-    <motion.div ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={className}>
-      {children}
-    </motion.div>
-  );
-}
+import FadeUp from "@/components/FadeUp";
 
 function Frame({
   src, alt, className = "", priority = false,
@@ -72,8 +57,8 @@ export default function AboutPage() {
               <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">About RCG Estates</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
-              Your Standards.<br />
-              Without Exception.
+              Built Around You.<br />
+              Every Step.
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">{companyInfo.about}</p>
           </motion.div>
