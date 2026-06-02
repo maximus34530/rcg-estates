@@ -72,8 +72,8 @@ export default function AboutPage() {
               <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">About RCG Estates</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
-              One Builder.<br />
-              <span className="text-[#0A3594]">From the Lot to the Keys.</span>
+              Your Standards.<br />
+              Without Exception.
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">{companyInfo.about}</p>
           </motion.div>

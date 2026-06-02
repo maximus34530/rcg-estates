@@ -142,7 +142,7 @@ export const companyInfo = {
   name: "RCG Estates Construction & Development",
   tagline: "Custom Home Builder in the Rio Grande Valley",
   subTagline: "Building a home in the Valley shouldn't feel like a gamble with your life savings. We eliminate the fear of the unknown with locked in milestone pricing, zero communication blackouts, and a process designed to protect your investment from start to finish.",
-  about: `I’m Raul Ceron. I know the emotional barrier that stops most families from building—the fear of the unknown. You’ve probably heard the horror stories: contractors who go ghost, hidden costs that ruin the budget, and the anxiety of being left in the dark. It's stressful.`,
+  about: `You’ve earned the right to build without compromise. From initial lot selection to final handover, your journey is completely protected by fixed pricing and zero hidden math.`,
   mission: `We eliminate that stress.\n\nFrom the moment we break ground to the final walkthrough, we communicate clearly, protect your budget, and remain fully committed to turning your vision into reality. We want building your home to be one of the best decisions you've ever made.`,
   founded: "2024",
   principles: [
