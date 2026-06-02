@@ -141,7 +141,7 @@ export default function HomePage() {
               className="mb-6">
               <a href="#contact"
                 className="btn-glow inline-flex items-center justify-center gap-2 px-10 py-5 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-lg">
-                  Take Your First Step <ArrowRight className="w-5 h-5" />
+                  Take Your First Step In <ArrowRight className="w-5 h-5" />
               </a>
             </motion.div>
           </div>
