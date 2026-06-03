@@ -91,13 +91,13 @@ export const images = {
 
   // ── 1007 Bette — local images ──
   bette1007: [
+    "/projects/1007-bette/6.png",
     "/projects/1007-bette/7.png",
     "/projects/1007-bette/1.png",
     "/projects/1007-bette/2.png",
     "/projects/1007-bette/3.png",
     "/projects/1007-bette/4.png",
     "/projects/1007-bette/5.png",
-    "/projects/1007-bette/6.png",
   ],
 
   // ── 1001 Bette — 9 local images ──
@@ -124,11 +124,11 @@ export const owner = {
   name: "Raul Ceron",
   title: "Founder & Managing Principal",
   credentials: [
-    "Primary REALTOR®, Greater McAllen Association of REALTORS (GMAR)",
-    "Custom Home Builder & Developer, 10+ Builds in McAllen & Mission",
-    "RE/MAX Platinum RGV · Imperio Real Estate",
+    "Licensed REALTOR® — Greater McAllen Association of REALTORS (GMAR)",
+    "Custom Home Builder & Developer — 10+ Homes Built in McAllen & Mission",
+    "Associated with RE/MAX Platinum RGV & Imperio Real Estate",
   ],
-  bio: `Raul Ceron is the founder of RCG Estates Construction & Development. As a licensed TX Realtor and custom home builder, he ensures every family is completely taken care of from land acquisition to the final walkthrough. His Bette Street Collection in Mission features five luxury homes built on one block.`,
+  bio: `Raul Ceron is the founder of RCG Estates Construction & Development. As a licensed TX Realtor and general contractor, he ensures every family is completely taken care of from land acquisition to the final walkthrough. With a background in both real estate and construction, Raul handles the full picture — land, financing, design, and build.`,
   bioParagraph2: `His builds include the Bette Street collection in Mission and 816 N Trinity in McAllen (4,100 sqft), with finish selections sourced through his partnership with Royal Decor Gallery at 4003 W US Hwy 83, McAllen.`,
   partner: {
     name: "Royal Decor Gallery",
@@ -142,7 +142,7 @@ export const companyInfo = {
   name: "RCG Estates Construction & Development",
   tagline: "Custom Home Builder in the Rio Grande Valley",
   subTagline: "Building a home in the Valley shouldn't feel like a gamble with your life savings. We eliminate the fear of the unknown with locked in milestone pricing, zero communication blackouts, and a process designed to protect your investment from start to finish.",
-  about: `We create spaces that reflect your lifestyle and values. Based in the Rio Grande Valley, we specialize in custom home construction and commercial building, serving communities from McAllen to Brownsville—empowering you throughout the entire process.`,
+  about: `We create spaces that reflect your lifestyle and values. Based in the Rio Grande Valley, we specialize in custom home construction and commercial building, serving communities from McAllen to Brownsville. Our client-first approach makes every step of the process empowering — not overwhelming.`,
   mission: `We eliminate that stress.\n\nFrom the moment we break ground to the final walkthrough, we communicate clearly, protect your budget, and remain fully committed to turning your vision into reality. We want building your home to be one of the best decisions you've ever made.`,
   founded: "2024",
   principles: [
@@ -432,23 +432,38 @@ export const services: Service[] = [
 export const processSteps = [
   {
     step: "01",
-    title: "Get Pre-Approved",
-    desc: "We connect you with trusted lenders.",
+    title: "Initial Consultation",
+    desc: "Goals, budget, and timeline — all mapped out before anything begins.",
   },
   {
     step: "02",
-    title: "Choose Your Location",
-    desc: "We help you secure the ideal lot.",
+    title: "Get Pre-Approved",
+    desc: "Connected with trusted local lenders who understand construction financing in the Rio Grande Valley.",
   },
   {
     step: "03",
-    title: "Design Your Home",
-    desc: "Collaborate with our award-winning architect.",
+    title: "Select Your Lot",
+    desc: "The right land, evaluated and secured for your build.",
   },
   {
     step: "04",
-    title: "Build With Confidence",
-    desc: "We keep you informed every step of the way.",
+    title: "Design & Selections",
+    desc: "Floor plan and finishes — flooring, fixtures, cabinetry, and more.",
+  },
+  {
+    step: "05",
+    title: "Permits & Approvals",
+    desc: "All required city permits and approvals coordinated.",
+  },
+  {
+    step: "06",
+    title: "Construction Begins",
+    desc: "Regular milestone updates from foundation to roof.",
+  },
+  {
+    step: "07",
+    title: "Final Walkthrough & Move-In",
+    desc: "Every detail reviewed, every finish confirmed. Your home is ready.",
   },
 ];
 

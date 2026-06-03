@@ -73,25 +73,8 @@ export default function AboutPage() {
             {/* Image cluster — 5 cols */}
             <div className="lg:col-span-5 order-2 lg:order-1">
               <FadeUp>
-                <Frame src={projects[0].images[0]} alt="RCG Estates — 816 N Trinity"
-                  className="w-full h-72 rounded-2xl" priority />
-              </FadeUp>
-              <FadeUp delay={0.12} className="mt-5 ml-10">
-                <Frame src={projects[1].images[2]} alt="RCG Estates interior"
-                  className="w-4/5 h-48 rounded-xl" />
-              </FadeUp>
-              <FadeUp delay={0.2} className="mt-5">
-                <div className="rounded-xl border border-gray-100 shadow-sm bg-white p-5">
-                  <div className="flex items-start gap-3">
-                    <Building2 className="w-5 h-5 text-[#0A3594] shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-[10px] font-mono text-[#0A3594] tracking-widest uppercase mb-1">Premium Finish Partner</p>
-                      <p className="font-bold text-[#111827] text-sm">{owner.partner.name}</p>
-                      <p className="text-xs text-gray-400 mt-1 leading-relaxed">{owner.partner.note}</p>
-                      <p className="text-xs text-gray-400 mt-0.5 font-mono">{owner.partner.address}</p>
-                    </div>
-                  </div>
-                </div>
+                <Frame src="/raul-dante.jpg" alt="Raul Ceron — RCG Estates"
+                  className="w-full h-[540px] rounded-2xl" priority />
               </FadeUp>
             </div>
 
@@ -131,8 +114,7 @@ export default function AboutPage() {
                   <Quote className="w-6 h-6 text-[#0A3594] shrink-0 mt-0.5" />
                   <div>
                     <p className="text-[#111827] font-medium leading-relaxed italic text-sm">
-                      "I built RCG Estates to give Rio Grande Valley families something that didn't exist — a builder
-                      who is also your licensed agent, guiding you from the lot purchase to the closing table."
+                      &ldquo;Building a home is one of the biggest decisions a family makes. My job is to make sure they never feel alone in that process.&rdquo;
                     </p>
                     <p className="text-xs text-[#0A3594] font-mono tracking-widest mt-3 uppercase font-bold">
                       — Raul Ceron, Founder
@@ -141,21 +123,6 @@ export default function AboutPage() {
                 </div>
               </FadeUp>
 
-              <FadeUp delay={0.2}>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  {[
-                    { icon: BadgeCheck, label: "Licensed TX Agent", sub: "Full real estate representation on land purchase and sale" },
-                    { icon: BadgeCheck, label: "Custom Builder", sub: "End-to-end construction — foundation to finish" },
-                    { icon: BadgeCheck, label: "RGV Land Expert", sub: "Lot evaluation, zoning, and soil review before you commit" },
-                  ].map((item) => (
-                    <div key={item.label} className="p-4 rounded-xl border border-gray-100 shadow-sm bg-white">
-                      <item.icon className="w-5 h-5 text-[#0A3594] mb-2" />
-                      <div className="font-bold text-[#111827] text-xs mb-1">{item.label}</div>
-                      <div className="text-xs text-gray-400 leading-relaxed">{item.sub}</div>
-                    </div>
-                  ))}
-                </div>
-              </FadeUp>
             </div>
           </div>
         </div>

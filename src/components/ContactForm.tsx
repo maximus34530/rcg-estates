@@ -158,7 +158,7 @@ export default function ContactForm({ glass = false }: { glass?: boolean }) {
       >
         <CheckCircle className={`w-12 h-12 mx-auto mb-4 ${glass ? "text-[#6B93D6]" : "text-green-500"}`} />
         <h3 className={`text-xl font-bold mb-2 ${glass ? "text-white" : "text-gray-900"}`}>
-          Message Received!
+          Thank You, We&apos;ll Reach Out Within 24 Hours
         </h3>
         <p className={`text-sm leading-relaxed ${glass ? "text-white/60" : "text-gray-600"}`}>
           Thank you for reaching out. We'll be in touch within one business day.
@@ -196,7 +196,7 @@ export default function ContactForm({ glass = false }: { glass?: boolean }) {
         placeholder="(956) 555-0100" value={form.phone} onChange={handleChange}
         autoComplete="tel" glass={glass} />
 
-      <FloatingTextarea id="message" name="message" label="Tell Us About Your Project"
+      <FloatingTextarea id="message" name="message" label="Tell Us About Your Future Home"
         placeholder="I'm looking to build a 4-bedroom custom home in Mission, TX..."
         value={form.message} onChange={handleChange} required rows={4} glass={glass} />
 
@@ -232,7 +232,7 @@ export default function ContactForm({ glass = false }: { glass?: boolean }) {
             </>
           ) : (
             <>
-              Start Your Journey
+              See What&apos;s Possible
               <ArrowRight className="w-4 h-4" />
             </>
           )}

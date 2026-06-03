@@ -94,7 +94,7 @@ export default function HomePage() {
             <div className="relative w-full">
               <motion.div
                 {...revealMotion}
-                transition={revealTransition}
+                transition={{ duration: revealDuration, delay: revealStart + 0.6, ease: revealEaseSnappy }}
                 className="absolute bottom-full left-1/2 -translate-x-1/2 mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-white/85 text-sm font-mono tracking-[.2em] uppercase backdrop-blur-sm whitespace-nowrap">
                 <MapPin className="w-4 h-4 text-[#6B93D6]" /> Rio Grande Valley, Texas
               </motion.div>
@@ -132,7 +132,7 @@ export default function HomePage() {
               {...revealMotion}
               transition={revealTransition}
               className="text-white/90 font-medium text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 max-w-3xl mx-auto [text-shadow:_0_2px_16px_rgb(0_0_0_/_50%)]">
-              You don&apos;t need to be an expert in construction to call this your home. All you have to do is watch your vision come to life — we handle everything else.
+              You don&apos;t need to be an expert in construction to call this your home. You just need a vision — we&apos;ll build the rest.
             </motion.p>
 
             <motion.div
@@ -141,29 +141,13 @@ export default function HomePage() {
               className="mb-6">
               <a href="#contact"
                 className="btn-glow inline-flex items-center justify-center gap-2 px-10 py-5 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-lg">
-                  Take Your First Step In <ArrowRight className="w-5 h-5" />
+                  See What&apos;s Possible <ArrowRight className="w-5 h-5" />
               </a>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* ── STATS BAR — boxed grid on charcoal ──────────────────────────── */}
-      <section className="bg-[#111827] border-t border-white/8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/8">
-            {companyInfo.stats.map((s, i) => (
-              <motion.div key={s.label}
-                initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.55 + i * 0.08 }}
-                className="px-8 py-9 flex flex-col items-start">
-                <span className="text-4xl font-bold text-white tracking-tight leading-none mb-2">{s.value}</span>
-                <span className="text-xs text-white/50 font-mono uppercase tracking-[.2em]">{s.label}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── 2. WHO WE ARE ─────────────────────────────────────────────────── */}
       <section className="py-28 bg-white overflow-hidden border-t border-neutral-200/50">
@@ -175,12 +159,12 @@ export default function HomePage() {
               <FadeUp><SectionLabel text="Who We Are" /></FadeUp>
               <FadeUp delay={0.05}>
                 <h2 className="text-4xl sm:text-5xl font-bold text-[#111827] leading-tight tracking-tight mb-7">
-                  You&apos;ve been comparing prices. But what you&apos;re actually looking for is trust.
+                  We Build For You
                 </h2>
               </FadeUp>
               <FadeUp delay={0.1}>
                 <p className="text-gray-600 text-lg leading-relaxed mb-10">
-                  At RCG Estates Construction &amp; Development, we specialize in building custom homes and commercial spaces across the Rio Grande Valley. While we do have a strong reputation in cities like McAllen, Mission, and Edinburg, we value you the most. We bring together expert design, skilled craftsmanship, and personalized service—ensuring every project meets your goals and exceeds your expectations.
+                  At RCG Estates Construction &amp; Development, we&apos;ve built a reputation across the Rio Grande Valley by doing one thing well — putting you first. That means clear communication, full transparency, and making sure you feel heard every step of the way. That&apos;s the foundation every RCG home is built on.
                 </p>
               </FadeUp>
 
@@ -245,7 +229,7 @@ export default function HomePage() {
                 <span className="block w-8 h-[2px] bg-[#0A3594]" />
                 <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Our Gallery</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">See Our Recent Builds Across the Rio Grande Valley</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Built to Last</h2>
               <p className="text-white/40 mt-2 max-w-xl text-sm leading-relaxed">
                 Explore our custom homes and commercial projects in McAllen, Mission, Harlingen &amp; more.
               </p>
@@ -415,54 +399,47 @@ export default function HomePage() {
       {/* ── REVIEWS MARQUEE (live Google data) ────────────────────────────── */}
       <ReviewsMarquee />
 
-      {/* ── UVP — Charcoal with credential grid ──────────────────────────── */}
-      <section className="bg-[#111827]">
-        <div className="max-w-7xl mx-auto">
-          {/* UVP body */}
-          <div className="px-4 sm:px-6 lg:px-8 py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <FadeUp className="lg:col-span-7">
+
+      {/* ── CONTACT ───────────────────────────────────────────────────────── */}
+      <section id="contact" className="py-28 bg-[#111827] border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <FadeUp className="lg:col-span-5">
               <div className="flex items-center gap-3 mb-6">
-                <span className="block w-8 h-[2px] bg-white/20" />
-                <span className="text-white/40 text-[11px] font-semibold tracking-[.24em] uppercase">The RCG Difference</span>
+                <span className="block w-8 h-[2px] bg-[#0A3594]" />
+                <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Contact Us</span>
               </div>
-              <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
-                Building a custom home is one of the most exciting decisions your family will ever make. At RCG, our job is to make sure it stays that way.
+              <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-5">
+                Let&apos;s Build Your Dream Home, Together
               </h2>
-              <p className="text-gray-400 text-lg leading-relaxed mb-4">
-                From the first call to the day you get your keys, every step is designed so you always know what&apos;s happening, what it costs, and what comes next.
-              </p>
-              <p className="text-gray-400 text-lg leading-relaxed mb-4">
-                You don&apos;t need to become an expert in construction to build a great home. All you have to do is watch your vision come to life — we handle everything else.
-              </p>
               <p className="text-gray-400 text-lg leading-relaxed">
-                The price you sign on is the price you pay. No surprises, no change order ambushes, no chasing your builder for updates.
+                Whether you have land, a budget, or just an idea, we&apos;ll help you understand what&apos;s realistic, what it costs, and what comes next.
               </p>
             </FadeUp>
 
-            <FadeUp delay={0.1} className="lg:col-span-5">
-              <div className="border border-white/10 divide-y divide-white/10">
-                {[
-                  { icon: BadgeCheck, label: "Built to Save® Certification", sub: "Your energy efficiency is verified by independent inspectors, cutting your South Texas cooling costs by up to 40%." },
-                  { icon: BadgeCheck, label: "Pre Construction Discovery", sub: "No guessing games. We lock in your site prep, soil realities, and material selections before we ever break ground." },
-                  { icon: BadgeCheck, label: "Vetted Local Trades", sub: "No cheap, revolving door crews. We work exclusively with long term, trusted local craftsmen who treat your property with care." },
-                  { icon: BadgeCheck, label: "Radical Transparency", sub: "You are always in the loop. Access your private digital portal anytime to see real time schedules, daily photos, and regular updates." },
-                  { icon: BadgeCheck, label: "Relentless Warranty", sub: "We protect your peace of mind long after the keys are yours. Enjoy a 24 hour response guarantee and proactive structural check ins." },
-                ].map((item) => (
-                  <div key={item.label} className="flex items-start gap-4 px-6 py-5">
-                    <item.icon className="w-5 h-5 text-[#6B93D6] shrink-0 mt-0.5" />
-                    <div>
-                      <div className="text-white font-semibold text-sm">{item.label}</div>
-                      <div className="text-gray-500 text-xs mt-0.5 leading-relaxed">{item.sub}</div>
-                    </div>
-                  </div>
-                ))}
+            <FadeUp delay={0.1} className="lg:col-span-7">
+              <div className="relative backdrop-blur-xl bg-white/5 border border-white/12 shadow-[0_0_60px_rgba(29,82,212,0.12),0_30px_60px_rgba(0,0,0,0.4)] p-8 sm:p-10">
+                <div className="absolute -top-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1D52D4]/40 to-transparent" />
+                <div className="mb-8">
+                  <p className="text-[#6B93D6] text-[10px] font-mono tracking-[.22em] uppercase mb-2">
+                    Free Consultation
+                  </p>
+                  <h3 className="text-2xl font-bold text-white tracking-tight">
+                    Not Sure Where to Start?
+                  </h3>
+                  <p className="text-white/60 text-sm mt-1 leading-relaxed">That&apos;s exactly what we&apos;re here for.</p>
+                  <p className="text-gray-500 text-sm mt-1.5 leading-relaxed">
+                    Tell us a little about your goals, budget, or timeline, and we&apos;ll personally review your situation and reach out within 1 business day.
+                  </p>
+                </div>
+                <ContactForm glass />
               </div>
             </FadeUp>
           </div>
         </div>
       </section>
 
-      {/* ── 7. BLOG PREVIEW ───────────────────────────────────────────────── */}
+      {/* ── BLOG PREVIEW ───────────────────────────────────────────────── */}
       <section className="py-24 bg-white border-t border-neutral-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
@@ -499,44 +476,6 @@ export default function HomePage() {
                 </Link>
               </FadeUp>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CONTACT ───────────────────────────────────────────────────────── */}
-      <section id="contact" className="py-28 bg-[#111827] border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <FadeUp className="lg:col-span-5">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="block w-8 h-[2px] bg-[#0A3594]" />
-                <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Contact Us</span>
-              </div>
-              <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-5">
-                Let’s Build Your Dream<br />Home, Together
-              </h2>
-              <p className="text-gray-400 text-lg leading-relaxed">
-                Whether you have a lot, a budget, or just an idea — bring it. We’ll tell you exactly what’s possible and what it takes to get there.
-              </p>
-            </FadeUp>
-
-            <FadeUp delay={0.1} className="lg:col-span-7">
-              <div className="relative backdrop-blur-xl bg-white/5 border border-white/12 shadow-[0_0_60px_rgba(29,82,212,0.12),0_30px_60px_rgba(0,0,0,0.4)] p-8 sm:p-10">
-                <div className="absolute -top-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1D52D4]/40 to-transparent" />
-                <div className="mb-8">
-                  <p className="text-[#6B93D6] text-[10px] font-mono tracking-[.22em] uppercase mb-2">
-                    Free Consultation
-                  </p>
-                  <h3 className="text-2xl font-bold text-white tracking-tight">
-                    Tell Us About Your Project
-                  </h3>
-                  <p className="text-gray-500 text-sm mt-1.5 leading-relaxed">
-                    The more detail you share, the better we can prepare for our first conversation.
-                  </p>
-                </div>
-                <ContactForm glass />
-              </div>
-            </FadeUp>
           </div>
         </div>
       </section>

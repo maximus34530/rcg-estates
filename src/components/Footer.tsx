@@ -44,14 +44,14 @@ export default function Footer() {
       <div className="border-t border-white/8 bg-[#0D1117]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-white font-semibold text-lg">The hardest part is starting.</p>
-            <p className="text-gray-500 text-sm mt-0.5">We make that part easy too.</p>
+            <p className="text-white font-semibold text-lg">Curious but not ready?</p>
+            <p className="text-gray-500 text-sm mt-0.5">Ask us anything — we&apos;ll be honest about what&apos;s realistic.</p>
           </div>
           <Link
             href="/contact"
             className="btn-glow shrink-0 px-7 py-3.5 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-lg transition-colors text-sm"
           >
-            Start Your Project
+            Send Us a Message
           </Link>
         </div>
       </div>

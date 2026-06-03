@@ -145,10 +145,11 @@ export default function ContactPage() {
                   Free Consultation
                 </p>
                 <h3 className="text-2xl font-bold text-white tracking-tight">
-                  Tell Us About Your Project
+                  Not Sure Where to Start?
                 </h3>
+                <p className="text-white/60 text-sm mt-1 leading-relaxed">That&apos;s exactly what we&apos;re here for.</p>
                 <p className="text-gray-500 text-sm mt-1.5 leading-relaxed">
-                  The more detail you share, the better we can prepare for our first conversation.
+                  Tell us a little about your goals, budget, or timeline, and we&apos;ll personally review your situation and reach out within 1 business day.
                 </p>
               </div>
 

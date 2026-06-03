@@ -128,7 +128,7 @@ export default function ReviewsMarquee() {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] tracking-tight mb-2">
-                What Our Clients Are Saying
+                What Families Are Saying
               </h2>
 
             </div>
