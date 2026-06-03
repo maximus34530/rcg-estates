@@ -94,7 +94,7 @@ export default function HomePage() {
             <div className="relative w-full">
               <motion.div
                 {...revealMotion}
-                transition={{ duration: revealDuration, delay: revealStart + 0.6, ease: revealEaseSnappy }}
+                transition={{ duration: revealDuration, delay: revealStart, ease: revealEaseSnappy }}
                 className="absolute bottom-full left-1/2 -translate-x-1/2 mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-white/85 text-sm font-mono tracking-[.2em] uppercase backdrop-blur-sm whitespace-nowrap">
                 <MapPin className="w-4 h-4 text-[#6B93D6]" /> Rio Grande Valley, Texas
               </motion.div>
