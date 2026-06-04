@@ -30,10 +30,9 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
-  "Custom Home Builds",
-  "Design & Planning",
-  "Real Estate Advisory",
-  "Pre-Construction",
+  "Custom Home Construction",
+  "Commercial Construction",
+  "Design & Architectural Services",
 ];
 
 export default function Footer() {
@@ -79,11 +78,11 @@ export default function Footer() {
             </div>
           </Link>
           <p className="text-sm leading-relaxed text-gray-500 mb-6">
-            The price you sign on is the price you pay. Built for how your family actually lives, moves, and grows.
+            Building With Purpose, Guided by Your Vision.
           </p>
           <div className="flex gap-3">
             <a
-              href="https://www.facebook.com/profile.php?id=61552752162933"
+              href="https://www.facebook.com/people/RCG-Estates/61552752162933/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="RCG Estates on Facebook"
@@ -92,7 +91,7 @@ export default function Footer() {
               <FacebookIcon className="w-4 h-4" />
             </a>
             <a
-              href="https://www.instagram.com/rcg.estates/"
+              href="https://www.instagram.com/rcg.estates?igsh=MTZ0c2JwNTNreWVjbg%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="RCG Estates on Instagram"
@@ -107,7 +106,6 @@ export default function Footer() {
               aria-label="Raul Ceron on Linktree"
               className="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 hover:bg-[#0A3594] text-gray-500 hover:text-white transition-all"
             >
-              {/* Linktree icon */}
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M13.51 5.41 16.88 2l1.41 1.42-3.38 3.38 3.38 3.38-1.41 1.41-3.37-3.37-3.38 3.37-1.41-1.41 3.38-3.38L9.71 3.42 11.12 2l2.39 2.39v1.02ZM11.12 22l1.43-3.49h-4.1l1.42 3.49h1.25ZM9.09 17.09h5.82l1.59-3.89H7.5l1.59 3.89Z" />
               </svg>
@@ -168,9 +166,7 @@ export default function Footer() {
             </li>
           </ul>
           <div className="mt-6 text-xs text-gray-600 space-y-0.5">
-            <p>Mon – Fri: 9 AM – 5 PM</p>
-            <p>Saturday: By Appointment</p>
-            <p>Sunday: Closed</p>
+            <p>Open 24 Hours</p>
           </div>
         </div>
       </div>

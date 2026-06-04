@@ -227,11 +227,11 @@ export default function HomePage() {
             <FadeUp>
               <div className="flex items-center gap-3 mb-4">
                 <span className="block w-8 h-[2px] bg-[#0A3594]" />
-                <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Our Gallery</span>
+                <span className="text-[#6B93D6] text-[11px] font-semibold tracking-[.24em] uppercase">Our Work</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Built to Last</h2>
               <p className="text-white/40 mt-2 max-w-xl text-sm leading-relaxed">
-                Explore our custom homes and commercial projects in McAllen, Mission, Harlingen &amp; more.
+                Explore our custom homes in McAllen, Mission, Edinburg &amp; more.
               </p>
             </FadeUp>
             <FadeUp>
@@ -302,13 +302,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Interior strip */}
-          <FadeUp delay={0.12} className="mt-5 grid grid-cols-2 md:grid-cols-4 gap-[1px] bg-white/8">
-            {[images.livingRoom, images.luxuryLiving, images.bathroomBuild, images.bette1007[3]].map((img, i) => (
-              <Frame key={i} src={img} alt="RCG Estates interior" className="w-full h-40 rounded-none" />
-            ))}
-          </FadeUp>
-
           {/* Video row */}
           <FadeUp delay={0.14} className="mt-5">
             <div className="flex items-center gap-3 mb-4">
@@ -347,7 +340,7 @@ export default function HomePage() {
             <div className="mt-8 flex justify-center">
               <a href="https://www.instagram.com/rcg.estates?igsh=MTZ0c2JwNTNreWVjbg==" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-[#6B93D6] font-medium text-sm border-b border-[#0A3594]/40 hover:border-[#0A3594] pb-px transition-all">
-                Watch More Reels on Instagram <ArrowRight className="w-4 h-4" />
+                See More on Instagram <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </FadeUp>
@@ -413,7 +406,7 @@ export default function HomePage() {
                 Let&apos;s Build Your Dream Home, Together
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Whether you have land, a budget, or just an idea, we&apos;ll help you understand what&apos;s realistic, what it costs, and what comes next.
+                Come with whatever you have. See what&apos;s possible, what it costs, and how to get there.
               </p>
             </FadeUp>
 
