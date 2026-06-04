@@ -114,7 +114,7 @@ export default function AboutPage() {
                   <Quote className="w-6 h-6 text-[#0A3594] shrink-0 mt-0.5" />
                   <div>
                     <p className="text-[#111827] font-medium leading-relaxed italic text-sm">
-                      &ldquo;Building a home is one of the biggest decisions a family makes. My job is to make sure they never feel alone in that process.&rdquo;
+                      &ldquo;Building a home is one of the most exciting decisions a family will ever make. My job is to make sure it stays that way.&rdquo;
                     </p>
                     <p className="text-xs text-[#0A3594] font-mono tracking-widest mt-3 uppercase font-bold">
                       — Raul Ceron, Founder
@@ -168,20 +168,20 @@ export default function AboutPage() {
                 <span className="text-[#0A3594] text-[11px] font-semibold tracking-[.24em] uppercase">Service Area</span>
               </div>
               <h2 className="text-3xl font-bold text-[#111827] tracking-tight leading-tight mb-4">
-                McAllen is Home. The Whole Valley is Our Territory.
+                Building Across the Valley
               </h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-8">
-                We are based in McAllen and take on projects throughout the Rio Grande Valley. If you have a lot anywhere in South Texas, call us and we will tell you straight whether it makes sense to build.
+                Serving the entire Rio Grande Valley — from McAllen and Mission to Harlingen, Edinburg, and everywhere in between.
               </p>
 
               <div className="space-y-0 divide-y divide-neutral-100 border border-neutral-100">
                 {[
-                  { city: "McAllen", note: "Primary market · Most active builds" },
-                  { city: "Mission", note: "Bette St collection & surrounding areas" },
-                  { city: "Harlingen", note: "Growing residential pipeline" },
-                  { city: "Pharr", note: "Active custom home projects" },
-                  { city: "Edinburg", note: "Available for new projects" },
-                  { city: "Brownsville", note: "South Valley coverage" },
+                  { city: "McAllen", note: "Available" },
+                  { city: "Mission", note: "Available" },
+                  { city: "Harlingen", note: "Available" },
+                  { city: "Pharr", note: "Available" },
+                  { city: "Edinburg", note: "Available" },
+                  { city: "Brownsville", note: "Available" },
                 ].map(({ city, note }) => (
                   <div key={city} className="flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors">
                     <span className="text-sm font-semibold text-[#111827]">{city}</span>
@@ -191,10 +191,10 @@ export default function AboutPage() {
               </div>
 
               <p className="text-xs text-gray-400 mt-4 leading-relaxed">
-                Don&apos;t see your city? Call us —{" "}
-                <a href="tel:+19564087136" className="text-[#0A3594] font-medium hover:underline">
-                  (956) 408-7136
-                </a>
+                Don&apos;t see your city?{" "}
+                <Link href="/contact" className="text-[#0A3594] font-medium hover:underline">
+                  Contact Us
+                </Link>
                 . We evaluate every project individually.
               </p>
             </FadeUp>

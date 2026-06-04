@@ -142,7 +142,7 @@ export const companyInfo = {
   name: "RCG Estates Construction & Development",
   tagline: "Custom Home Builder in the Rio Grande Valley",
   subTagline: "Building a home in the Valley shouldn't feel like a gamble with your life savings. We eliminate the fear of the unknown with locked in milestone pricing, zero communication blackouts, and a process designed to protect your investment from start to finish.",
-  about: `We create spaces that reflect your lifestyle and values. Based in the Rio Grande Valley, we specialize in custom home construction and commercial building, serving communities from McAllen to Brownsville. Our client-first approach makes every step of the process empowering — not overwhelming.`,
+  about: `We create spaces that reflect your lifestyle and values. Based in the Rio Grande Valley, we specialize in custom home construction and commercial building, serving communities from McAllen to Brownsville. Our client-first approach makes every step of the process empowering.`,
   mission: `We eliminate that stress.\n\nFrom the moment we break ground to the final walkthrough, we communicate clearly, protect your budget, and remain fully committed to turning your vision into reality. We want building your home to be one of the best decisions you've ever made.`,
   founded: "2024",
   principles: [
