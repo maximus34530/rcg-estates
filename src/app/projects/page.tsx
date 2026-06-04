@@ -313,10 +313,10 @@ export default function ProjectsPage() {
             <FadeUp className="lg:col-span-8 px-8 py-16">
               <div className="w-8 h-[2px] bg-[#0A3594] mb-8" />
               <h2 className="text-3xl font-bold text-white mb-4 tracking-tight">
-                Ready to Build Something You&apos;ll Never Regret?
+                Start With a Free Consultation
               </h2>
               <p className="text-gray-400 mb-8 leading-relaxed max-w-lg">
-                Tell us about your lot, your vision, and your timeline. We handle every step from the land search to move-in day.
+                Come with whatever you have. See what&apos;s possible, what it costs, and how to get there.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact"

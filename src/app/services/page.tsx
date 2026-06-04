@@ -5,17 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  Home, PencilRuler, ClipboardList,
+  Home, PencilRuler, Building2,
   ArrowRight, CheckCircle, Phone,
 } from "lucide-react";
-import { services, companyInfo } from "@/data/mockData";
+import { services } from "@/data/mockData";
 import FadeUp from "@/components/FadeUp";
 
 const iconMap: Record<string, React.ElementType> = {
-  Home, PencilRuler, ClipboardList,
+  Home, PencilRuler, Building2,
 };
-
-const serviceStats = companyInfo.stats;
 
 export default function ServicesPage() {
   return (
@@ -40,7 +38,7 @@ export default function ServicesPage() {
               Construction Built Around Your Vision
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed">
-              From lot selection to final walkthrough, every phase handled by our team of experts.
+              A complete suite of construction services designed to bring your ideas to life — from initial concept to final delivery.
             </p>
           </motion.div>
         </div>
@@ -55,7 +53,7 @@ export default function ServicesPage() {
               <span className="text-[#0A3594] text-[11px] font-semibold tracking-[.24em] uppercase">Core Services</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] tracking-tight">
-              Every Phase. One Builder.
+              From Land to Move-In
             </h2>
           </FadeUp>
 
@@ -88,6 +86,7 @@ export default function ServicesPage() {
 
                   {/* Body */}
                   <div className="p-7 flex flex-col flex-1 border-t border-neutral-100">
+                    <p className="text-[#111827] font-semibold text-sm mb-2">{service.subheading}</p>
                     <p className="text-gray-500 text-sm leading-relaxed mb-6">{service.description}</p>
                     <ul className="space-y-2.5 flex-1">
                       {service.details.map((detail) => (
@@ -112,7 +111,7 @@ export default function ServicesPage() {
           {/* Proof bar */}
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/8 border-b border-white/8">
             {[
-              { label: "Custom Home Builder — McAllen & Mission", sub: "Every build managed from permit to final walkthrough" },
+              { label: "General Contractor — McAllen & Mission", sub: "Every build managed from permit to final walkthrough" },
               { label: "Premium Finish Selections", sub: "Access to artisan hardware and high-end materials for every build" },
               { label: "RGV Land & Lot Expert", sub: "Soil, zoning, flood zone, and setback evaluation before you commit a dollar" },
             ].map((item) => (
@@ -134,7 +133,7 @@ export default function ServicesPage() {
                 Built in the RGV.<br />For the RGV.
               </h2>
               <p className="text-gray-400 leading-relaxed mb-8 text-lg">
-                We know South Texas soil, local codes, and the best local trades. We build homes that are designed specifically to thrive in this climate.
+                Come with whatever you have. See what&apos;s possible, what it costs, and how to get there.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact"
@@ -151,6 +150,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+
     </>
   );
 }

@@ -371,6 +371,7 @@ export const testimonials = [
 export interface Service {
   id: string;
   title: string;
+  subheading: string;
   description: string;
   details: string[];
   icon: string;
@@ -381,13 +382,13 @@ export const services: Service[] = [
   {
     id: "custom-builds",
     title: "Custom Home Construction",
+    subheading: "Your Dream Home, From the Ground Up",
     description:
-      "We manage the entire build from breaking ground to the final walkthrough. Your home is built exactly to your plans, with no cut corners.",
+      "We specialize in personalized homes tailored to your lifestyle, preferences, and budget — no cookie-cutter designs.",
     details: [
-      "Financing and pre approval assistance",
-      "Lot selection across the RGV",
-      "Collaborative design with your architect of choice",
-      "Permit procurement and full compliance",
+      "Financing & pre-approval assistance",
+      "Lot selection across McAllen, Brownsville, Harlingen & surrounding areas",
+      "Collaborative home design with architect",
       "Full construction management",
       "Regular progress updates and walkthroughs",
     ],
@@ -395,36 +396,34 @@ export const services: Service[] = [
     image: images.houseFinished,
   },
   {
-    id: "design-consultation",
-    title: "Design and Architectural Services",
+    id: "commercial-construction",
+    title: "Commercial Construction",
+    subheading: "Designed for Function. Built to Last.",
     description:
-      "We help you lock in your floor plan and interior finishes before construction starts so there are no surprises later.",
+      "From retail to office spaces and multi-use facilities — built to code, on time, and aligned with your business goals.",
+    details: [
+      "Code-compliant and site-specific builds",
+      "Business-goal-aligned design",
+      "Quality materials with trusted local subcontractors",
+      "Efficient project planning",
+      "Transparent communication throughout construction",
+    ],
+    icon: "Building2",
+    image: images.houseEntrance,
+  },
+  {
+    id: "design-consultation",
+    title: "Design & Architectural Services",
+    subheading: "Form Meets Function",
+    description:
+      "We partner with architects to deliver structurally sound and aesthetically refined spaces — from custom floor plans to final finishes.",
     details: [
       "Custom floor plan development",
       "Interior and exterior design guidance",
-      "Premium wallpaper and hardware sourcing",
-      "Finish selections and material board",
-      "Material board and budget alignment",
-      "3D rendering coordination",
+      "Design reviews for structural optimization",
     ],
     icon: "PencilRuler",
     image: images.livingRoom,
-  },
-  {
-    id: "pre-construction",
-    title: "Pre Construction Services",
-    description:
-      "We handle the prep work: lender coordination, permits, lot evaluation, and construction loan guidance.",
-    details: [
-      "Construction loan advisory",
-      "Lender package preparation",
-      "Zoning and variance research",
-      "Utility infrastructure planning",
-      "Geotechnical coordination",
-      "Construction schedule development",
-    ],
-    icon: "ClipboardList",
-    image: images.houseEntrance,
   },
 ];
 

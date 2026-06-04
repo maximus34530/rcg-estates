@@ -34,7 +34,7 @@ export default function ContactPage() {
               <span className="text-[#6B93D6]">Start Here.</span>
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed">
-              Whether you own land or are just starting to look, let&apos;s talk. Fill out the form, and we&apos;ll get back to you within one business day with an honest breakdown of your options.
+              Come with whatever you have. See what&apos;s possible, what it costs, and how to get there. Fill out the form, and we&apos;ll get back to you within one business day.
             </p>
           </motion.div>
         </div>
@@ -70,10 +70,10 @@ export default function ContactPage() {
                 Direct Contact
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight tracking-tight mb-4">
-                Your builder from call one to keys in hand.
+                We&apos;re Easy to Reach.
               </h2>
               <p className="text-gray-400 leading-relaxed text-sm mb-10">
-                We review every inquiry personally. Drop your budget or your lot details below, and we&apos;ll get back to you within 24 hours with real next steps.
+                Reach out by form, phone, or email. Every inquiry is read personally and answered within 24 hours.
               </p>
             </FadeUp>
 
@@ -159,67 +159,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── Service Area Map ──────────────────────────────────────────────── */}
-      <section className="bg-white border-t border-neutral-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-
-            {/* Left — copy */}
-            <FadeUp className="lg:col-span-4">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="block w-8 h-[2px] bg-[#1D52D4]" />
-                <span className="text-[#0A3594] text-[11px] font-semibold tracking-[.24em] uppercase">Service Area</span>
-              </div>
-              <h2 className="text-3xl font-bold text-[#111827] tracking-tight leading-tight mb-4">
-                McAllen is Home. The Whole Valley is Our Territory.
-              </h2>
-              <p className="text-gray-500 text-sm leading-relaxed mb-8">
-                We are based in McAllen and take on projects throughout the Rio Grande Valley. If you have a lot anywhere in South Texas, call us and we will tell you straight whether it makes sense to build.
-              </p>
-
-              <div className="space-y-0 divide-y divide-neutral-100 border border-neutral-100">
-                {[
-                  { city: "McAllen", note: "Primary market · Most active builds" },
-                  { city: "Mission", note: "Bette St collection & surrounding areas" },
-                  { city: "Harlingen", note: "Growing residential pipeline" },
-                  { city: "Pharr", note: "Active custom home projects" },
-                  { city: "Edinburg", note: "Available for new projects" },
-                  { city: "Brownsville", note: "South Valley coverage" },
-                ].map(({ city, note }) => (
-                  <div key={city} className="flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors">
-                    <span className="text-sm font-semibold text-[#111827]">{city}</span>
-                    <span className="text-xs text-gray-400">{note}</span>
-                  </div>
-                ))}
-              </div>
-
-              <p className="text-xs text-gray-400 mt-4 leading-relaxed">
-                Don&apos;t see your city? Call us —{" "}
-                <a href="tel:+19564087136" className="text-[#0A3594] font-medium hover:underline">
-                  (956) 408-7136
-                </a>
-                . We evaluate every project individually.
-              </p>
-            </FadeUp>
-
-            {/* Right — map */}
-            <FadeUp delay={0.1} className="lg:col-span-8">
-              <div className="relative w-full overflow-hidden border border-neutral-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)]" style={{ height: 480 }}>
-                <iframe
-                  src="https://maps.google.com/maps?q=RCG+Estates+Construction+%26+Development,+McAllen,+TX&t=&z=9&ie=UTF8&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="RCG Estates Service Area — Rio Grande Valley, Texas"
-                />
-              </div>
-            </FadeUp>
-
-          </div>
-        </div>
-      </section>
 
       {/* ── Trust bar ─────────────────────────────────────────────────────── */}
       <section className="bg-[#111827] border-t border-white/5">

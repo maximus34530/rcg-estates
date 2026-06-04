@@ -157,72 +157,62 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Service Area + Contact */}
-      <section className="py-20 bg-white border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-            <FadeUp className="lg:col-span-5">
+      {/* Service Area + Map */}
+      <section className="bg-white border-t border-neutral-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+            <FadeUp className="lg:col-span-4">
               <div className="flex items-center gap-3 mb-4">
-                <span className="block w-8 h-[2px] bg-[#0A3594]" />
+                <span className="block w-8 h-[2px] bg-[#1D52D4]" />
                 <span className="text-[#0A3594] text-[11px] font-semibold tracking-[.24em] uppercase">Service Area</span>
               </div>
-              <h2 className="text-3xl font-bold text-[#111827] tracking-tight mb-4 leading-tight">
-                Building Custom Homes Across the Rio Grande Valley
+              <h2 className="text-3xl font-bold text-[#111827] tracking-tight leading-tight mb-4">
+                McAllen is Home. The Whole Valley is Our Territory.
               </h2>
-              <p className="text-gray-400 leading-relaxed mb-6 text-sm">
-                We proudly serve clients in McAllen, Pharr, Mission, Harlingen, Brownsville, and surrounding South Texas areas.
-                Every home is customized to thrive in the local climate and community.
+              <p className="text-gray-500 text-sm leading-relaxed mb-8">
+                We are based in McAllen and take on projects throughout the Rio Grande Valley. If you have a lot anywhere in South Texas, call us and we will tell you straight whether it makes sense to build.
               </p>
-              <div className="flex flex-wrap gap-2 mb-8">
-                {["McAllen", "Mission", "Pharr", "Harlingen", "Brownsville", "Edinburg", "Weslaco"].map((c) => (
-                  <span key={c}
-                    className="px-3 py-1.5 text-sm font-medium rounded-lg bg-gray-50 border border-gray-100 text-[#0A3594]">
-                    {c}
-                  </span>
+
+              <div className="space-y-0 divide-y divide-neutral-100 border border-neutral-100">
+                {[
+                  { city: "McAllen", note: "Primary market · Most active builds" },
+                  { city: "Mission", note: "Bette St collection & surrounding areas" },
+                  { city: "Harlingen", note: "Growing residential pipeline" },
+                  { city: "Pharr", note: "Active custom home projects" },
+                  { city: "Edinburg", note: "Available for new projects" },
+                  { city: "Brownsville", note: "South Valley coverage" },
+                ].map(({ city, note }) => (
+                  <div key={city} className="flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors">
+                    <span className="text-sm font-semibold text-[#111827]">{city}</span>
+                    <span className="text-xs text-gray-400">{note}</span>
+                  </div>
                 ))}
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact"
-                  className="btn-glow inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0A3594] hover:bg-[#072D82] text-white font-semibold rounded-xl transition-all text-sm">
-                  Schedule a Free Consultation <ArrowRight className="w-4 h-4" />
-                </Link>
-                <a href="tel:+19564087136"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-gray-200 hover:border-gray-300 text-gray-700 font-medium rounded-xl transition-all text-sm">
-                  <Phone className="w-4 h-4" /> (956) 408-7136
+
+              <p className="text-xs text-gray-400 mt-4 leading-relaxed">
+                Don&apos;t see your city? Call us —{" "}
+                <a href="tel:+19564087136" className="text-[#0A3594] font-medium hover:underline">
+                  (956) 408-7136
                 </a>
+                . We evaluate every project individually.
+              </p>
+            </FadeUp>
+
+            <FadeUp delay={0.1} className="lg:col-span-8">
+              <div className="relative w-full overflow-hidden border border-neutral-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)]" style={{ height: 480 }}>
+                <iframe
+                  src="https://maps.google.com/maps?q=RCG+Estates+Construction+%26+Development,+McAllen,+TX&t=&z=9&ie=UTF8&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="RCG Estates Service Area — Rio Grande Valley, Texas"
+                />
               </div>
             </FadeUp>
 
-            <FadeUp delay={0.12} className="lg:col-span-7">
-              <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm relative bg-gray-50" style={{ height: "420px" }}>
-                {isLoaded ? (
-                  <GoogleMap
-                    mapContainerStyle={mapContainerStyle}
-                    center={center}
-                    zoom={12}
-                    options={{
-                      disableDefaultUI: true,
-                      zoomControl: true,
-                      scrollwheel: false,
-                      streetViewControl: false,
-                      mapTypeControl: false,
-                      fullscreenControl: false,
-                      styles: [
-                        {
-                          featureType: "poi",
-                          elementType: "labels",
-                          stylers: [{ visibility: "off" }]
-                        }
-                      ]
-                    }}
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm">
-                    Loading Map...
-                  </div>
-                )}
-              </div>
-            </FadeUp>
           </div>
         </div>
       </section>
